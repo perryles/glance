@@ -1,7 +1,5 @@
 # Glance 1.2.1 (build 7)
 
-Changes compared with jonnyoo/glance main at b97f521. Download **Glance-1.2.1.dmg** for Apple Silicon Macs running macOS 15 or later. [Upstream baseline](https://github.com/jonnyoo/glance/tree/b97f521397ec1197ba17768ba797cae1e628848d)
-
 ## New
 
 - Added Simplified Chinese and Turkish translations for settings, onboarding, permissions, error messages and the new infrared pages. Glance follows your system language and supports the per-app language selection in macOS settings.
