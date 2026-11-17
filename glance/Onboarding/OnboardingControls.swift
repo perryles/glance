@@ -8,6 +8,7 @@
 
 import SwiftUI
 import AppKit
+import Foundation
 
 /// The primary (accent-filled) or secondary (dark) pill button used for
 /// Next/Back/Confirm across every step.
@@ -76,7 +77,7 @@ struct PermissionRow: View {
             Spacer(minLength: 4)
 
             Button(action: grant) {
-                Text(granted ? "已授权" : "授权")
+                Text(granted ? String(localized: "Granted") : String(localized: "Grant"))
                     .font(GlanceTheme.Font.grantLabel)
                     .foregroundStyle(GlanceTheme.textPrimary)
                     .frame(width: OnboardingMetrics.grantButtonSize.width, height: OnboardingMetrics.grantButtonSize.height)
@@ -109,7 +110,7 @@ struct CameraSelectionPill: View {
     var body: some View {
         HStack {
             Menu {
-                Button("系统默认") { onSelect(nil) }
+                Button(String(localized: "System default")) { onSelect(nil) }
                 ForEach(devices) { device in
                     Button(device.name) { onSelect(device.id) }
                 }

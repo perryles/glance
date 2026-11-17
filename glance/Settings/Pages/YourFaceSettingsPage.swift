@@ -8,6 +8,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct YourFaceSettingsPage: View {
     let environment: AppEnvironment
@@ -34,7 +35,7 @@ struct YourFaceSettingsPage: View {
     private var stateKind: PageStateKind {
         if store.isLocked { return .locked }
         // Ahead of `.notEnrolled` — a failed decrypt looks like an empty
-        // store, and offering "设置人脸解锁" there would destroy the data.
+        // store, and offering String(localized: "Set up Face Unlock") there would destroy the data.
         if store.loadFailure != nil { return .unreadable }
         return store.identities.isEmpty ? .notEnrolled : .enrolled
     }
@@ -76,7 +77,7 @@ struct YourFaceSettingsPage: View {
             store.reloadIfUnlocked()
         }
         .confirmationDialog(
-            "删除这个已录入的人脸？",
+            String(localized: "Delete this enrolled face?"),
             isPresented: Binding(
                 get: { identityPendingDeletion != nil },
                 set: { if !$0 { identityPendingDeletion = nil } }
@@ -84,10 +85,10 @@ struct YourFaceSettingsPage: View {
             titleVisibility: .visible,
             presenting: identityPendingDeletion
         ) { identity in
-            Button("删除", role: .destructive) { delete(identity) }
-            Button("取消", role: .cancel) { identityPendingDeletion = nil }
+            Button(String(localized: "Delete"), role: .destructive) { delete(identity) }
+            Button(String(localized: "Cancel"), role: .cancel) { identityPendingDeletion = nil }
         } message: { identity in
-            Text("删除后，\"\(identity.name)\" 将不再被识别，直到重新录入。")
+            Text(String(localized: "\"\(identity.name)\" will stop being recognized until you enroll them again."))
         }
     }
 
@@ -96,8 +97,8 @@ struct YourFaceSettingsPage: View {
     private var lockedState: some View {
         SettingsEmptyStateView(
             icon: "lock.fill",
-            message: "会话已锁定",
-            buttonTitle: isUnlocking ? "正在验证…" : "解锁会话",
+            message: String(localized: "Session locked"),
+            buttonTitle: isUnlocking ? String(localized: "Authenticating…") : String(localized: "Unlock session"),
             isButtonEnabled: !isUnlocking,
             caption: sessionError,
             action: unlock
@@ -115,14 +116,14 @@ struct YourFaceSettingsPage: View {
                 .font(.system(size: SettingsMetrics.emptyStateIconSize, weight: .regular))
                 .foregroundStyle(SettingsMetrics.qualityFairColor)
 
-            Text("无法读取已录入的人脸")
+            Text(String(localized: "Enrolled faces couldn't be read"))
                 .font(SettingsMetrics.rowFont)
                 .foregroundStyle(SettingsMetrics.textSecondary)
 
-            SettingsCaption(text: store.loadFailure ?? "无法使用当前会话密钥解密存储的数据。")
+            SettingsCaption(text: store.loadFailure ?? String(localized: "The stored data couldn't be decrypted with this session key."))
                 .multilineTextAlignment(.center)
 
-            SettingsCaption(text: "没有任何数据被删除，Glance 也不会覆盖它；在此问题解决前无法继续录入。请退出并重新打开 Glance 重试。如果仍然失败，说明会话密钥已不匹配这些数据：请在“密码”标签页移除已存密码以同时清除两者，然后重新设置。")
+            SettingsCaption(text: String(localized: "Nothing has been deleted, and Glance will not overwrite it — enrolling is blocked until this resolves. Quit and reopen Glance to retry. If it keeps failing, the session key no longer matches this data: remove the stored password on the Password tab to clear both, then set up again."))
                 .multilineTextAlignment(.center)
         }
         .frame(maxWidth: .infinity, minHeight: SettingsMetrics.emptyStateMinHeight)
@@ -133,8 +134,8 @@ struct YourFaceSettingsPage: View {
     private var notEnrolledState: some View {
         SettingsEmptyStateView(
             icon: "faceid",
-            message: "人脸录入",
-            buttonTitle: "设置人脸解锁",
+            message: String(localized: "Face enrollment"),
+            buttonTitle: String(localized: "Set up Face Unlock"),
             isButtonEnabled: !enrollmentFlowIsRunning,
             action: { OnboardingController.startEnrollmentOnly() }
         )
@@ -162,7 +163,7 @@ struct YourFaceSettingsPage: View {
             }
 
             if !store.identities.isEmpty && store.activeIdentities.isEmpty {
-                SettingsCaption(text: "没有启用的身份：请至少重新启用一个，否则人脸解锁无法识别任何人。")
+                SettingsCaption(text: String(localized: "No identities are enabled — face unlock won't recognize anyone until you switch one back on."))
             }
 
             if let writeError {
@@ -177,7 +178,7 @@ struct YourFaceSettingsPage: View {
         SettingsGroup {
             VStack(alignment: .leading, spacing: 6) {
                 HStack(spacing: 8) {
-                    Text("人脸数据已加密")
+                    Text(String(localized: "Face encrypted"))
                         .font(SettingsMetrics.rowFont)
                         .foregroundStyle(SettingsMetrics.textPrimary)
                     Spacer(minLength: 8)
@@ -186,7 +187,7 @@ struct YourFaceSettingsPage: View {
                         .foregroundStyle(SettingsMetrics.textSecondary)
                 }
 
-                Text("可分别录入多个身份，让 Glance 适用于多人、配饰（如眼镜）、不同表情或新的光照环境。这会提升识别质量。")
+                Text(String(localized: "Enroll separate identities to use Glance with multiple people, accessories (ex. glasses), facial expressions, or new lighting environments. This improves recognition quality."))
                     .font(.system(size: 12))
                     .foregroundStyle(SettingsMetrics.textTertiary)
                     .fixedSize(horizontal: false, vertical: true)
@@ -199,7 +200,7 @@ struct YourFaceSettingsPage: View {
 
     private var identitiesHeader: some View {
         HStack(spacing: 0) {
-            SettingsSectionTitle(text: "身份")
+            SettingsSectionTitle(text: String(localized: "Identities"))
 
             Button {
                 OnboardingController.startAddIdentity()
@@ -213,7 +214,7 @@ struct YourFaceSettingsPage: View {
             .buttonStyle(.plain)
             .disabled(enrollmentFlowIsRunning)
             .opacity(enrollmentFlowIsRunning ? 0.4 : 1)
-            .help("再录入一张人脸")
+            .help(String(localized: "Enroll another face"))
             .padding(.trailing, SettingsMetrics.sectionTitleHorizontalInset)
             .padding(.top, SettingsMetrics.sectionTitleVerticalPadding)
         }
@@ -253,7 +254,7 @@ struct YourFaceSettingsPage: View {
         Task {
             do {
                 try await Task.detached(priority: .userInitiated) {
-                    try SecureCredentialManager.unlockSession(reason: "验证以查看已录入的人脸")
+                    try SecureCredentialManager.unlockSession(reason: String(localized: "Authenticate to view your enrolled face"))
                 }.value
                 store.reloadIfUnlocked()
             } catch {
@@ -296,9 +297,9 @@ private struct IdentityCard: View {
     /// An enrollment saved before per-sample quality existed reports "not
     /// recorded" rather than a misleading 100%.
     private var qualityCaption: String {
-        if identity.samples.isEmpty { return "未采集样本" }
-        if ratedCount == 0 { return "采集质量 • 未记录" }
-        return "采集质量 • \(qualityPercentage)%"
+        if identity.samples.isEmpty { return String(localized: "No samples captured") }
+        if ratedCount == 0 { return String(localized: "Capture quality • not recorded") }
+        return String(localized: "Capture quality • \(qualityPercentage)%")
     }
 
     var body: some View {
@@ -320,11 +321,11 @@ private struct IdentityCard: View {
                         QualityTickStrip(samples: identity.samples)
                         .padding(.leading, 2)
                         Spacer(minLength: 12)
-                        PillActionButton(title: "重新采集", action: recapture)
+                        PillActionButton(title: String(localized: "Recapture"), action: recapture)
                             .disabled(!canStartFlow)
                             .opacity(canStartFlow ? 1 : 0.4)
                         PillIconButton(systemImage: "trash", action: delete)
-                            .help("删除 \(identity.name)")
+                            .help(String(localized: "Delete \(identity.name)"))
                     }
                 }
                 // Dimmed rather than hidden while switched off: the person
@@ -332,7 +333,7 @@ private struct IdentityCard: View {
                 .opacity(isEnabled ? 1 : 0.45)
 
                 if isStale {
-                    Text("这些人脸数据来自其他识别模型；请重新采集后才能用于解锁 Mac。")
+                    Text(String(localized: "Captured with a different recognition model — recapture before this face can unlock your Mac."))
                         .font(.system(size: 11))
                         .foregroundStyle(SettingsMetrics.qualityFairColor)
                         .fixedSize(horizontal: false, vertical: true)
@@ -378,7 +379,7 @@ private struct QualityTickStrip: View {
         }
         .frame(width: stripWidth, height: SettingsMetrics.qualityTickHeight, alignment: .leading)
         .accessibilityElement()
-        .accessibilityLabel("\(samples.count) 个样本的采集质量")
+        .accessibilityLabel(String(localized: "Capture quality for \(samples.count) samples"))
     }
 
     /// Fixed rather than flexible: this strip shares a row with a `Spacer`

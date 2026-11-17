@@ -110,6 +110,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 601C4933300FFC8400D3DE9D;
 			minimizedProjectReferenceProxies = 1;
@@ -284,17 +285,17 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = glance/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_NSCameraUsageDescription = "glance 会在设备上使用摄像头识别人脸以解锁 Mac，并让你在设置中录入和预览人脸。";
+				INFOPLIST_KEY_NSCameraUsageDescription = "glance uses the camera on-device to recognize your face for unlocking your Mac, and to let you enroll and preview your face in Settings.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jonathan.glance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.perryles.glance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -320,17 +321,17 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = glance/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_NSCameraUsageDescription = "glance 会在设备上使用摄像头识别人脸以解锁 Mac，并让你在设置中录入和预览人脸。";
+				INFOPLIST_KEY_NSCameraUsageDescription = "glance uses the camera on-device to recognize your face for unlocking your Mac, and to let you enroll and preview your face in Settings.";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.jonathan.glance;
+				PRODUCT_BUNDLE_IDENTIFIER = com.perryles.glance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;

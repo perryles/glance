@@ -4,6 +4,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct PasswordSettingsPage: View {
     @Bindable var pocController: POCController
@@ -65,8 +66,8 @@ struct PasswordSettingsPage: View {
     private var noPasswordState: some View {
         SettingsEmptyStateView(
             icon: "lock.fill",
-            message: "设置密码",
-            buttonTitle: "设置密码",
+            message: String(localized: "Set up a password"),
+            buttonTitle: String(localized: "Set password"),
             caption: statusMessage,
             action: { OnboardingController.startPasswordOnly() }
         )
@@ -77,8 +78,8 @@ struct PasswordSettingsPage: View {
     private var lockedState: some View {
         SettingsEmptyStateView(
             icon: "lock.fill",
-            message: "会话已锁定",
-            buttonTitle: isUnlocking ? "正在验证…" : "解锁会话",
+            message: String(localized: "Session locked"),
+            buttonTitle: isUnlocking ? String(localized: "Authenticating…") : String(localized: "Unlock session"),
             isButtonEnabled: !isUnlocking,
             caption: sessionError,
             action: unlock
@@ -90,7 +91,7 @@ struct PasswordSettingsPage: View {
     private var unlockedState: some View {
         VStack(alignment: .leading, spacing: SettingsMetrics.rowSpacing) {
             SettingsGroup {
-                SettingsRowContent(title: "密码已加密") {
+                SettingsRowContent(title: String(localized: "Password encrypted")) {
                     Image(systemName: "lock.fill")
                         .font(.system(size: 12))
                         .foregroundStyle(SettingsMetrics.textSecondary)
@@ -99,7 +100,7 @@ struct PasswordSettingsPage: View {
                 SettingsGroupDivider()
 
                 SettingsSteppedSliderRowContent(
-                    title: "自动锁定会话",
+                    title: String(localized: "Auto lock session"),
                     valueLabel: settings.autoLockInterval.title,
                     index: Binding(
                         get: { settings.autoLockInterval.sliderIndex },
@@ -110,16 +111,16 @@ struct PasswordSettingsPage: View {
 
                 SettingsGroupDivider()
 
-                SettingsRowContent(title: "更改密码") {
-                    SettingsPrimaryButton(title: "更改", compact: true) {
+                SettingsRowContent(title: String(localized: "Change password")) {
+                    SettingsPrimaryButton(title: String(localized: "Change"), compact: true) {
                         OnboardingController.startPasswordOnly()
                     }
                 }
 
                 SettingsGroupDivider()
 
-                SettingsRowContent(title: "移除密码") {
-                    HoldToConfirmButton(title: "移除", action: removePassword)
+                SettingsRowContent(title: String(localized: "Remove password")) {
+                    HoldToConfirmButton(title: String(localized: "Remove"), action: removePassword)
                 }
             }
 
@@ -152,9 +153,9 @@ struct PasswordSettingsPage: View {
             FaceEnrollmentStore.shared.deleteAll()
             try SecureCredentialManager.deletePassword()
             pocController.refreshCredentialStatus()
-            statusMessage = "密码和人脸录入已移除。"
+            statusMessage = String(localized: "Password and face enrollment removed.")
         } catch {
-            statusMessage = "无法移除：\(error.localizedDescription)"
+            statusMessage = String(localized: "Couldn't remove: \(error.localizedDescription)")
         }
     }
 }

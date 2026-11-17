@@ -1,0 +1,4142 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    " [STALE — re-enroll under current model]": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "【已过期——请在当前模型下重新录入】"
+          }
+        }
+      }
+    },
+    "\"%@\" will stop being recognized until you enroll them again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除后，\"%@\" 将不再被识别，直到重新录入。"
+          }
+        }
+      }
+    },
+    "%@ (Default)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@（默认）"
+          }
+        }
+      }
+    },
+    "%@ (disconnected)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@（已断开连接）"
+          }
+        }
+      }
+    },
+    "%lld enrolled": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已录入 %lld 个"
+          }
+        }
+      }
+    },
+    "%lld frames": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 帧"
+          }
+        }
+      }
+    },
+    "%lld of %lld samples are low quality": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld / %2$lld 个样本质量较低"
+          }
+        }
+      }
+    },
+    "%lld sample%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld 个样本"
+          }
+        }
+      }
+    },
+    "%lld/%lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "%lld/9 poses · %lld samples · enrolled %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld/9 个姿态 · %2$lld 个样本 · 录入于 %3$@"
+          }
+        }
+      }
+    },
+    "%llds": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 秒"
+          }
+        }
+      }
+    },
+    "(ArcFace unavailable — see log)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "（ArcFace 不可用——详情见日志）"
+          }
+        }
+      }
+    },
+    "2-point (eyes only)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "两点（仅眼睛）"
+          }
+        }
+      }
+    },
+    "5-point": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "五点"
+          }
+        }
+      }
+    },
+    "7 days": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "7 天"
+          }
+        }
+      }
+    },
+    "14 days": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "14 天"
+          }
+        }
+      }
+    },
+    "30 days": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 天"
+          }
+        }
+      }
+    },
+    "A device-shaped rectangle overlaps the face — a phone or tablet held up.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备形状的矩形覆盖了人脸——像是举起的手机或平板。"
+          }
+        }
+      }
+    },
+    "A device-shaped rectangle was detected around the face — this looks like a photo or screen.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在人脸周围检测到设备形状的矩形——看起来像照片或屏幕。"
+          }
+        }
+      }
+    },
+    "A face named \"%@\" is already enrolled.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已经录入了名为 \"%@\" 的人脸。"
+          }
+        }
+      }
+    },
+    "About": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关于"
+          }
+        }
+      }
+    },
+    "Abstaining — not enough head rotation to tell a plane from a still 3D face.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "弃权——头部转动不足，无法区分平面图像和静止的 3D 人脸。"
+          }
+        }
+      }
+    },
+    "Accessibility": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "辅助功能"
+          }
+        }
+      }
+    },
+    "Accessibility not granted — open System Settings and enable glance.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未授予辅助功能权限。请打开系统设置并启用 glance。"
+          }
+        }
+      }
+    },
+    "Accessibility permission required. Open System Settings → Privacy & Security → Accessibility and enable glance.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要辅助功能权限。请打开“系统设置”→“隐私与安全性”→“辅助功能”，并启用 glance。"
+          }
+        }
+      }
+    },
+    "Add Identity": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加身份"
+          }
+        }
+      }
+    },
+    "Aligned face": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已对齐人脸"
+          }
+        }
+      }
+    },
+    "Aligned input": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已对齐输入"
+          }
+        }
+      }
+    },
+    "Alignment: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "对齐方式：%@"
+          }
+        }
+      }
+    },
+    "Allow Glance to recognize your face": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许 Glance 识别你的脸"
+          }
+        }
+      }
+    },
+    "Allow Glance to unlock your Mac": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许 Glance 解锁你的 Mac"
+          }
+        }
+      }
+    },
+    "Also requires proof of a real face.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还要求证明这是真人。"
+          }
+        }
+      }
+    },
+    "Animation": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "动画"
+          }
+        }
+      }
+    },
+    "Any one firing passes liveness. None firing is not a failure — the scan just keeps looking.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任一信号触发即通过活体检测。没有触发并不算失败，扫描会继续等待。"
+          }
+        }
+      }
+    },
+    "ArcFace model produced an unexpected output: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ArcFace 模型输出异常：%@"
+          }
+        }
+      }
+    },
+    "ArcFace unavailable (%@) — using Vision Feature Print instead.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ArcFace 不可用（%@）——改用 Vision Feature Print。"
+          }
+        }
+      }
+    },
+    "ArcFace.mlpackage/mlmodelc not found in the app bundle. Run tools/convert_arcface.py, then add glance/Models/ArcFace.mlpackage to the Xcode project.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "应用包中未找到 ArcFace.mlpackage/mlmodelc。请运行 tools/convert_arcface.py，然后将 glance/Models/ArcFace.mlpackage 添加到 Xcode 项目。"
+          }
+        }
+      }
+    },
+    "ArcFaceEmbedder expects a %lldx%lld aligned image, got %lldx%lld. Run the face through FaceAligner first.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ArcFaceEmbedder 需要尺寸为 %1$lldx%2$lld 的已对齐图像，但收到 %3$lldx%4$lld。请先通过 FaceAligner 处理人脸。"
+          }
+        }
+      }
+    },
+    "Authenticate to enroll another face": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "验证以录入另一张人脸"
+          }
+        }
+      }
+    },
+    "Authenticate to re-enroll this face": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "验证以重新采集此人脸"
+          }
+        }
+      }
+    },
+    "Authenticate to re-enroll your face": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "验证以重新录入人脸"
+          }
+        }
+      }
+    },
+    "Authenticate to set up or use glance": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "验证以设置或使用 glance"
+          }
+        }
+      }
+    },
+    "Authenticate to use Face Lab": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "验证以使用人脸实验室"
+          }
+        }
+      }
+    },
+    "Authenticate to view your enrolled face": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "验证以查看已录入的人脸"
+          }
+        }
+      }
+    },
+    "Authenticating…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在验证…"
+          }
+        }
+      }
+    },
+    "Authentication was cancelled or failed.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "验证已取消或失败。"
+          }
+        }
+      }
+    },
+    "Auto lock session": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动锁定会话"
+          }
+        }
+      }
+    },
+    "Auto retry once after failure": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "失败后自动重试一次"
+          }
+        }
+      }
+    },
+    "Automatically check for updates": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "自动检查更新"
+          }
+        }
+      }
+    },
+    "Back": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上一步"
+          }
+        }
+      }
+    },
+    "Behaviour": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "行为"
+          }
+        }
+      }
+    },
+    "Best match: %@ — centroid %@, max %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最佳匹配：%1$@——中心 %2$@，最大 %3$@"
+          }
+        }
+      }
+    },
+    "Blink": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "眨眼"
+          }
+        }
+      }
+    },
+    "Bottom left": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "左下"
+          }
+        }
+      }
+    },
+    "Bottom right": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "右下"
+          }
+        }
+      }
+    },
+    "Bring your face closer": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请靠近一些"
+          }
+        }
+      }
+    },
+    "Built-in display": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内建显示屏"
+          }
+        }
+      }
+    },
+    "Calibration: recorded %@ sample at %@.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "校准：已在相似度 %2$@ 记录一个%2$@样本。"
+          }
+        }
+      }
+    },
+    "Camera": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "摄像头"
+          }
+        }
+      }
+    },
+    "Camera Preview": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "摄像头预览"
+          }
+        }
+      }
+    },
+    "Camera access not granted (status: %@). ": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未授予摄像头权限（状态：%@）。"
+          }
+        }
+      }
+    },
+    "Camera started.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "摄像头已启动。"
+          }
+        }
+      }
+    },
+    "Camera stopped.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "摄像头已停止。"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
+          }
+        }
+      }
+    },
+    "Capture Sample": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "采集样本"
+          }
+        }
+      }
+    },
+    "Capture quality for %lld samples": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 个样本的采集质量"
+          }
+        }
+      }
+    },
+    "Capture quality • %lld%%": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "采集质量 • %lld%%"
+          }
+        }
+      }
+    },
+    "Capture quality • not recorded": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "采集质量 • 未记录"
+          }
+        }
+      }
+    },
+    "Capture quality: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "采集质量：%@"
+          }
+        }
+      }
+    },
+    "Capture quality: —": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "采集质量：—"
+          }
+        }
+      }
+    },
+    "Captured sample for \"%@\" (%lld-dim, %@, quality %@).": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已为 \"%1$@\" 采集样本（%2$lld 维，%3$@，质量 %4$@）。"
+          }
+        }
+      }
+    },
+    "Captured with a different recognition model — recapture before this face can unlock your Mac.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这些人脸数据来自其他识别模型；请重新采集后才能用于解锁 Mac。"
+          }
+        }
+      }
+    },
+    "Change": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更改"
+          }
+        }
+      }
+    },
+    "Change password": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更改密码"
+          }
+        }
+      }
+    },
+    "Check": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "检查"
+          }
+        }
+      }
+    },
+    "Check for Updates": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "检查更新"
+          }
+        }
+      }
+    },
+    "Checks that you're a live person, not a photo. May increase unlock time.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认你是真人而不是照片。可能会增加解锁时间。"
+          }
+        }
+      }
+    },
+    "Clear": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清除"
+          }
+        }
+      }
+    },
+    "Close": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "近"
+          }
+        }
+      }
+    },
+    "Closest: %@ — centroid %@, max %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最接近：%1$@——中心 %2$@，最大 %3$@"
+          }
+        }
+      }
+    },
+    "Coherence: %@  Motion: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一致性：%1$@  运动：%2$@"
+          }
+        }
+      }
+    },
+    "Confirm": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认"
+          }
+        }
+      }
+    },
+    "Confirm — evidence of a real face": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "确认——真人证据"
+          }
+        }
+      }
+    },
+    "Continue": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "继续"
+          }
+        }
+      }
+    },
+    "Could not align the detected face.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法对齐检测到的人脸。"
+          }
+        }
+      }
+    },
+    "Couldn't confirm a live face — hover the notch to try again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法确认这是活体人脸——将指针悬停在刘海上即可重试。"
+          }
+        }
+      }
+    },
+    "Couldn't confirm a live face.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法确认这是活体人脸。"
+          }
+        }
+      }
+    },
+    "Couldn't create CGEvent for keystroke.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法为按键创建 CGEvent。"
+          }
+        }
+      }
+    },
+    "Couldn't create Keychain access control: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法创建钥匙串访问控制：%@"
+          }
+        }
+      }
+    },
+    "Couldn't delete: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法删除：%@"
+          }
+        }
+      }
+    },
+    "Couldn't prepare the aligned face image for Core ML.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法为 Core ML 准备已对齐的人脸图像。"
+          }
+        }
+      }
+    },
+    "Couldn't remove: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法移除：%@"
+          }
+        }
+      }
+    },
+    "Couldn't save sample: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法保存样本：%@"
+          }
+        }
+      }
+    },
+    "Couldn't select the camera's highest-resolution format: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法选择摄像头的最高分辨率格式：%@"
+          }
+        }
+      }
+    },
+    "Cue firing latches for the whole scan — reset to re-test.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "信号一旦触发会在整次扫描中保持——重置后可重新测试。"
+          }
+        }
+      }
+    },
+    "Decryption failed. The stored credential may be corrupted.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解密失败。已存凭据可能已损坏。"
+          }
+        }
+      }
+    },
+    "Default": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "默认"
+          }
+        }
+      }
+    },
+    "Delete": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除"
+          }
+        }
+      }
+    },
+    "Delete %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除 %@"
+          }
+        }
+      }
+    },
+    "Delete this enrolled face?": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除这个已录入的人脸？"
+          }
+        }
+      }
+    },
+    "Deleted \"%@\".": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已删除 \"%@\"。"
+          }
+        }
+      }
+    },
+    "Deny — evidence of a spoof": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拒绝——作弊证据"
+          }
+        }
+      }
+    },
+    "Depth/pose": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "深度/姿态"
+          }
+        }
+      }
+    },
+    "Detection": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "检测"
+          }
+        }
+      }
+    },
+    "Detection distance": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "检测距离"
+          }
+        }
+      }
+    },
+    "Detection error: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "检测错误：%@"
+          }
+        }
+      }
+    },
+    "Device detected": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "检测到设备"
+          }
+        }
+      }
+    },
+    "Device overlap: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备重叠：%@"
+          }
+        }
+      }
+    },
+    "Display on": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示在"
+          }
+        }
+      }
+    },
+    "Distributions overlap — no single cutoff perfectly separates these samples yet.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "两个分布重叠——目前没有单一分界能完美区分这些样本。"
+          }
+        }
+      }
+    },
+    "Down": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下"
+          }
+        }
+      }
+    },
+    "Either one firing fails face unlock outright, and overrides any confirmation.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "任一信号触发都会直接置人脸解锁失败，并覆盖任何确认结果。"
+          }
+        }
+      }
+    },
+    "Embedder: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "嵌入器：%@"
+          }
+        }
+      }
+    },
+    "Embedding: %lld numbers": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "嵌入向量：%lld 个数字"
+          }
+        }
+      }
+    },
+    "Enable Face Unlock": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启用人脸解锁"
+          }
+        }
+      }
+    },
+    "Enable it in System Settings > Privacy & Security > Camera. If glance isn't listed there, quit the app, run `tccutil reset Camera com.perryles.glance` in Terminal, then relaunch so macOS asks again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请在“系统设置”>“隐私与安全性”>“摄像头”中启用。如果列表中没有 glance，请退出应用，在“终端”运行 `tccutil reset Camera com.perryles.glance`，然后重新启动，让 macOS 再次询问。"
+          }
+        }
+      }
+    },
+    "Encryption failed.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加密失败。"
+          }
+        }
+      }
+    },
+    "Enroll": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "录入"
+          }
+        }
+      }
+    },
+    "Enroll another face": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "再录入一张人脸"
+          }
+        }
+      }
+    },
+    "Enroll separate identities to use Glance with multiple people, accessories (ex. glasses), facial expressions, or new lighting environments. This improves recognition quality.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可分别录入多个身份，让 Glance 适用于多人、配饰（如眼镜）、不同表情或新的光照环境。这会提升识别质量。"
+          }
+        }
+      }
+    },
+    "Enrolled faces couldn't be read": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法读取已录入的人脸"
+          }
+        }
+      }
+    },
+    "Enter a name before capturing a sample.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "采集样本前请输入名称。"
+          }
+        }
+      }
+    },
+    "Enter a name.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请输入名称。"
+          }
+        }
+      }
+    },
+    "Enter a name...": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入名称..."
+          }
+        }
+      }
+    },
+    "Enter a password first.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请先输入密码。"
+          }
+        }
+      }
+    },
+    "Enter a password.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请输入密码。"
+          }
+        }
+      }
+    },
+    "Enter password...": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入密码..."
+          }
+        }
+      }
+    },
+    "Enter your password": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入密码"
+          }
+        }
+      }
+    },
+    "External display": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外接显示屏"
+          }
+        }
+      }
+    },
+    "Eye aspect ratio dipped and recovered — a photo cannot blink.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "眼睛纵横比下降后恢复——照片无法眨眼。"
+          }
+        }
+      }
+    },
+    "FIRED": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已触发"
+          }
+        }
+      }
+    },
+    "Face": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人脸"
+          }
+        }
+      }
+    },
+    "Face Lab": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人脸实验室"
+          }
+        }
+      }
+    },
+    "Face Lab — On-Device Face Recognition (Debug)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人脸实验室——设备端人脸识别（调试）"
+          }
+        }
+      }
+    },
+    "Face Unlock for Mac": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac 人脸解锁"
+          }
+        }
+      }
+    },
+    "Face captured": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人脸已采集"
+          }
+        }
+      }
+    },
+    "Face detection duration": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人脸检测时长"
+          }
+        }
+      }
+    },
+    "Face encrypted": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人脸数据已加密"
+          }
+        }
+      }
+    },
+    "Face enrollment": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人脸录入"
+          }
+        }
+      }
+    },
+    "Face not recognized — hover the notch to try again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未识别人脸——将指针悬停在刘海上即可重试。"
+          }
+        }
+      }
+    },
+    "Face not recognized.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未识别人脸。"
+          }
+        }
+      }
+    },
+    "Face unlock is on, but no password is stored yet.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人脸解锁已开启，但尚未存储密码。"
+          }
+        }
+      }
+    },
+    "Face unlock is on, but the session is locked — authenticate once from Password settings first.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人脸解锁已开启，但会话仍处于锁定状态。请先在“密码”设置中完成一次验证。"
+          }
+        }
+      }
+    },
+    "Faces detected: %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "检测到人脸：%lld"
+          }
+        }
+      }
+    },
+    "Failed to load the ArcFace Core ML model: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "加载 ArcFace Core ML 模型失败：%@"
+          }
+        }
+      }
+    },
+    "Far": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "远"
+          }
+        }
+      }
+    },
+    "Feature print used an unexpected element type.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "特征描述使用了异常的元素类型。"
+          }
+        }
+      }
+    },
+    "Fit residual: %@  Probe residual: %@  Excess: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拟合残差：%1$@  探针残差：%2$@  超额：%3$@"
+          }
+        }
+      }
+    },
+    "Flat vs 3D": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "平面与 3D"
+          }
+        }
+      }
+    },
+    "Flat vs 3D diagnostics": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "平面与 3D 诊断"
+          }
+        }
+      }
+    },
+    "Follow the directions\nshown on the screen": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按照屏幕\\n上的指引操作"
+          }
+        }
+      }
+    },
+    "General": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通用"
+          }
+        }
+      }
+    },
+    "Genuine": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "本人"
+          }
+        }
+      }
+    },
+    "Glance": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glance"
+          }
+        }
+      }
+    },
+    "Glance Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glance 设置"
+          }
+        }
+      }
+    },
+    "Glance is not as secure as Apple's FaceID or TouchID.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glance 不如 Apple 的 Face ID 或 Touch ID 安全。"
+          }
+        }
+      }
+    },
+    "Gloss/glare": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "光泽/反光"
+          }
+        }
+      }
+    },
+    "Grant": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "授权"
+          }
+        }
+      }
+    },
+    "Granted": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已授权"
+          }
+        }
+      }
+    },
+    "Haptic feedback": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "触感反馈"
+          }
+        }
+      }
+    },
+    "Heavy": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重度"
+          }
+        }
+      }
+    },
+    "Heavy: a deny cue fails the scan; at least one confirm cue must fire before it can pass.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重度：任一拒绝信号都会使扫描失败；必须至少触发一个确认信号才能通过。"
+          }
+        }
+      }
+    },
+    "Held-out nose points miss the plane fit — the face has real depth.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "伸出的鼻部关键点偏离平面拟合——说明脸部有真实深度。"
+          }
+        }
+      }
+    },
+    "I understand": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我了解"
+          }
+        }
+      }
+    },
+    "Identify": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "识别"
+          }
+        }
+      }
+    },
+    "Identities": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "身份"
+          }
+        }
+      }
+    },
+    "Idle": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "空闲"
+          }
+        }
+      }
+    },
+    "Impostor": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "他人"
+          }
+        }
+      }
+    },
+    "Injected stored password + Return at %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已在 %@ 输入已存密码并按回车"
+          }
+        }
+      }
+    },
+    "Injecting…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在输入…"
+          }
+        }
+      }
+    },
+    "Injection failed: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输入失败：%@"
+          }
+        }
+      }
+    },
+    "It uses your Mac's standard webcam and is designed for convenience, not high-security authentication.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "它使用 Mac 的普通摄像头，目标是提供便利，而不是高安全等级认证。"
+          }
+        }
+      }
+    },
+    "Keychain error: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "钥匙串错误：%@"
+          }
+        }
+      }
+    },
+    "Keychain item had an unexpected format.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "钥匙串项格式异常。"
+          }
+        }
+      }
+    },
+    "Keychain item not found.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未找到钥匙串项。"
+          }
+        }
+      }
+    },
+    "Landmarks: %lld   Pairs: %lld   Rejected: %lld": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关键点：%1$lld   特征对：%2$lld   已拒绝：%3$lld"
+          }
+        }
+      }
+    },
+    "Large flat specular highlight — glass/screen glare rather than skin's small scattered shine.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大面积平面镜面高光——更像玻璃或屏幕反光，而不是皮肤的小范围散射光泽。"
+          }
+        }
+      }
+    },
+    "Launch at login": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "登录时启动"
+          }
+        }
+      }
+    },
+    "Left": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "左"
+          }
+        }
+      }
+    },
+    "Left EAR: %@  Right EAR: %@  Nose offset: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "左眼 EAR：%1$@  右眼 EAR：%2$@  鼻子偏移：%3$@"
+          }
+        }
+      }
+    },
+    "Less strict": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更宽松"
+          }
+        }
+      }
+    },
+    "Light": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "轻度"
+          }
+        }
+      }
+    },
+    "Light includes basic protection. Heavy requires you to blink or slightly move your head.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "轻度提供基础防护。重度需要你眨眼或轻微移动头部。"
+          }
+        }
+      }
+    },
+    "Light: only the deny cues run. Anything not actively rejected is treated as live.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "轻度：只运行拒绝信号。未被明确拒绝的都会视为活体。"
+          }
+        }
+      }
+    },
+    "Live — auto-confirmed (Light mode)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "活体——轻度模式自动确认"
+          }
+        }
+      }
+    },
+    "Live — confirmed by %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "活体——由%@确认"
+          }
+        }
+      }
+    },
+    "Liveness": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "活体检测"
+          }
+        }
+      }
+    },
+    "Liveness check failed.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "活体检测未通过。"
+          }
+        }
+      }
+    },
+    "Liveness cues reset.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "活体信号已重置。"
+          }
+        }
+      }
+    },
+    "Liveness detection": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "活体检测"
+          }
+        }
+      }
+    },
+    "Loading Face Lab…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在加载人脸实验室…"
+          }
+        }
+      }
+    },
+    "Log": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "日志"
+          }
+        }
+      }
+    },
+    "Look straight at the camera": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正对摄像头"
+          }
+        }
+      }
+    },
+    "Looking for your face…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在寻找你的脸…"
+          }
+        }
+      }
+    },
+    "MATCH": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "匹配"
+          }
+        }
+      }
+    },
+    "Main display": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "主显示屏"
+          }
+        }
+      }
+    },
+    "Mark Genuine (this is me)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标记为本人"
+          }
+        }
+      }
+    },
+    "Mark Impostor (not me)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标记为他人"
+          }
+        }
+      }
+    },
+    "Match confidence": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "匹配置信度"
+          }
+        }
+      }
+    },
+    "Matched %@ at %@, %@.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已匹配 %1$@，中心相似度 %2$@，%3$@。"
+          }
+        }
+      }
+    },
+    "Minimal": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "简约"
+          }
+        }
+      }
+    },
+    "Mode": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "模式"
+          }
+        }
+      }
+    },
+    "More information": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更多信息"
+          }
+        }
+      }
+    },
+    "More strict": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更严格"
+          }
+        }
+      }
+    },
+    "NO MATCH": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不匹配"
+          }
+        }
+      }
+    },
+    "Name": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "名称"
+          }
+        }
+      }
+    },
+    "Name this face": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "为这张人脸命名"
+          }
+        }
+      }
+    },
+    "Never": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "永不"
+          }
+        }
+      }
+    },
+    "Next": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下一步"
+          }
+        }
+      }
+    },
+    "No camera device found.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未找到摄像头设备。"
+          }
+        }
+      }
+    },
+    "No enrolled identities yet — capture a sample first.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未录入身份——请先采集样本。"
+          }
+        }
+      }
+    },
+    "No face": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无人脸"
+          }
+        }
+      }
+    },
+    "No face detected in frame.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前画面中未检测到人脸。"
+          }
+        }
+      }
+    },
+    "No face detected — can't capture a sample.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未检测到人脸——无法采集样本。"
+          }
+        }
+      }
+    },
+    "No face detected — can't recognize.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未检测到人脸——无法识别。"
+          }
+        }
+      }
+    },
+    "No face detected — hover the notch to try again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未检测到人脸——将指针悬停在刘海上即可重试。"
+          }
+        }
+      }
+    },
+    "No face detected.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未检测到人脸。"
+          }
+        }
+      }
+    },
+    "No identities are enabled — face unlock won't recognize anyone until you switch one back on.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有启用的身份：请至少重新启用一个，否则人脸解锁无法识别任何人。"
+          }
+        }
+      }
+    },
+    "No identities enrolled yet — run the guided nine-pose capture with Add Identity.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未录入身份——请使用“添加身份”运行九姿态引导采集。"
+          }
+        }
+      }
+    },
+    "No identities enrolled yet.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "尚未录入身份。"
+          }
+        }
+      }
+    },
+    "No liveness frame yet.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有活体检测帧。"
+          }
+        }
+      }
+    },
+    "No samples captured": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未采集样本"
+          }
+        }
+      }
+    },
+    "No thanks": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暂不"
+          }
+        }
+      }
+    },
+    "None": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无"
+          }
+        }
+      }
+    },
+    "Nose offset tracks head yaw — the nose sits off the eye plane, so this isn't flat.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鼻子偏移随头部偏航变化——鼻子不在眼平面上，因此不是平面图像。"
+          }
+        }
+      }
+    },
+    "Nothing has been deleted, and Glance will not overwrite it — enrolling is blocked until this resolves. Quit and reopen Glance to retry. If it keeps failing, the session key no longer matches this data: remove the stored password on the Password tab to clear both, then set up again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有任何数据被删除，Glance 也不会覆盖它；在此问题解决前无法继续录入。请退出并重新打开 Glance 重试。如果仍然失败，说明会话密钥已不匹配这些数据：请在“密码”标签页移除已存密码以同时清除两者，然后重新设置。"
+          }
+        }
+      }
+    },
+    "Nothing to record — run Identify first.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有可记录的结果——请先运行“识别”。"
+          }
+        }
+      }
+    },
+    "On lock": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "锁定时"
+          }
+        }
+      }
+    },
+    "On space": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按空格键时"
+          }
+        }
+      }
+    },
+    "On wake": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "唤醒时"
+          }
+        }
+      }
+    },
+    "Only rejects obvious spoofs.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "只拒绝明显作弊。"
+          }
+        }
+      }
+    },
+    "Open Accessibility settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "打开辅助功能设置"
+          }
+        }
+      }
+    },
+    "Original": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "原版"
+          }
+        }
+      }
+    },
+    "Owner": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所有者"
+          }
+        }
+      }
+    },
+    "Password": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密码"
+          }
+        }
+      }
+    },
+    "Password and face enrollment removed.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密码和人脸录入已移除。"
+          }
+        }
+      }
+    },
+    "Password cannot be empty.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密码不能为空。"
+          }
+        }
+      }
+    },
+    "Password encrypted": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密码已加密"
+          }
+        }
+      }
+    },
+    "Password saved and encrypted.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密码已保存并加密。"
+          }
+        }
+      }
+    },
+    "Pending — nothing decided yet": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "待定——尚未判定"
+          }
+        }
+      }
+    },
+    "Permissions": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "权限"
+          }
+        }
+      }
+    },
+    "Preview": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "预览"
+          }
+        }
+      }
+    },
+    "Preview ✓": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "预览 ✓"
+          }
+        }
+      }
+    },
+    "Preview ✗": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "预览 ✗"
+          }
+        }
+      }
+    },
+    "Quit": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退出"
+          }
+        }
+      }
+    },
+    "Recapture": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新采集"
+          }
+        }
+      }
+    },
+    "Recognition": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "识别"
+          }
+        }
+      }
+    },
+    "Recognize": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "识别"
+          }
+        }
+      }
+    },
+    "Recognize: best = %@ centroid=%@ max=%@ -> %@%@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "识别：最佳 = %1$@，中心=%2$@，最大=%3$@ -> %4$@%5$@"
+          }
+        }
+      }
+    },
+    "Recognized — unlocking…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已识别——正在解锁…"
+          }
+        }
+      }
+    },
+    "Record at least one genuine and one impostor sample to get a suggestion.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请至少记录一个本人样本和一个他人样本，才能获得建议。"
+          }
+        }
+      }
+    },
+    "Refresh camera list": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刷新摄像头列表"
+          }
+        }
+      }
+    },
+    "Remove": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除"
+          }
+        }
+      }
+    },
+    "Remove password": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "移除密码"
+          }
+        }
+      }
+    },
+    "Reset cues": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重置信号"
+          }
+        }
+      }
+    },
+    "Retry on notch hover": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "悬停在刘海时重试"
+          }
+        }
+      }
+    },
+    "Right": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "右"
+          }
+        }
+      }
+    },
+    "Run Identify, then tag whether that was really you or someone else — do this across lighting, angle, and expression, and again with a different person, to see where the two score distributions actually fall.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行“识别”后标记结果是本人还是他人；请在不同光照、角度、表情下测试，并加入另一个人，观察两组分数分布的实际位置。"
+          }
+        }
+      }
+    },
+    "Running": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "运行中"
+          }
+        }
+      }
+    },
+    "Running from Xcode — permission checks resolve against Xcode’s grants, not glance’s, so this reading is meaningless. Launch glance.app on its own to see the real state.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在从 Xcode 运行：权限检查会读取 Xcode 的授权，而不是 glance 的授权，因此这个结果没有意义。请单独启动 glance.app 查看真实状态。"
+          }
+        }
+      }
+    },
+    "Save": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
+          }
+        }
+      }
+    },
+    "Save failed: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存失败：%@"
+          }
+        }
+      }
+    },
+    "Saving…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在保存…"
+          }
+        }
+      }
+    },
+    "Screen glare detected — this looks like a photo on a display.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "检测到屏幕反光——看起来像显示在屏幕上的照片。"
+          }
+        }
+      }
+    },
+    "Select camera": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择摄像头"
+          }
+        }
+      }
+    },
+    "Select multiple": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可多选"
+          }
+        }
+      }
+    },
+    "Selected display (disconnected)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "所选显示器（已断开连接）"
+          }
+        }
+      }
+    },
+    "Send": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发送"
+          }
+        }
+      }
+    },
+    "Send Feedback": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发送反馈"
+          }
+        }
+      }
+    },
+    "Session Locked": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话已锁定"
+          }
+        }
+      }
+    },
+    "Session Unlocked": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话已解锁"
+          }
+        }
+      }
+    },
+    "Session is locked. Authenticate with Touch ID before storing or using the password.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话已锁定。请先使用触控 ID 验证，才能存储或使用密码。"
+          }
+        }
+      }
+    },
+    "Session is locked. Authenticate with Touch ID to access enrolled faces.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话已锁定。请使用触控 ID 验证以访问已录入的人脸。"
+          }
+        }
+      }
+    },
+    "Session locked": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话已锁定"
+          }
+        }
+      }
+    },
+    "Session locked — authenticate with Touch ID first.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话已锁定——请先使用触控 ID 验证。"
+          }
+        }
+      }
+    },
+    "Session locked — enrolled faces are encrypted and can't be read or saved yet.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话已锁定——已录入的人脸仍处于加密状态，暂不能读取或保存。"
+          }
+        }
+      }
+    },
+    "Session unlocked": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话已解锁"
+          }
+        }
+      }
+    },
+    "Session unlocked.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话已解锁。"
+          }
+        }
+      }
+    },
+    "Set password": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置密码"
+          }
+        }
+      }
+    },
+    "Set up Face\nRecognition": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置\\n人脸识别"
+          }
+        }
+      }
+    },
+    "Set up Face Unlock": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置人脸解锁"
+          }
+        }
+      }
+    },
+    "Set up Glance": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置 Glance"
+          }
+        }
+      }
+    },
+    "Set up a password": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置密码"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置"
+          }
+        }
+      }
+    },
+    "Show animation": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示动画"
+          }
+        }
+      }
+    },
+    "Show in menu bar": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在菜单栏中显示"
+          }
+        }
+      }
+    },
+    "Show preview": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "显示预览"
+          }
+        }
+      }
+    },
+    "Similarity": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "相似度"
+          }
+        }
+      }
+    },
+    "Skipped: CGSession reports screen is not actually locked.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已跳过：CGSession 显示屏幕实际并未锁定。"
+          }
+        }
+      }
+    },
+    "Specular: %@  Cluster: %@  Crop: %lldpx": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高光：%1$@  聚类：%2$@  裁剪：%3$lldpx"
+          }
+        }
+      }
+    },
+    "Specular: — (no native-resolution crop this frame)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "高光：—（此帧没有原生分辨率裁剪）"
+          }
+        }
+      }
+    },
+    "Spoof — denied by %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "疑似作弊——被%@拒绝"
+          }
+        }
+      }
+    },
+    "Start": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "启动"
+          }
+        }
+      }
+    },
+    "Start Onboarding": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始设置"
+          }
+        }
+      }
+    },
+    "Starting guided enrollment for a new identity.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在为新身份启动引导录入。"
+          }
+        }
+      }
+    },
+    "Starting guided re-capture of \"%@\".": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在启动 \"%@\" 的重新引导采集。"
+          }
+        }
+      }
+    },
+    "Starting the full onboarding flow.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在启动完整设置流程。"
+          }
+        }
+      }
+    },
+    "Stop": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止"
+          }
+        }
+      }
+    },
+    "Stopped": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已停止"
+          }
+        }
+      }
+    },
+    "Strength": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "强度"
+          }
+        }
+      }
+    },
+    "Style": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "样式"
+          }
+        }
+      }
+    },
+    "Suggested threshold: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "建议阈值：%@"
+          }
+        }
+      }
+    },
+    "System default": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系统默认"
+          }
+        }
+      }
+    },
+    "The animation that appears when unlocking your Mac": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解锁 Mac 时显示的动画"
+          }
+        }
+      }
+    },
+    "The session key is missing, but encrypted data still exists that only it could read. Nothing has been deleted. Remove the stored password on the Password tab to clear both and start fresh.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "会话密钥缺失，但仍存在只有它才能读取的加密数据。没有任何数据被删除。请在“密码”标签页移除已存密码，同时清除两者并重新开始。"
+          }
+        }
+      }
+    },
+    "The stored data couldn't be decrypted with this session key.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法使用当前会话密钥解密存储的数据。"
+          }
+        }
+      }
+    },
+    "Threshold": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "阈值"
+          }
+        }
+      }
+    },
+    "Threshold Calibration": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "阈值校准"
+          }
+        }
+      }
+    },
+    "Threshold: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "阈值：%@"
+          }
+        }
+      }
+    },
+    "Too far down": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "太偏下"
+          }
+        }
+      }
+    },
+    "Too far left": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "太偏左"
+          }
+        }
+      }
+    },
+    "Too far right": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "太偏右"
+          }
+        }
+      }
+    },
+    "Too far toward the bottom left": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "太偏左下"
+          }
+        }
+      }
+    },
+    "Too far toward the bottom right": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "太偏右下"
+          }
+        }
+      }
+    },
+    "Too far toward the top left": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "太偏左上"
+          }
+        }
+      }
+    },
+    "Too far toward the top right": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "太偏右上"
+          }
+        }
+      }
+    },
+    "Too far up": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "太偏上"
+          }
+        }
+      }
+    },
+    "Top left": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "左上"
+          }
+        }
+      }
+    },
+    "Top right": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "右上"
+          }
+        }
+      }
+    },
+    "Triggers": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "触发条件"
+          }
+        }
+      }
+    },
+    "Turn your head slightly down": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "头部稍微向下低"
+          }
+        }
+      }
+    },
+    "Turn your head slightly left": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "头部稍微向左转"
+          }
+        }
+      }
+    },
+    "Turn your head slightly right": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "头部稍微向右转"
+          }
+        }
+      }
+    },
+    "Turn your head slightly up": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "头部稍微向上抬"
+          }
+        }
+      }
+    },
+    "Turn your head to the bottom left": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "头部转向左下方"
+          }
+        }
+      }
+    },
+    "Turn your head to the bottom right": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "头部转向右下方"
+          }
+        }
+      }
+    },
+    "Turn your head to the top left": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "头部转向左上方"
+          }
+        }
+      }
+    },
+    "Turn your head to the top right": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "头部转向右上方"
+          }
+        }
+      }
+    },
+    "Type": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "类型"
+          }
+        }
+      }
+    },
+    "Unlock": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解锁"
+          }
+        }
+      }
+    },
+    "Unlock session": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解锁会话"
+          }
+        }
+      }
+    },
+    "Unlock the session to view enrolled identities.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "解锁会话以查看已录入的身份。"
+          }
+        }
+      }
+    },
+    "Up": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上"
+          }
+        }
+      }
+    },
+    "Use it": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "采用"
+          }
+        }
+      }
+    },
+    "Used for Face enrollment and for unlocking your Mac": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用于录入人脸和解锁 Mac"
+          }
+        }
+      }
+    },
+    "Used to tell enrolled faces apart when more than one person is set up on this Mac.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当这台 Mac 上设置了多人时，用于区分已录入的人脸。"
+          }
+        }
+      }
+    },
+    "Using %@.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在使用 %@。"
+          }
+        }
+      }
+    },
+    "Version %@ (%@)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "版本 %1$@（版本号 %2$@）"
+          }
+        }
+      }
+    },
+    "Vision did not produce a feature print for this image.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vision 未生成此图像的特征描述。"
+          }
+        }
+      }
+    },
+    "Yaw: %@  Pitch: %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "偏航：%1$@  俯仰：%2$@"
+          }
+        }
+      }
+    },
+    "You're all set": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置完成"
+          }
+        }
+      }
+    },
+    "Your enrolled faces couldn't be read, so nothing was saved — writing now would overwrite them.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法读取已录入的人脸，因此未保存任何内容——现在写入会覆盖原有数据。"
+          }
+        }
+      }
+    },
+    "Your password is required to unlock your Mac. It is encrypted and securely stored on your device. Glance works entirely offline, so your password never leaves your Mac.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要你的密码才能解锁 Mac。密码会加密并安全存储在这台设备上。Glance 完全离线运行，密码不会离开你的 Mac。"
+          }
+        }
+      }
+    },
+    "authorized": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已授权"
+          }
+        }
+      }
+    },
+    "bottom": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下方"
+          }
+        }
+      }
+    },
+    "bottom_left": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "左下"
+          }
+        }
+      }
+    },
+    "bottom_right": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "右下"
+          }
+        }
+      }
+    },
+    "center": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正面"
+          }
+        }
+      }
+    },
+    "centroid %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "中心 %@"
+          }
+        }
+      }
+    },
+    "denied": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已拒绝"
+          }
+        }
+      }
+    },
+    "eye / faceW": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "眼睛 / 脸宽"
+          }
+        }
+      }
+    },
+    "eye / nose-mouth": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "眼睛 / 鼻嘴距"
+          }
+        }
+      }
+    },
+    "interocular": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "瞳距"
+          }
+        }
+      }
+    },
+    "left": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "左侧"
+          }
+        }
+      }
+    },
+    "live via %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通过%@确认活体"
+          }
+        }
+      }
+    },
+    "liveness clear": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "活体检测通过"
+          }
+        }
+      }
+    },
+    "liveness off": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "活体检测已关闭"
+          }
+        }
+      }
+    },
+    "macOS reports this as *restricted* — not a simple user denial. This usually means Screen Time content restrictions or an MDM/profile policy is blocking camera access for this app; toggling it in System Settings > Privacy & Security > Camera won't help until that restriction is lifted.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS 将其报告为“受限”，而不是简单的用户拒绝。这通常是“屏幕使用时间”内容限制或 MDM/描述文件策略阻止了此应用访问摄像头；在限制解除前，仅在“系统设置”>“隐私与安全性”>“摄像头”中切换开关不会有帮助。"
+          }
+        }
+      }
+    },
+    "max %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "最大 %@"
+          }
+        }
+      }
+    },
+    "mouthW / faceW": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "嘴宽 / 脸宽"
+          }
+        }
+      }
+    },
+    "no match": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不匹配"
+          }
+        }
+      }
+    },
+    "nose-eye / faceH": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鼻眼 / 脸高"
+          }
+        }
+      }
+    },
+    "nose-mouth / faceH": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "鼻嘴 / 脸高"
+          }
+        }
+      }
+    },
+    "notDetermined": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未确定"
+          }
+        }
+      }
+    },
+    "padded crop (no alignment)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "填充裁剪（未对齐）"
+          }
+        }
+      }
+    },
+    "restricted": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "受限"
+          }
+        }
+      }
+    },
+    "right": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "右侧"
+          }
+        }
+      }
+    },
+    "stale": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已过期"
+          }
+        }
+      }
+    },
+    "top": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上方"
+          }
+        }
+      }
+    },
+    "top_left": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "左上"
+          }
+        }
+      }
+    },
+    "top_right": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "右上"
+          }
+        }
+      }
+    },
+    "unknown reason": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未知原因"
+          }
+        }
+      }
+    },
+    "unknown(%lld)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未知（%lld）"
+          }
+        }
+      }
+    },
+    "untagged": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未标记"
+          }
+        }
+      }
+    },
+    "yaw range (deg)": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "偏航范围（度）"
+          }
+        }
+      }
+    },
+    "“On space” reads the keyboard directly to see the space key on the lock screen, which needs Accessibility — the same permission glance uses to type your password. Switch glance on under Privacy & Security → Accessibility, then quit and reopen glance.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“按空格键时”需要直接读取键盘，以便在锁屏界面检测空格键；这需要“辅助功能”权限，与 glance 输入密码所用的权限相同。请在“隐私与安全性”→“辅助功能”中开启 glance，然后退出并重新打开 glance。"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

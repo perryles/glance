@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 enum EnrollmentSweepDirection: CaseIterable, Hashable {
     case left, right, up, down, topLeft, topRight, bottomLeft, bottomRight
@@ -43,14 +44,14 @@ enum EnrollmentSweepDirection: CaseIterable, Hashable {
 
     var previewLabel: String {
         switch self {
-        case .left:        return "左"
-        case .right:       return "右"
-        case .up:          return "上"
-        case .down:        return "下"
-        case .topLeft:     return "左上"
-        case .topRight:    return "右上"
-        case .bottomLeft:  return "左下"
-        case .bottomRight: return "右下"
+        case .left:        return String(localized: "Left")
+        case .right:       return String(localized: "Right")
+        case .up:          return String(localized: "Up")
+        case .down:        return String(localized: "Down")
+        case .topLeft:     return String(localized: "Top left")
+        case .topRight:    return String(localized: "Top right")
+        case .bottomLeft:  return String(localized: "Bottom left")
+        case .bottomRight: return String(localized: "Bottom right")
         }
     }
 }
@@ -340,7 +341,7 @@ private struct SweepStreak: View {
 
 // MARK: - Previews
 
-#Preview("所有方向") {
+#Preview(String(localized: "All directions")) {
     let columns = [
         GridItem(.flexible(), spacing: 8),
         GridItem(.flexible(), spacing: 8),
@@ -366,7 +367,7 @@ private struct SweepStreak: View {
     .background(Color.black)
 }
 
-#Preview("循环") {
+#Preview(String(localized: "Cycling")) {
     struct CyclingSweepPreview: View {
         @State private var index = 0
         private let directions = EnrollmentSweepDirection.allCases

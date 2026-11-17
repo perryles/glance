@@ -1,0 +1,28 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "CFBundleName": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "glance"
+          }
+        }
+      }
+    },
+    "NSCameraUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "glance 会在设备上使用摄像头识别人脸以解锁 Mac，并让你在设置中录入和预览人脸。"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

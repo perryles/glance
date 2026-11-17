@@ -10,6 +10,7 @@
 import SwiftUI
 import AppKit
 import CoreImage
+import Foundation
 
 
 /// What a tab's icon actually is — a built-in SF Symbol, or a template
@@ -35,7 +36,7 @@ struct SettingsInfoButton: View {
                 .foregroundStyle(SettingsMetrics.textTertiary)
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("更多信息")
+        .accessibilityLabel(String(localized: "More information"))
         .popover(isPresented: $isPresented, arrowEdge: .bottom) {
             Text(text)
                 .font(.system(size: 12))
@@ -692,8 +693,8 @@ struct UnlockAnimationPicker: View {
 
     var body: some View {
         SettingsLabeledOptionRow(
-            title: "样式",
-            subtitle: "解锁 Mac 时显示的动画"
+            title: String(localized: "Style"),
+            subtitle: String(localized: "The animation that appears when unlocking your Mac")
         ) {
             ForEach(UnlockAnimationStyle.selectableCases) { style in
                 SettingsOptionTile(
@@ -779,8 +780,8 @@ struct LivenessModePicker: View {
 
     var body: some View {
         SettingsLabeledOptionRow(
-            title: "强度",
-            subtitle: "轻度提供基础防护。重度需要你眨眼或轻微移动头部。"
+            title: String(localized: "Strength"),
+            subtitle: String(localized: "Light includes basic protection. Heavy requires you to blink or slightly move your head.")
         ) {
             ForEach(LivenessMode.allCases) { mode in
                 SettingsOptionTile(
@@ -819,7 +820,7 @@ struct UnlockTriggerPicker: View {
     var isEnabled: Bool = true
 
     var body: some View {
-        SettingsLabeledOptionRow(title: "触发条件", subtitle: "可多选") {
+        SettingsLabeledOptionRow(title: String(localized: "Triggers"), subtitle: String(localized: "Select multiple")) {
             ForEach(UnlockTrigger.allCases) { trigger in
                 let isSelected = selection.contains(trigger)
                 SettingsOptionTile(

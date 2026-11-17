@@ -4,6 +4,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct CameraSettingsPage: View {
     @Bindable var pocController: POCController
@@ -55,8 +56,8 @@ struct CameraSettingsPage: View {
     private var lockedState: some View {
         SettingsEmptyStateView(
             icon: "lock.fill",
-            message: "会话已锁定",
-            buttonTitle: isUnlocking ? "正在验证…" : "解锁会话",
+            message: String(localized: "Session locked"),
+            buttonTitle: isUnlocking ? String(localized: "Authenticating…") : String(localized: "Unlock session"),
             isButtonEnabled: !isUnlocking,
             caption: sessionError,
             action: unlock
@@ -68,14 +69,14 @@ struct CameraSettingsPage: View {
     private var unlockedState: some View {
         VStack(alignment: .leading, spacing: SettingsMetrics.rowSpacing) {
             SettingsGroup {
-                cameraPicker(title: "默认", selection: $settings.defaultCameraID)
+                cameraPicker(title: String(localized: "Default"), selection: $settings.defaultCameraID)
                 SettingsGroupDivider()
-                cameraPicker(title: "内建显示屏", selection: $settings.builtInDisplayCameraID)
+                cameraPicker(title: String(localized: "Built-in display"), selection: $settings.builtInDisplayCameraID)
                 SettingsGroupDivider()
-                cameraPicker(title: "外接显示屏", selection: $settings.externalDisplayCameraID)
+                cameraPicker(title: String(localized: "External display"), selection: $settings.externalDisplayCameraID)
             }
 
-            SettingsSectionTitle(text: "预览")
+            SettingsSectionTitle(text: String(localized: "Preview"))
             .padding(.bottom, -4)
             previewArea
                 .frame(height: 220)
@@ -94,7 +95,7 @@ struct CameraSettingsPage: View {
         .onChange(of: settings.externalDisplayCameraID) { restartPreview() }
     }
 
-    /// Live feed, or a placeholder until "显示预览" is tapped — opening
+    /// Live feed, or a placeholder until String(localized: "Show preview") is tapped — opening
     /// this page alone should never request camera access.
     @ViewBuilder
     private var previewArea: some View {
@@ -103,7 +104,7 @@ struct CameraSettingsPage: View {
         } else {
             ZStack {
                 SettingsMetrics.rowColor
-                SettingsPrimaryButton(title: "显示预览", action: showPreview)
+                SettingsPrimaryButton(title: String(localized: "Show preview"), action: showPreview)
             }
         }
     }
@@ -131,7 +132,7 @@ struct CameraSettingsPage: View {
     private func cameraPicker(title: String, selection: Binding<String?>) -> some View {
         SettingsRowContent(title: title) {
             SettingsMenuPickerPill(label: cameraLabel(for: selection.wrappedValue)) {
-                Button("系统默认") { selection.wrappedValue = nil }
+                Button(String(localized: "System default")) { selection.wrappedValue = nil }
                 ForEach(devices) { device in
                     Button(device.name) { selection.wrappedValue = device.id }
                 }
@@ -146,7 +147,7 @@ struct CameraSettingsPage: View {
 
     private func cameraLabel(for id: String?) -> String {
         guard let id, let device = devices.first(where: { $0.id == id }) else {
-            return "系统默认"
+            return String(localized: "System default")
         }
         return device.name
     }

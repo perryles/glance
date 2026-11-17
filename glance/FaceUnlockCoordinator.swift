@@ -114,11 +114,11 @@ final class FaceUnlockCoordinator {
         guard NotchGeometry.preferredScreen() != nil else { return }
 
         guard SecureCredentialManager.isSessionUnlocked else {
-            statusMessage = "人脸解锁已开启，但会话仍处于锁定状态。请先在“密码”设置中完成一次验证。"
+            statusMessage = String(localized: "Face unlock is on, but the session is locked — authenticate once from Password settings first.")
             return
         }
         guard SecureCredentialManager.hasStoredPassword() else {
-            statusMessage = "人脸解锁已开启，但尚未存储密码。"
+            statusMessage = String(localized: "Face unlock is on, but no password is stored yet.")
             return
         }
 
@@ -251,7 +251,7 @@ final class FaceUnlockCoordinator {
         if showsUI {
             NotchOverlayController.shared.beginScanning()
         }
-        statusMessage = "正在寻找你的脸…"
+        statusMessage = String(localized: "Looking for your face…")
 
         let outcome = await observeScanWindow(
             deadline: Date().addingTimeInterval(scanWindowDuration),
@@ -270,28 +270,28 @@ final class FaceUnlockCoordinator {
                 NotchOverlayController.shared.finish(success: true)
             }
         case .consistentlyWrongFace:
-            statusMessage = "未识别人脸。"
+            statusMessage = String(localized: "Face not recognized.")
             if showsUI {
                 NotchOverlayController.shared.finish(success: false)
-                statusMessage = "未识别人脸——将指针悬停在刘海上即可重试。"
+                statusMessage = String(localized: "Face not recognized — hover the notch to try again.")
                 scheduleAutoRetryIfEnabled(after: NotchOverlayController.shared.failureHoldDuration)
             } else {
                 scheduleAutoRetryIfEnabled(after: headlessRetryDelay)
             }
         case .spoofSuspected:
-            statusMessage = "无法确认这是活体人脸。"
+            statusMessage = String(localized: "Couldn't confirm a live face.")
             if showsUI {
                 NotchOverlayController.shared.finish(success: false)
-                statusMessage = "无法确认这是活体人脸——将指针悬停在刘海上即可重试。"
+                statusMessage = String(localized: "Couldn't confirm a live face — hover the notch to try again.")
                 scheduleAutoRetryIfEnabled(after: NotchOverlayController.shared.failureHoldDuration)
             } else {
                 scheduleAutoRetryIfEnabled(after: headlessRetryDelay)
             }
         case .noResolution:
-            statusMessage = "未检测到人脸。"
+            statusMessage = String(localized: "No face detected.")
             if showsUI {
                 // No explicit collapse call: NotchOverlayController's own scanning timeout fires on the same mark and collapses itself.
-                statusMessage = "未检测到人脸——将指针悬停在刘海上即可重试。"
+                statusMessage = String(localized: "No face detected — hover the notch to try again.")
                 scheduleAutoRetryIfEnabled(after: NotchOverlayController.shared.collapseAnimationDuration)
             } else {
                 scheduleAutoRetryIfEnabled(after: headlessRetryDelay)
@@ -407,11 +407,11 @@ final class FaceUnlockCoordinator {
             }
 
             if let readyMatch, livenessConfirmed {
-                statusMessage = "已识别——正在解锁…"
+                statusMessage = String(localized: "Recognized — unlocking…")
                 let livenessNote = livenessEnabled
-                    ? (confirmingCue.map { "通过\($0.title)确认活体" } ?? "活体检测通过")
-                    : "活体检测已关闭"
-                lastOutcome = "已匹配 \(readyMatch.identity.name)，中心相似度 \(String(format: "%.3f", readyMatch.centroidSimilarity))，\(livenessNote)。"
+                    ? (confirmingCue.map { String(localized: "live via \($0.title)") } ?? String(localized: "liveness clear"))
+                    : String(localized: "liveness off")
+                lastOutcome = String(localized: "Matched \(readyMatch.identity.name) at \(String(format: "%.3f", readyMatch.centroidSimilarity)), \(livenessNote).")
                 await pocController.injectStoredPassword(requireAuthoritativeLock: true)
                 return .matched
             }
