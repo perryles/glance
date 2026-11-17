@@ -1,24 +1,24 @@
-# Glance 1.2.1（build 7）
+# Glance 1.2.1 (build 7)
 
-以下更新以 jonnyoo/glance main（b97f521）为比较基准。安装包为 **Glance-1.2.1.dmg**，支持 Apple Silicon、macOS 15 及以上。[上游比较基准](https://github.com/jonnyoo/glance/tree/b97f521397ec1197ba17768ba797cae1e628848d)
+Changes compared with jonnyoo/glance main at b97f521. Download **Glance-1.2.1.dmg** for Apple Silicon Macs running macOS 15 or later. [Upstream baseline](https://github.com/jonnyoo/glance/tree/b97f521397ec1197ba17768ba797cae1e628848d)
 
-## 新的
+## New
 
-- **中文和土耳其语**：补齐设置、首次设置、权限、错误提示及新增红外页面；跟随系统语言，也可在 macOS 的应用语言设置中指定。
-- **系统密码辅助**：启用后聚焦受支持的 Apple 系统密码框，按 Control + Option + Command + F，完成脸部验证后填写 Mac 登录密码，再由用户确认。检查系统代理签名、密码框归属和焦点；不提供原生 Face ID / Touch ID / 通行密钥认证接口，不填充网站或任意应用密码框。
-- **BRIO 红外**：移植 JediBrooker 的 PR #50（e089499），包含签名辅助程序、三次独立录入及加密模板。默认关闭；启用后锁屏和系统密码辅助都要求彩色身份、重度活体和同一身份的新鲜红外匹配，缺少设备、授权或模板时拒绝人脸解锁。[PR #50](https://github.com/jonnyoo/glance/pull/50)
+- Added Simplified Chinese and Turkish translations for settings, onboarding, permissions, error messages and the new infrared pages. Glance follows your system language and supports the per-app language selection in macOS settings.
+- Added system password assistance. Enable it, focus a supported Apple system password field and press **Control + Option + Command + F**. After face verification, Glance fills your Mac login password for you to confirm. The field owner, focus and Apple system-agent signature are checked. Supported prompts are the secure password fields owned by SecurityAgent and LocalAuthentication UIAgent. Native Face ID, Touch ID and passkey authentication remain outside this feature's scope.
+- Added experimental Logitech BRIO infrared support, ported from JediBrooker's PR #50 at e089499. Includes a signed helper, three independent enrollment scans and encrypted templates. Disabled by default. When enabled, both lock-screen unlock and system password assistance require colour identity recognition, Heavy liveness and a fresh infrared match for the same identity. Missing hardware, approval or enrollment denies face unlock. [PR #50](https://github.com/jonnyoo/glance/pull/50)
 
-## 改进
+## Improvements
 
-- 保留识别距离设置，改善摄像头交接及反光分析。
-- 更新检查、反馈和下载入口指向 perryles 仓库。内部版本从 6 提升到 7。
+- Improved camera handoff and recovery after infrared capture, and refined glare analysis while preserving the recognition-distance setting.
+- Pointed update checks, feedback and download links to the perryles repository. Increased the internal build number from 6 to 7.
 
-## 修复
+## Fixes
 
-- **空格键触发**：监听提前建立并贯穿睡眠，处理唤醒/锁屏状态切换、重复按键和键盘重连。
-- 修复钥匙串迁移读取失败时误删旧数据的问题。
-- 会话变更立即撤销旧识别和密码提交。
+- Improved space-key triggering across sleep, wake and lock transitions, repeated key events and keyboard reconnections by establishing input monitoring earlier and keeping it active through sleep.
+- Fixed keychain migration potentially deleting old data after a read failure. Migration now verifies the destination before removing the source.
+- Invalidated in-flight recognition, infrared enrollment and password submission when the credential session changes.
 
-签名 Release 构建、8 组离线红外/活体回归、空格状态、系统提示策略、钥匙串迁移、加密存储和会话更替、红外底层离线检查、中/土语言资源及应用/辅助程序签名检查通过。
+The signed Release build, eight offline infrared/liveness regression suites, space-key state checks, system-prompt trust policy, keychain migration, encrypted storage and session checks, native infrared offline checks, Chinese/Turkish resources, and app/helper signature checks passed.
 
-BRIO 红外功能处于实验阶段，目前没有红外摄像头，真机录入、完整解锁和防伪阈值尚待验证。锁屏/睡眠唤醒及系统密码框填写仍需实机交互验收。安装包使用 Apple Development 证书签名，尚未完成 Developer ID 公证，其他 Mac 的安装运行可能受系统限制。
+Infrared support remains experimental. BRIO enrollment, end-to-end unlock and spoof-resistance thresholds still need hardware validation because no infrared camera was available. Lock-screen, sleep/wake and system password-field interactions also need live acceptance testing. The download is signed with an Apple Development certificate and has not been Developer ID notarized, which may limit installation or execution on other Macs.
