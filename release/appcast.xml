@@ -9,7 +9,7 @@
             <sparkle:shortVersionString>1.2.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/perryles/glance/releases/latest/download/Glance-1.2.2.dmg" length="12712250" type="application/octet-stream" sparkle:edSignature="/M/sJAE887Nrp9bBXo88Ji1fY7Oh/du3GRWdL6oRBcLg/a8qRJxoBUCvivuSZM7jQeN/xlAC8JUM5vGykLyoBQ==" />
+            <enclosure url="https://github.com/perryles/glance/releases/latest/download/Glance-1.2.2.dmg" length="12712298" type="application/octet-stream" sparkle:edSignature="HIbNBA2wBbqh5XxPlh9a2AbN3E5b37euHr0u0+t8goqgbz2PcLKCW6dmUGJsfPDuccmKkPlro/k4y4rSgDy3CA==" />
         </item>
     </channel>
 </rss>
