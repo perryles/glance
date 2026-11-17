@@ -9,8 +9,8 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 FEED_URL = "https://github.com/perryles/glance/releases/latest/download/appcast.xml"
-DOWNLOAD_URL = "https://github.com/perryles/glance/releases/latest/download/Glance-1.2.1.dmg"
-ARCHIVE_NAME = "Glance-1.2.1.dmg"
+DOWNLOAD_URL = "https://github.com/perryles/glance/releases/latest/download/Glance-1.2.2.dmg"
+ARCHIVE_NAME = "Glance-1.2.2.dmg"
 
 
 def sparkle_child_text(element, local_name):
@@ -29,8 +29,8 @@ def main():
     project = (root / "glance.xcodeproj/project.pbxproj").read_text()
     short_versions = re.findall(r"^\t*MARKETING_VERSION = ([^;]+);", project, re.MULTILINE)
     bundle_versions = re.findall(r"^\t*CURRENT_PROJECT_VERSION = ([^;]+);", project, re.MULTILINE)
-    assert short_versions == ["1.2.1", "1.2.1"], short_versions
-    assert bundle_versions == ["5", "5"], bundle_versions
+    assert short_versions == ["1.2.2", "1.2.2"], short_versions
+    assert bundle_versions == ["6", "6"], bundle_versions
 
     archive = root / "release" / ARCHIVE_NAME
     appcast = root / "release/appcast.xml"
@@ -43,9 +43,10 @@ def main():
     assert item is not None and enclosure is not None, "appcast has no update item"
     signature = next((value for key, value in enclosure.attrib.items() if key.endswith("}edSignature")), None)
     assert signature, "update archive is unsigned"
+    assert int(enclosure.attrib["length"]) == archive.stat().st_size
     assert enclosure.attrib.get("url") == DOWNLOAD_URL, enclosure.attrib.get("url")
-    assert sparkle_child_text(item, "version") == "5"
-    assert sparkle_child_text(item, "shortVersionString") == "1.2.1"
+    assert sparkle_child_text(item, "version") == "6"
+    assert sparkle_child_text(item, "shortVersionString") == "1.2.2"
     print("release selftest: passed")
 
 
