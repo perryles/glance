@@ -9,6 +9,12 @@
             "state": "translated",
             "value": "【已过期——请在当前模型下重新录入】"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": " [ESKİ — geçerli modelle yeniden kaydedin]"
+          }
         }
       }
     },
@@ -19,6 +25,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "删除后，\"%@\" 将不再被识别，直到重新录入。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yeniden kaydedene kadar \"%@\" tanınmayacak."
           }
         }
       }
@@ -31,6 +43,12 @@
             "state": "translated",
             "value": "%@（默认）"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ (Varsayılan)"
+          }
         }
       }
     },
@@ -41,6 +59,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%@（已断开连接）"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ (bağlı değil)"
           }
         }
       }
@@ -53,6 +77,12 @@
             "state": "translated",
             "value": "已录入 %lld 个"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld kayıtlı"
+          }
         }
       }
     },
@@ -63,6 +93,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld 帧"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld kare"
           }
         }
       }
@@ -75,16 +111,11 @@
             "state": "translated",
             "value": "%1$lld / %2$lld 个样本质量较低"
           }
-        }
-      }
-    },
-    "%lld sample%@": {
-      "extractionState": "manual",
-      "localizations": {
-        "zh-Hans": {
+        },
+        "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "%1$lld 个样本"
+            "value": "%2$lld örneğin %1$lld tanesi düşük kaliteli"
           }
         }
       }
@@ -97,6 +128,12 @@
             "state": "translated",
             "value": "%1$lld/%2$lld"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld/%lld"
+          }
         }
       }
     },
@@ -107,6 +144,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%1$lld/9 个姿态 · %2$lld 个样本 · 录入于 %3$@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld/9 poz · %lld örnek · kayıt tarihi %@"
           }
         }
       }
@@ -119,6 +162,12 @@
             "state": "translated",
             "value": "%lld 秒"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld sn"
+          }
         }
       }
     },
@@ -129,6 +178,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "（ArcFace 不可用——详情见日志）"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "(ArcFace kullanılamıyor — günlüğe bakın)"
           }
         }
       }
@@ -141,6 +196,12 @@
             "state": "translated",
             "value": "两点（仅眼睛）"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2 noktalı (yalnızca gözler)"
+          }
         }
       }
     },
@@ -151,6 +212,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "五点"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "5 noktalı"
           }
         }
       }
@@ -163,6 +230,12 @@
             "state": "translated",
             "value": "7 天"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "7 gün"
+          }
         }
       }
     },
@@ -173,6 +246,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "14 天"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "14 gün"
           }
         }
       }
@@ -185,6 +264,12 @@
             "state": "translated",
             "value": "30 天"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 gün"
+          }
         }
       }
     },
@@ -195,6 +280,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "设备形状的矩形覆盖了人脸——像是举起的手机或平板。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüzle örtüşen cihaz biçiminde bir dikdörtgen var — telefon veya tablet tutuluyor olabilir."
           }
         }
       }
@@ -207,6 +298,12 @@
             "state": "translated",
             "value": "在人脸周围检测到设备形状的矩形——看起来像照片或屏幕。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüzün çevresinde cihaz biçiminde bir dikdörtgen algılandı — fotoğraf veya ekran olabilir."
+          }
         }
       }
     },
@@ -217,6 +314,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "已经录入了名为 \"%@\" 的人脸。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\"%@\" adlı bir yüz zaten kayıtlı."
           }
         }
       }
@@ -229,6 +332,12 @@
             "state": "translated",
             "value": "关于"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hakkında"
+          }
         }
       }
     },
@@ -239,6 +348,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "弃权——头部转动不足，无法区分平面图像和静止的 3D 人脸。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Karar verilemiyor — düz bir yüzey ile hareketsiz üç boyutlu bir yüzü ayırt etmek için baş dönüşü yetersiz."
           }
         }
       }
@@ -251,6 +366,12 @@
             "state": "translated",
             "value": "辅助功能"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erişilebilirlik"
+          }
         }
       }
     },
@@ -261,6 +382,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "未授予辅助功能权限。请打开系统设置并启用 glance。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erişilebilirlik izni verilmedi — Sistem Ayarları'nı açıp glance için izin verin."
           }
         }
       }
@@ -273,6 +400,12 @@
             "state": "translated",
             "value": "需要辅助功能权限。请打开“系统设置”→“隐私与安全性”→“辅助功能”，并启用 glance。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erişilebilirlik izni gerekiyor. Sistem Ayarları → Gizlilik ve Güvenlik → Erişilebilirlik bölümünden glance için izin verin."
+          }
         }
       }
     },
@@ -283,6 +416,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "添加身份"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kimlik Ekle"
           }
         }
       }
@@ -295,6 +434,12 @@
             "state": "translated",
             "value": "已对齐人脸"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hizalanmış yüz"
+          }
         }
       }
     },
@@ -305,6 +450,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "已对齐输入"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hizalanmış girdi"
           }
         }
       }
@@ -317,6 +468,12 @@
             "state": "translated",
             "value": "对齐方式：%@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hizalama: %@"
+          }
         }
       }
     },
@@ -327,6 +484,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "允许 Glance 识别你的脸"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glance'ın yüzünüzü tanımasına izin verin"
           }
         }
       }
@@ -339,6 +502,12 @@
             "state": "translated",
             "value": "允许 Glance 解锁你的 Mac"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glance'ın Mac'inizin kilidini açmasına izin verin"
+          }
         }
       }
     },
@@ -349,6 +518,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "还要求证明这是真人。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gerçek bir yüz olduğuna dair kanıt da gerektirir."
           }
         }
       }
@@ -361,6 +536,12 @@
             "state": "translated",
             "value": "动画"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Animasyon"
+          }
         }
       }
     },
@@ -371,6 +552,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "任一信号触发即通过活体检测。没有触发并不算失败，扫描会继续等待。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu sinyallerden herhangi biri algılanırsa canlılık doğrulanır. Hiçbiri algılanmazsa tarama devam eder."
           }
         }
       }
@@ -383,6 +570,12 @@
             "state": "translated",
             "value": "ArcFace 模型输出异常：%@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ArcFace modeli beklenmeyen bir çıktı üretti: %@"
+          }
         }
       }
     },
@@ -393,6 +586,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "ArcFace 不可用（%@）——改用 Vision Feature Print。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ArcFace kullanılamıyor (%@) — Vision Feature Print kullanılıyor."
           }
         }
       }
@@ -405,6 +604,12 @@
             "state": "translated",
             "value": "应用包中未找到 ArcFace.mlpackage/mlmodelc。请运行 tools/convert_arcface.py，然后将 glance/Models/ArcFace.mlpackage 添加到 Xcode 项目。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uygulama paketinde ArcFace.mlpackage/mlmodelc bulunamadı. tools/convert_arcface.py dosyasını çalıştırıp glance/Models/ArcFace.mlpackage dosyasını Xcode projesine ekleyin."
+          }
         }
       }
     },
@@ -415,6 +620,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "ArcFaceEmbedder 需要尺寸为 %1$lldx%2$lld 的已对齐图像，但收到 %3$lldx%4$lld。请先通过 FaceAligner 处理人脸。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ArcFaceEmbedder %lldx%lld boyutunda hizalanmış bir görüntü bekliyor, alınan boyut %lldx%lld. Önce yüzü FaceAligner ile işleyin."
           }
         }
       }
@@ -427,6 +638,12 @@
             "state": "translated",
             "value": "验证以录入另一张人脸"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başka bir yüz kaydetmek için kimliğinizi doğrulayın"
+          }
         }
       }
     },
@@ -437,6 +654,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "验证以重新采集此人脸"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu yüzü yeniden kaydetmek için kimliğinizi doğrulayın"
           }
         }
       }
@@ -449,6 +672,12 @@
             "state": "translated",
             "value": "验证以重新录入人脸"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüzünüzü yeniden kaydetmek için kimliğinizi doğrulayın"
+          }
         }
       }
     },
@@ -459,6 +688,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "验证以设置或使用 glance"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "glance'ı ayarlamak veya kullanmak için kimliğinizi doğrulayın"
           }
         }
       }
@@ -471,6 +706,12 @@
             "state": "translated",
             "value": "验证以使用人脸实验室"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz Laboratuvarı'nı kullanmak için kimliğinizi doğrulayın"
+          }
         }
       }
     },
@@ -481,6 +722,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "验证以查看已录入的人脸"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kayıtlı yüzünüzü görmek için kimliğinizi doğrulayın"
           }
         }
       }
@@ -493,6 +740,12 @@
             "state": "translated",
             "value": "正在验证…"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Doğrulanıyor…"
+          }
         }
       }
     },
@@ -503,6 +756,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "验证已取消或失败。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kimlik doğrulama iptal edildi veya başarısız oldu."
           }
         }
       }
@@ -515,6 +774,12 @@
             "state": "translated",
             "value": "自动锁定会话"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oturumu otomatik kilitle"
+          }
         }
       }
     },
@@ -525,6 +790,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "失败后自动重试一次"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başarısız olursa bir kez otomatik yeniden dene"
           }
         }
       }
@@ -537,6 +808,12 @@
             "state": "translated",
             "value": "自动检查更新"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Güncellemeleri otomatik denetle"
+          }
         }
       }
     },
@@ -547,6 +824,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "上一步"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geri"
           }
         }
       }
@@ -559,6 +842,12 @@
             "state": "translated",
             "value": "行为"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Davranış"
+          }
         }
       }
     },
@@ -569,6 +858,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "最佳匹配：%1$@——中心 %2$@，最大 %3$@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En iyi eşleşme: %@ — merkez benzerliği %@, en yüksek %@"
           }
         }
       }
@@ -581,6 +876,12 @@
             "state": "translated",
             "value": "眨眼"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Göz kırpma"
+          }
         }
       }
     },
@@ -591,6 +892,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "左下"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sol alt"
           }
         }
       }
@@ -603,6 +910,12 @@
             "state": "translated",
             "value": "右下"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sağ alt"
+          }
         }
       }
     },
@@ -613,6 +926,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "请靠近一些"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüzünüzü yaklaştırın"
           }
         }
       }
@@ -625,6 +944,12 @@
             "state": "translated",
             "value": "内建显示屏"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yerleşik ekran"
+          }
         }
       }
     },
@@ -634,7 +959,13 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "校准：已在相似度 %2$@ 记录一个%2$@样本。"
+            "value": "校准：已在相似度 %2$@ 记录一个“%1$@”样本。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kalibrasyon: %@ örneği %@ puanıyla kaydedildi."
           }
         }
       }
@@ -647,6 +978,12 @@
             "state": "translated",
             "value": "摄像头"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kamera"
+          }
         }
       }
     },
@@ -657,6 +994,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "摄像头预览"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kamera Önizlemesi"
           }
         }
       }
@@ -669,6 +1012,12 @@
             "state": "translated",
             "value": "未授予摄像头权限（状态：%@）。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kamera erişim izni verilmedi (durum: %@). "
+          }
         }
       }
     },
@@ -679,6 +1028,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "摄像头已启动。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kamera başlatıldı."
           }
         }
       }
@@ -691,6 +1046,12 @@
             "state": "translated",
             "value": "摄像头已停止。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kamera durduruldu."
+          }
         }
       }
     },
@@ -701,6 +1062,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "取消"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İptal"
           }
         }
       }
@@ -713,6 +1080,12 @@
             "state": "translated",
             "value": "采集样本"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Örnek Yakala"
+          }
         }
       }
     },
@@ -723,6 +1096,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "%lld 个样本的采集质量"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld örneğin yakalama kalitesi"
           }
         }
       }
@@ -735,6 +1114,12 @@
             "state": "translated",
             "value": "采集质量 • %lld%%"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yakalama kalitesi • %lld%%"
+          }
         }
       }
     },
@@ -745,6 +1130,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "采集质量 • 未记录"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yakalama kalitesi • kaydedilmedi"
           }
         }
       }
@@ -757,6 +1148,12 @@
             "state": "translated",
             "value": "采集质量：%@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yakalama kalitesi: %@"
+          }
         }
       }
     },
@@ -767,6 +1164,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "采集质量：—"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yakalama kalitesi: —"
           }
         }
       }
@@ -779,6 +1182,12 @@
             "state": "translated",
             "value": "已为 \"%1$@\" 采集样本（%2$lld 维，%3$@，质量 %4$@）。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\"%@\" için örnek yakalandı (%lld boyut, %@, kalite %@)."
+          }
         }
       }
     },
@@ -789,6 +1198,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "这些人脸数据来自其他识别模型；请重新采集后才能用于解锁 Mac。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Farklı bir tanıma modeliyle yakalandı — Mac'inizin kilidini bu yüzle açmadan önce yeniden yakalayın."
           }
         }
       }
@@ -801,6 +1216,12 @@
             "state": "translated",
             "value": "更改"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Değiştir"
+          }
         }
       }
     },
@@ -811,6 +1232,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "更改密码"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parolayı değiştir"
           }
         }
       }
@@ -823,6 +1250,12 @@
             "state": "translated",
             "value": "检查"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Denetle"
+          }
         }
       }
     },
@@ -833,6 +1266,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "检查更新"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Güncellemeleri Denetle"
           }
         }
       }
@@ -845,6 +1284,12 @@
             "state": "translated",
             "value": "确认你是真人而不是照片。可能会增加解锁时间。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fotoğraf yerine canlı bir kişi olduğunuzu denetler. Kilit açma süresini uzatabilir."
+          }
         }
       }
     },
@@ -855,6 +1300,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "清除"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temizle"
           }
         }
       }
@@ -867,6 +1318,12 @@
             "state": "translated",
             "value": "近"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kapat"
+          }
         }
       }
     },
@@ -877,6 +1334,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "最接近：%1$@——中心 %2$@，最大 %3$@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "En yakın: %@ — merkez benzerliği %@, en yüksek %@"
           }
         }
       }
@@ -889,6 +1352,12 @@
             "state": "translated",
             "value": "一致性：%1$@  运动：%2$@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tutarlılık: %@  Hareket: %@"
+          }
         }
       }
     },
@@ -899,6 +1368,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "确认"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Onayla"
           }
         }
       }
@@ -911,6 +1386,12 @@
             "state": "translated",
             "value": "确认——真人证据"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Onay — gerçek yüz kanıtı"
+          }
         }
       }
     },
@@ -921,6 +1402,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "继续"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Devam Et"
           }
         }
       }
@@ -933,6 +1420,12 @@
             "state": "translated",
             "value": "无法对齐检测到的人脸。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algılanan yüz hizalanamadı."
+          }
         }
       }
     },
@@ -943,6 +1436,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法确认这是活体人脸——将指针悬停在刘海上即可重试。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Canlı bir yüz doğrulanamadı — yeniden denemek için imleci çentiğin üzerine getirin."
           }
         }
       }
@@ -955,6 +1454,12 @@
             "state": "translated",
             "value": "无法确认这是活体人脸。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Canlı bir yüz doğrulanamadı."
+          }
         }
       }
     },
@@ -965,6 +1470,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法为按键创建 CGEvent。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tuş vuruşu için CGEvent oluşturulamadı."
           }
         }
       }
@@ -977,6 +1488,12 @@
             "state": "translated",
             "value": "无法创建钥匙串访问控制：%@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anahtar Zinciri erişim denetimi oluşturulamadı: %@"
+          }
         }
       }
     },
@@ -987,6 +1504,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法删除：%@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Silinemedi: %@"
           }
         }
       }
@@ -999,6 +1522,12 @@
             "state": "translated",
             "value": "无法为 Core ML 准备已对齐的人脸图像。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hizalanmış yüz görüntüsü Core ML için hazırlanamadı."
+          }
         }
       }
     },
@@ -1009,6 +1538,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法移除：%@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaldırılamadı: %@"
           }
         }
       }
@@ -1021,6 +1556,12 @@
             "state": "translated",
             "value": "无法保存样本：%@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Örnek kaydedilemedi: %@"
+          }
         }
       }
     },
@@ -1031,6 +1572,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法选择摄像头的最高分辨率格式：%@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kameranın en yüksek çözünürlüklü biçimi seçilemedi: %@"
           }
         }
       }
@@ -1043,6 +1590,12 @@
             "state": "translated",
             "value": "信号一旦触发会在整次扫描中保持——重置后可重新测试。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algılanan sinyaller tarama boyunca korunur — yeniden test etmek için sıfırlayın."
+          }
         }
       }
     },
@@ -1053,6 +1606,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "解密失败。已存凭据可能已损坏。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Şifre çözme başarısız oldu. Kayıtlı kimlik bilgisi bozulmuş olabilir."
           }
         }
       }
@@ -1065,6 +1624,12 @@
             "state": "translated",
             "value": "默认"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Varsayılan"
+          }
         }
       }
     },
@@ -1075,6 +1640,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "删除"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sil"
           }
         }
       }
@@ -1087,6 +1658,12 @@
             "state": "translated",
             "value": "删除 %@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ adlı yüzü sil"
+          }
         }
       }
     },
@@ -1097,6 +1674,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "删除这个已录入的人脸？"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu kayıtlı yüz silinsin mi?"
           }
         }
       }
@@ -1109,6 +1692,12 @@
             "state": "translated",
             "value": "已删除 \"%@\"。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\"%@\" silindi."
+          }
         }
       }
     },
@@ -1119,6 +1708,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "拒绝——作弊证据"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ret — sahte yüz kanıtı"
           }
         }
       }
@@ -1131,6 +1726,12 @@
             "state": "translated",
             "value": "深度/姿态"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Derinlik/poz"
+          }
         }
       }
     },
@@ -1141,6 +1742,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "检测"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algılama"
           }
         }
       }
@@ -1153,6 +1760,12 @@
             "state": "translated",
             "value": "检测距离"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algılama mesafesi"
+          }
         }
       }
     },
@@ -1163,6 +1776,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "检测错误：%@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algılama hatası: %@"
           }
         }
       }
@@ -1175,6 +1794,12 @@
             "state": "translated",
             "value": "检测到设备"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cihaz algılandı"
+          }
         }
       }
     },
@@ -1185,6 +1810,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "设备重叠：%@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cihaz örtüşmesi: %@"
           }
         }
       }
@@ -1197,6 +1828,12 @@
             "state": "translated",
             "value": "显示在"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gösterilecek ekran"
+          }
         }
       }
     },
@@ -1207,6 +1844,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "两个分布重叠——目前没有单一分界能完美区分这些样本。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dağılımlar örtüşüyor — henüz bu örnekleri kusursuz ayıran tek bir eşik yok."
           }
         }
       }
@@ -1219,6 +1862,12 @@
             "state": "translated",
             "value": "下"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aşağı"
+          }
         }
       }
     },
@@ -1229,6 +1878,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "任一信号触发都会直接置人脸解锁失败，并覆盖任何确认结果。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu sinyallerden herhangi biri algılanırsa yüzle kilit açma reddedilir ve tüm onaylar geçersiz olur."
           }
         }
       }
@@ -1241,6 +1896,12 @@
             "state": "translated",
             "value": "嵌入器：%@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Özellik çıkarıcı: %@"
+          }
         }
       }
     },
@@ -1251,6 +1912,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "嵌入向量：%lld 个数字"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Özellik vektörü: %lld sayı"
           }
         }
       }
@@ -1263,6 +1930,12 @@
             "state": "translated",
             "value": "启用人脸解锁"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüzle Kilit Açmayı Etkinleştir"
+          }
         }
       }
     },
@@ -1273,6 +1946,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "请在“系统设置”>“隐私与安全性”>“摄像头”中启用。如果列表中没有 glance，请退出应用，在“终端”运行 `tccutil reset Camera com.perryles.glance`，然后重新启动，让 macOS 再次询问。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem Ayarları > Gizlilik ve Güvenlik > Kamera bölümünden izin verin. glance listede yoksa uygulamadan çıkın, Terminal'de `tccutil reset Camera com.perryles.glance` komutunu çalıştırıp uygulamayı yeniden açın. macOS tekrar izin isteyecektir."
           }
         }
       }
@@ -1285,6 +1964,12 @@
             "state": "translated",
             "value": "加密失败。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Şifreleme başarısız oldu."
+          }
         }
       }
     },
@@ -1295,6 +1980,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "录入"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaydet"
           }
         }
       }
@@ -1307,6 +1998,12 @@
             "state": "translated",
             "value": "再录入一张人脸"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başka bir yüz kaydet"
+          }
         }
       }
     },
@@ -1317,6 +2014,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "可分别录入多个身份，让 Glance 适用于多人、配饰（如眼镜）、不同表情或新的光照环境。这会提升识别质量。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glance'ı birden fazla kişiyle, gözlük gibi aksesuarlarla, farklı yüz ifadelerinde veya farklı ışık koşullarında kullanmak için ayrı kimlikler kaydedin. Bu, tanıma kalitesini artırır."
           }
         }
       }
@@ -1329,6 +2032,12 @@
             "state": "translated",
             "value": "无法读取已录入的人脸"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kayıtlı yüzler okunamadı"
+          }
         }
       }
     },
@@ -1339,6 +2048,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "采集样本前请输入名称。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Örnek yakalamadan önce bir ad girin."
           }
         }
       }
@@ -1351,6 +2066,12 @@
             "state": "translated",
             "value": "请输入名称。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bir ad girin."
+          }
         }
       }
     },
@@ -1361,6 +2082,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "输入名称..."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bir ad girin..."
           }
         }
       }
@@ -1373,6 +2100,12 @@
             "state": "translated",
             "value": "请先输入密码。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Önce bir parola girin."
+          }
         }
       }
     },
@@ -1383,6 +2116,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "请输入密码。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bir parola girin."
           }
         }
       }
@@ -1395,6 +2134,12 @@
             "state": "translated",
             "value": "输入密码..."
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parolayı girin..."
+          }
         }
       }
     },
@@ -1405,6 +2150,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "输入密码"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parolanızı girin"
           }
         }
       }
@@ -1417,6 +2168,12 @@
             "state": "translated",
             "value": "外接显示屏"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Harici ekran"
+          }
         }
       }
     },
@@ -1427,6 +2184,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "眼睛纵横比下降后恢复——照片无法眨眼。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Göz açıklık oranı azalıp tekrar arttı — fotoğraf göz kırpamaz."
           }
         }
       }
@@ -1439,6 +2202,12 @@
             "state": "translated",
             "value": "已触发"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ALGILANDI"
+          }
         }
       }
     },
@@ -1449,6 +2218,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "人脸"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz"
           }
         }
       }
@@ -1461,6 +2236,12 @@
             "state": "translated",
             "value": "人脸实验室"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz Laboratuvarı"
+          }
         }
       }
     },
@@ -1471,6 +2252,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "人脸实验室——设备端人脸识别（调试）"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz Laboratuvarı — Aygıtta Yüz Tanıma (Hata Ayıklama)"
           }
         }
       }
@@ -1483,6 +2270,12 @@
             "state": "translated",
             "value": "Mac 人脸解锁"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac için Yüzle Kilit Açma"
+          }
         }
       }
     },
@@ -1493,6 +2286,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "人脸已采集"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz yakalandı"
           }
         }
       }
@@ -1505,6 +2304,12 @@
             "state": "translated",
             "value": "人脸检测时长"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz algılama süresi"
+          }
         }
       }
     },
@@ -1515,6 +2320,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "人脸数据已加密"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz verileri şifrelendi"
           }
         }
       }
@@ -1527,6 +2338,12 @@
             "state": "translated",
             "value": "人脸录入"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz kaydı"
+          }
         }
       }
     },
@@ -1537,6 +2354,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "未识别人脸——将指针悬停在刘海上即可重试。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz tanınmadı — yeniden denemek için imleci çentiğin üzerine getirin."
           }
         }
       }
@@ -1549,6 +2372,12 @@
             "state": "translated",
             "value": "未识别人脸。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz tanınmadı."
+          }
         }
       }
     },
@@ -1559,6 +2388,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "人脸解锁已开启，但尚未存储密码。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüzle kilit açma etkin, ancak henüz bir parola kayıtlı değil."
           }
         }
       }
@@ -1571,6 +2406,12 @@
             "state": "translated",
             "value": "人脸解锁已开启，但会话仍处于锁定状态。请先在“密码”设置中完成一次验证。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüzle kilit açma etkin, ancak oturum kilitli — önce Parola ayarlarından bir kez kimliğinizi doğrulayın."
+          }
         }
       }
     },
@@ -1581,6 +2422,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "检测到人脸：%lld"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Algılanan yüz sayısı: %lld"
           }
         }
       }
@@ -1593,6 +2440,12 @@
             "state": "translated",
             "value": "加载 ArcFace Core ML 模型失败：%@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ArcFace Core ML modeli yüklenemedi: %@"
+          }
         }
       }
     },
@@ -1603,6 +2456,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "远"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uzak"
           }
         }
       }
@@ -1615,6 +2474,12 @@
             "state": "translated",
             "value": "特征描述使用了异常的元素类型。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Özellik izi beklenmeyen bir öğe türü kullandı."
+          }
         }
       }
     },
@@ -1625,6 +2490,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "拟合残差：%1$@  探针残差：%2$@  超额：%3$@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uyum artığı: %@  Test artığı: %@  Fazlalık: %@"
           }
         }
       }
@@ -1637,6 +2508,12 @@
             "state": "translated",
             "value": "平面与 3D"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Düz / 3B"
+          }
         }
       }
     },
@@ -1648,6 +2525,12 @@
             "state": "translated",
             "value": "平面与 3D 诊断"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Düz / 3B tanılama"
+          }
         }
       }
     },
@@ -1657,7 +2540,13 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "按照屏幕\\n上的指引操作"
+            "value": "按照屏幕\n上的指引操作"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ekranda gösterilen\nyönergeleri izleyin"
           }
         }
       }
@@ -1670,6 +2559,12 @@
             "state": "translated",
             "value": "通用"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Genel"
+          }
         }
       }
     },
@@ -1681,6 +2576,12 @@
             "state": "translated",
             "value": "本人"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gerçek kişi"
+          }
         }
       }
     },
@@ -1688,6 +2589,12 @@
       "extractionState": "manual",
       "localizations": {
         "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glance"
+          }
+        },
+        "tr": {
           "stringUnit": {
             "state": "translated",
             "value": "Glance"
@@ -1703,6 +2610,12 @@
             "state": "translated",
             "value": "Glance 设置"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glance Ayarları"
+          }
         }
       }
     },
@@ -1713,6 +2626,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "Glance 不如 Apple 的 Face ID 或 Touch ID 安全。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glance, Apple'ın Face ID veya Touch ID özellikleri kadar güvenli değildir."
           }
         }
       }
@@ -1725,6 +2644,12 @@
             "state": "translated",
             "value": "光泽/反光"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parlaklık/yansıma"
+          }
         }
       }
     },
@@ -1735,6 +2660,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "授权"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İzin Ver"
           }
         }
       }
@@ -1747,6 +2678,12 @@
             "state": "translated",
             "value": "已授权"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İzin Verildi"
+          }
         }
       }
     },
@@ -1757,6 +2694,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "触感反馈"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dokunsal geri bildirim"
           }
         }
       }
@@ -1769,6 +2712,12 @@
             "state": "translated",
             "value": "重度"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Güçlü"
+          }
         }
       }
     },
@@ -1779,6 +2728,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "重度：任一拒绝信号都会使扫描失败；必须至少触发一个确认信号才能通过。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Güçlü: bir ret sinyali taramayı başarısız kılar. Geçmek için en az bir onay sinyali algılanmalıdır."
           }
         }
       }
@@ -1791,6 +2746,12 @@
             "state": "translated",
             "value": "伸出的鼻部关键点偏离平面拟合——说明脸部有真实深度。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Test için ayrılan burun noktaları düzlem uyumundan sapıyor — yüzün gerçek derinliği var."
+          }
         }
       }
     },
@@ -1801,6 +2762,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "我了解"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anladım"
           }
         }
       }
@@ -1813,6 +2780,12 @@
             "state": "translated",
             "value": "识别"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tanı"
+          }
         }
       }
     },
@@ -1823,6 +2796,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "身份"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kimlikler"
           }
         }
       }
@@ -1835,6 +2814,12 @@
             "state": "translated",
             "value": "空闲"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Beklemede"
+          }
         }
       }
     },
@@ -1845,6 +2830,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "他人"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başka kişi"
           }
         }
       }
@@ -1857,6 +2848,12 @@
             "state": "translated",
             "value": "已在 %@ 输入已存密码并按回车"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kayıtlı parola ve Return tuşu gönderildi: %@"
+          }
         }
       }
     },
@@ -1867,6 +2864,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "正在输入…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parola giriliyor…"
           }
         }
       }
@@ -1879,6 +2882,12 @@
             "state": "translated",
             "value": "输入失败：%@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parola girilemedi: %@"
+          }
         }
       }
     },
@@ -1889,6 +2898,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "它使用 Mac 的普通摄像头，目标是提供便利，而不是高安全等级认证。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac'inizin standart web kamerasını kullanır ve kullanım kolaylığı için tasarlanmıştır. Yüksek güvenlikli kimlik doğrulama sağlamaz."
           }
         }
       }
@@ -1901,6 +2916,12 @@
             "state": "translated",
             "value": "钥匙串错误：%@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anahtar Zinciri hatası: %@"
+          }
         }
       }
     },
@@ -1911,6 +2932,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "钥匙串项格式异常。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anahtar Zinciri öğesi beklenmeyen bir biçimde."
           }
         }
       }
@@ -1923,6 +2950,12 @@
             "state": "translated",
             "value": "未找到钥匙串项。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anahtar Zinciri öğesi bulunamadı."
+          }
         }
       }
     },
@@ -1933,6 +2966,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "关键点：%1$lld   特征对：%2$lld   已拒绝：%3$lld"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Referans noktaları: %lld   Çiftler: %lld   Reddedilen: %lld"
           }
         }
       }
@@ -1945,6 +2984,12 @@
             "state": "translated",
             "value": "大面积平面镜面高光——更像玻璃或屏幕反光，而不是皮肤的小范围散射光泽。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geniş ve düz bir parlama — cildin küçük, dağınık yansımaları yerine cam veya ekran yansımasına benziyor."
+          }
         }
       }
     },
@@ -1955,6 +3000,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "登录时启动"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oturum açıldığında başlat"
           }
         }
       }
@@ -1967,6 +3018,12 @@
             "state": "translated",
             "value": "左"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sol"
+          }
         }
       }
     },
@@ -1977,6 +3034,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "左眼 EAR：%1$@  右眼 EAR：%2$@  鼻子偏移：%3$@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sol göz oranı: %@  Sağ göz oranı: %@  Burun kayması: %@"
           }
         }
       }
@@ -1989,6 +3052,12 @@
             "state": "translated",
             "value": "更宽松"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daha esnek"
+          }
         }
       }
     },
@@ -1999,6 +3068,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "轻度"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hafif"
           }
         }
       }
@@ -2011,6 +3086,12 @@
             "state": "translated",
             "value": "轻度提供基础防护。重度需要你眨眼或轻微移动头部。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hafif mod temel koruma sağlar. Güçlü modda göz kırpmanız veya başınızı hafifçe hareket ettirmeniz gerekir."
+          }
         }
       }
     },
@@ -2021,6 +3102,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "轻度：只运行拒绝信号。未被明确拒绝的都会视为活体。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hafif: yalnızca ret sinyalleri denetlenir. Açıkça reddedilmeyen her yüz canlı kabul edilir."
           }
         }
       }
@@ -2033,6 +3120,12 @@
             "state": "translated",
             "value": "活体——轻度模式自动确认"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Canlı — otomatik onaylandı (Hafif mod)"
+          }
         }
       }
     },
@@ -2043,6 +3136,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "活体——由%@确认"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Canlı — %@ ile onaylandı"
           }
         }
       }
@@ -2055,6 +3154,12 @@
             "state": "translated",
             "value": "活体检测"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Canlılık"
+          }
         }
       }
     },
@@ -2065,6 +3170,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "活体检测未通过。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Canlılık denetimi başarısız oldu."
           }
         }
       }
@@ -2077,6 +3188,12 @@
             "state": "translated",
             "value": "活体信号已重置。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Canlılık sinyalleri sıfırlandı."
+          }
         }
       }
     },
@@ -2087,6 +3204,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "活体检测"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Canlılık algılama"
           }
         }
       }
@@ -2099,6 +3222,12 @@
             "state": "translated",
             "value": "正在加载人脸实验室…"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz Laboratuvarı yükleniyor…"
+          }
         }
       }
     },
@@ -2109,6 +3238,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "日志"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Günlük"
           }
         }
       }
@@ -2121,6 +3256,12 @@
             "state": "translated",
             "value": "正对摄像头"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Doğrudan kameraya bakın"
+          }
         }
       }
     },
@@ -2131,6 +3272,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "正在寻找你的脸…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüzünüz aranıyor…"
           }
         }
       }
@@ -2143,6 +3290,12 @@
             "state": "translated",
             "value": "匹配"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "EŞLEŞTİ"
+          }
         }
       }
     },
@@ -2153,6 +3306,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "主显示屏"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ana ekran"
           }
         }
       }
@@ -2165,6 +3324,12 @@
             "state": "translated",
             "value": "标记为本人"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gerçek kişi olarak işaretle (benim)"
+          }
         }
       }
     },
@@ -2175,6 +3340,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "标记为他人"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başka kişi olarak işaretle (ben değilim)"
           }
         }
       }
@@ -2187,6 +3358,12 @@
             "state": "translated",
             "value": "匹配置信度"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eşleşme güven düzeyi"
+          }
         }
       }
     },
@@ -2197,6 +3374,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "已匹配 %1$@，中心相似度 %2$@，%3$@。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@, %@ benzerlik puanıyla eşleşti, %@."
           }
         }
       }
@@ -2209,6 +3392,12 @@
             "state": "translated",
             "value": "简约"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sade"
+          }
         }
       }
     },
@@ -2219,6 +3408,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "模式"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mod"
           }
         }
       }
@@ -2231,6 +3426,12 @@
             "state": "translated",
             "value": "更多信息"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daha fazla bilgi"
+          }
         }
       }
     },
@@ -2241,6 +3442,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "更严格"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daha katı"
           }
         }
       }
@@ -2253,6 +3460,12 @@
             "state": "translated",
             "value": "不匹配"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "EŞLEŞME YOK"
+          }
         }
       }
     },
@@ -2263,6 +3476,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "名称"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ad"
           }
         }
       }
@@ -2275,6 +3494,12 @@
             "state": "translated",
             "value": "为这张人脸命名"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu yüze bir ad verin"
+          }
         }
       }
     },
@@ -2285,6 +3510,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "永不"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Asla"
           }
         }
       }
@@ -2297,6 +3528,12 @@
             "state": "translated",
             "value": "下一步"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İleri"
+          }
         }
       }
     },
@@ -2307,6 +3544,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "未找到摄像头设备。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kamera bulunamadı."
           }
         }
       }
@@ -2319,6 +3562,12 @@
             "state": "translated",
             "value": "尚未录入身份——请先采集样本。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Henüz kayıtlı kimlik yok — önce bir örnek yakalayın."
+          }
         }
       }
     },
@@ -2329,6 +3578,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无人脸"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz yok"
           }
         }
       }
@@ -2341,6 +3596,12 @@
             "state": "translated",
             "value": "当前画面中未检测到人脸。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Karede yüz algılanmadı."
+          }
         }
       }
     },
@@ -2351,6 +3612,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "未检测到人脸——无法采集样本。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz algılanmadı — örnek yakalanamıyor."
           }
         }
       }
@@ -2363,6 +3630,12 @@
             "state": "translated",
             "value": "未检测到人脸——无法识别。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz algılanmadı — tanıma yapılamıyor."
+          }
         }
       }
     },
@@ -2373,6 +3646,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "未检测到人脸——将指针悬停在刘海上即可重试。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz algılanmadı — yeniden denemek için imleci çentiğin üzerine getirin."
           }
         }
       }
@@ -2385,6 +3664,12 @@
             "state": "translated",
             "value": "未检测到人脸。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz algılanmadı."
+          }
         }
       }
     },
@@ -2395,6 +3680,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "没有启用的身份：请至少重新启用一个，否则人脸解锁无法识别任何人。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Etkin kimlik yok — en az birini yeniden etkinleştirene kadar yüzle kilit açma kimseyi tanımayacak."
           }
         }
       }
@@ -2407,6 +3698,12 @@
             "state": "translated",
             "value": "尚未录入身份——请使用“添加身份”运行九姿态引导采集。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Henüz kayıtlı kimlik yok — Kimlik Ekle ile dokuz pozlu yönlendirmeli yakalamayı başlatın."
+          }
         }
       }
     },
@@ -2417,6 +3714,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "尚未录入身份。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Henüz kayıtlı kimlik yok."
           }
         }
       }
@@ -2429,6 +3732,12 @@
             "state": "translated",
             "value": "还没有活体检测帧。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Henüz canlılık karesi yok."
+          }
         }
       }
     },
@@ -2439,6 +3748,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "未采集样本"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yakalanan örnek yok"
           }
         }
       }
@@ -2451,6 +3766,12 @@
             "state": "translated",
             "value": "暂不"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hayır, teşekkürler"
+          }
         }
       }
     },
@@ -2461,6 +3782,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yok"
           }
         }
       }
@@ -2473,6 +3800,12 @@
             "state": "translated",
             "value": "鼻子偏移随头部偏航变化——鼻子不在眼平面上，因此不是平面图像。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Burun kayması baş dönüşünü izliyor — burun göz düzleminden önde, dolayısıyla yüz düz değil."
+          }
         }
       }
     },
@@ -2483,6 +3816,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "没有任何数据被删除，Glance 也不会覆盖它；在此问题解决前无法继续录入。请退出并重新打开 Glance 重试。如果仍然失败，说明会话密钥已不匹配这些数据：请在“密码”标签页移除已存密码以同时清除两者，然后重新设置。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hiçbir veri silinmedi ve Glance verilerin üzerine yazmayacak. Sorun çözülene kadar yüz kaydı yapılamaz. Glance'tan çıkıp yeniden açarak deneyin. Sorun sürerse oturum anahtarı verilerle eşleşmiyor olabilir. Parola sekmesinden kayıtlı parolayı kaldırarak hem parolayı hem yüz verilerini temizleyin, ardından yeniden ayarlayın."
           }
         }
       }
@@ -2495,6 +3834,12 @@
             "state": "translated",
             "value": "没有可记录的结果——请先运行“识别”。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaydedilecek veri yok — önce Tanı'yı çalıştırın."
+          }
         }
       }
     },
@@ -2505,6 +3850,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "锁定时"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kilitlendiğinde"
           }
         }
       }
@@ -2517,6 +3868,12 @@
             "state": "translated",
             "value": "按空格键时"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Boşluk tuşuyla"
+          }
         }
       }
     },
@@ -2527,6 +3884,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "唤醒时"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uyandığında"
           }
         }
       }
@@ -2539,6 +3902,12 @@
             "state": "translated",
             "value": "只拒绝明显作弊。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yalnızca belirgin sahte yüzleri reddeder."
+          }
         }
       }
     },
@@ -2549,6 +3918,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "打开辅助功能设置"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Erişilebilirlik ayarlarını aç"
           }
         }
       }
@@ -2561,6 +3936,12 @@
             "state": "translated",
             "value": "原版"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Özgün"
+          }
         }
       }
     },
@@ -2571,6 +3952,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "所有者"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sahibi"
           }
         }
       }
@@ -2583,6 +3970,12 @@
             "state": "translated",
             "value": "密码"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parola"
+          }
         }
       }
     },
@@ -2593,6 +3986,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "密码和人脸录入已移除。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parola ve yüz kayıtları kaldırıldı."
           }
         }
       }
@@ -2605,6 +4004,12 @@
             "state": "translated",
             "value": "密码不能为空。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parola boş olamaz."
+          }
         }
       }
     },
@@ -2615,6 +4020,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "密码已加密"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parola şifrelendi"
           }
         }
       }
@@ -2627,6 +4038,12 @@
             "state": "translated",
             "value": "密码已保存并加密。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parola kaydedildi ve şifrelendi."
+          }
         }
       }
     },
@@ -2637,6 +4054,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "待定——尚未判定"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bekliyor — henüz karar verilmedi"
           }
         }
       }
@@ -2649,6 +4072,12 @@
             "state": "translated",
             "value": "权限"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İzinler"
+          }
         }
       }
     },
@@ -2659,6 +4088,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "预览"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Önizleme"
           }
         }
       }
@@ -2671,6 +4106,12 @@
             "state": "translated",
             "value": "预览 ✓"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Önizleme ✓"
+          }
         }
       }
     },
@@ -2681,6 +4122,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "预览 ✗"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Önizleme ✗"
           }
         }
       }
@@ -2693,6 +4140,12 @@
             "state": "translated",
             "value": "退出"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çık"
+          }
         }
       }
     },
@@ -2703,6 +4156,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "重新采集"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yeniden Yakala"
           }
         }
       }
@@ -2715,6 +4174,12 @@
             "state": "translated",
             "value": "识别"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tanıma"
+          }
         }
       }
     },
@@ -2725,6 +4190,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "识别"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tanı"
           }
         }
       }
@@ -2737,6 +4208,12 @@
             "state": "translated",
             "value": "识别：最佳 = %1$@，中心=%2$@，最大=%3$@ -> %4$@%5$@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tanıma: en iyi = %@ merkez=%@ en yüksek=%@ -> %@%@"
+          }
         }
       }
     },
@@ -2747,6 +4224,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "已识别——正在解锁…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tanındı — kilit açılıyor…"
           }
         }
       }
@@ -2759,6 +4242,12 @@
             "state": "translated",
             "value": "请至少记录一个本人样本和一个他人样本，才能获得建议。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Öneri almak için en az bir gerçek kişi ve bir başka kişi örneği kaydedin."
+          }
         }
       }
     },
@@ -2769,6 +4258,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "刷新摄像头列表"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kamera listesini yenile"
           }
         }
       }
@@ -2781,6 +4276,12 @@
             "state": "translated",
             "value": "移除"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaldır"
+          }
         }
       }
     },
@@ -2791,6 +4292,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "移除密码"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parolayı kaldır"
           }
         }
       }
@@ -2803,6 +4310,12 @@
             "state": "translated",
             "value": "重置信号"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sinyalleri sıfırla"
+          }
         }
       }
     },
@@ -2813,6 +4326,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "悬停在刘海时重试"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çentiğin üzerine gelince yeniden dene"
           }
         }
       }
@@ -2825,6 +4344,12 @@
             "state": "translated",
             "value": "右"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sağ"
+          }
         }
       }
     },
@@ -2835,6 +4360,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "运行“识别”后标记结果是本人还是他人；请在不同光照、角度、表情下测试，并加入另一个人，观察两组分数分布的实际位置。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tanı'yı çalıştırıp sonucun gerçekten siz mi yoksa başka biri mi olduğunu işaretleyin. Bunu farklı ışık, açı ve ifadelerde, ayrıca başka bir kişiyle tekrarlayarak iki puan dağılımının nasıl ayrıldığını görün."
           }
         }
       }
@@ -2847,6 +4378,12 @@
             "state": "translated",
             "value": "运行中"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çalışıyor"
+          }
         }
       }
     },
@@ -2857,6 +4394,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "正在从 Xcode 运行：权限检查会读取 Xcode 的授权，而不是 glance 的授权，因此这个结果没有意义。请单独启动 glance.app 查看真实状态。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Xcode'dan çalıştırılıyor — izin denetimleri glance yerine Xcode izinlerini okur. Gerçek durumu görmek için glance.app uygulamasını bağımsız başlatın."
           }
         }
       }
@@ -2869,6 +4412,12 @@
             "state": "translated",
             "value": "保存"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaydet"
+          }
         }
       }
     },
@@ -2879,6 +4428,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "保存失败：%@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaydedilemedi: %@"
           }
         }
       }
@@ -2891,6 +4446,12 @@
             "state": "translated",
             "value": "正在保存…"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kaydediliyor…"
+          }
         }
       }
     },
@@ -2901,6 +4462,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "检测到屏幕反光——看起来像显示在屏幕上的照片。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ekran yansıması algılandı — ekrandaki bir fotoğraf olabilir."
           }
         }
       }
@@ -2913,6 +4480,12 @@
             "state": "translated",
             "value": "选择摄像头"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kamera seçin"
+          }
         }
       }
     },
@@ -2923,6 +4496,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "可多选"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Birden fazla seçilebilir"
           }
         }
       }
@@ -2935,6 +4514,12 @@
             "state": "translated",
             "value": "所选显示器（已断开连接）"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Seçili ekran (bağlı değil)"
+          }
         }
       }
     },
@@ -2945,6 +4530,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "发送"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gönder"
           }
         }
       }
@@ -2957,6 +4548,12 @@
             "state": "translated",
             "value": "发送反馈"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geri Bildirim Gönder"
+          }
         }
       }
     },
@@ -2967,6 +4564,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "会话已锁定"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oturum Kilitli"
           }
         }
       }
@@ -2979,6 +4582,12 @@
             "state": "translated",
             "value": "会话已解锁"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oturum Kilidi Açık"
+          }
         }
       }
     },
@@ -2989,6 +4598,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "会话已锁定。请先使用触控 ID 验证，才能存储或使用密码。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oturum kilitli. Parolayı kaydetmeden veya kullanmadan önce Touch ID ile kimliğinizi doğrulayın."
           }
         }
       }
@@ -3001,6 +4616,12 @@
             "state": "translated",
             "value": "会话已锁定。请使用触控 ID 验证以访问已录入的人脸。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oturum kilitli. Kayıtlı yüzlere erişmek için Touch ID ile kimliğinizi doğrulayın."
+          }
         }
       }
     },
@@ -3011,6 +4632,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "会话已锁定"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oturum kilitli"
           }
         }
       }
@@ -3023,6 +4650,12 @@
             "state": "translated",
             "value": "会话已锁定——请先使用触控 ID 验证。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oturum kilitli — önce Touch ID ile kimliğinizi doğrulayın."
+          }
         }
       }
     },
@@ -3033,6 +4666,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "会话已锁定——已录入的人脸仍处于加密状态，暂不能读取或保存。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oturum kilitli — yüz kayıtları şifreli olduğundan henüz okunamaz veya kaydedilemez."
           }
         }
       }
@@ -3045,6 +4684,12 @@
             "state": "translated",
             "value": "会话已解锁"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oturum kilidi açık"
+          }
         }
       }
     },
@@ -3055,6 +4700,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "会话已解锁。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oturum kilidi açıldı."
           }
         }
       }
@@ -3067,6 +4718,12 @@
             "state": "translated",
             "value": "设置密码"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parola belirle"
+          }
         }
       }
     },
@@ -3076,7 +4733,13 @@
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "设置\\n人脸识别"
+            "value": "设置\n人脸识别"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz Tanımayı\nAyarlayın"
           }
         }
       }
@@ -3089,6 +4752,12 @@
             "state": "translated",
             "value": "设置人脸解锁"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüzle Kilit Açmayı Ayarla"
+          }
         }
       }
     },
@@ -3099,6 +4768,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "设置 Glance"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Glance'ı ayarla"
           }
         }
       }
@@ -3111,6 +4786,12 @@
             "state": "translated",
             "value": "设置密码"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bir parola belirleyin"
+          }
         }
       }
     },
@@ -3121,6 +4802,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "设置"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayarlar"
           }
         }
       }
@@ -3133,6 +4820,12 @@
             "state": "translated",
             "value": "显示动画"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Animasyonu göster"
+          }
         }
       }
     },
@@ -3143,6 +4836,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "在菜单栏中显示"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Menü çubuğunda göster"
           }
         }
       }
@@ -3155,6 +4854,12 @@
             "state": "translated",
             "value": "显示预览"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Önizlemeyi göster"
+          }
         }
       }
     },
@@ -3165,6 +4870,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "相似度"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Benzerlik"
           }
         }
       }
@@ -3177,6 +4888,12 @@
             "state": "translated",
             "value": "已跳过：CGSession 显示屏幕实际并未锁定。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atlandı: CGSession, ekranın kilitli olmadığını bildiriyor."
+          }
         }
       }
     },
@@ -3187,6 +4904,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "高光：%1$@  聚类：%2$@  裁剪：%3$lldpx"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parlama: %@  Küme: %@  Kırpma: %lld piksel"
           }
         }
       }
@@ -3199,6 +4922,12 @@
             "state": "translated",
             "value": "高光：—（此帧没有原生分辨率裁剪）"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parlama: — (bu karede özgün çözünürlüklü kırpma yok)"
+          }
         }
       }
     },
@@ -3209,6 +4938,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "疑似作弊——被%@拒绝"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sahte yüz — %@ ile reddedildi"
           }
         }
       }
@@ -3221,6 +4956,12 @@
             "state": "translated",
             "value": "启动"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başlat"
+          }
         }
       }
     },
@@ -3231,6 +4972,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "开始设置"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kurulumu Başlat"
           }
         }
       }
@@ -3243,6 +4990,12 @@
             "state": "translated",
             "value": "正在为新身份启动引导录入。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yeni kimlik için yönlendirmeli kayıt başlatılıyor."
+          }
         }
       }
     },
@@ -3253,6 +5006,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "正在启动 \"%@\" 的重新引导采集。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\"%@\" için yönlendirmeli yeniden yakalama başlatılıyor."
           }
         }
       }
@@ -3265,6 +5024,12 @@
             "state": "translated",
             "value": "正在启动完整设置流程。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tam kurulum süreci başlatılıyor."
+          }
         }
       }
     },
@@ -3275,6 +5040,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "停止"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durdur"
           }
         }
       }
@@ -3287,6 +5058,12 @@
             "state": "translated",
             "value": "已停止"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durduruldu"
+          }
         }
       }
     },
@@ -3297,6 +5074,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "强度"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Güç"
           }
         }
       }
@@ -3309,6 +5092,12 @@
             "state": "translated",
             "value": "样式"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stil"
+          }
         }
       }
     },
@@ -3319,6 +5108,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "建议阈值：%@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Önerilen eşik: %@"
           }
         }
       }
@@ -3331,6 +5126,12 @@
             "state": "translated",
             "value": "系统默认"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem varsayılanı"
+          }
         }
       }
     },
@@ -3341,6 +5142,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "解锁 Mac 时显示的动画"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac'inizin kilidi açılırken gösterilen animasyon"
           }
         }
       }
@@ -3353,6 +5160,12 @@
             "state": "translated",
             "value": "会话密钥缺失，但仍存在只有它才能读取的加密数据。没有任何数据被删除。请在“密码”标签页移除已存密码，同时清除两者并重新开始。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oturum anahtarı eksik, ancak yalnızca bu anahtarla okunabilen şifreli veriler hâlâ mevcut. Hiçbir veri silinmedi. Parola sekmesinden kayıtlı parolayı kaldırarak her ikisini temizleyin ve yeniden başlayın."
+          }
         }
       }
     },
@@ -3363,6 +5176,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法使用当前会话密钥解密存储的数据。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kayıtlı verilerin şifresi bu oturum anahtarıyla çözülemedi."
           }
         }
       }
@@ -3375,6 +5194,12 @@
             "state": "translated",
             "value": "阈值"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eşik"
+          }
         }
       }
     },
@@ -3385,6 +5210,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "阈值校准"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eşik Kalibrasyonu"
           }
         }
       }
@@ -3397,6 +5228,12 @@
             "state": "translated",
             "value": "阈值：%@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eşik: %@"
+          }
         }
       }
     },
@@ -3407,6 +5244,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "太偏下"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çok aşağıda"
           }
         }
       }
@@ -3419,6 +5262,12 @@
             "state": "translated",
             "value": "太偏左"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çok solda"
+          }
         }
       }
     },
@@ -3429,6 +5278,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "太偏右"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çok sağda"
           }
         }
       }
@@ -3441,6 +5296,12 @@
             "state": "translated",
             "value": "太偏左下"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çok sol altta"
+          }
         }
       }
     },
@@ -3451,6 +5312,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "太偏右下"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çok sağ altta"
           }
         }
       }
@@ -3463,6 +5330,12 @@
             "state": "translated",
             "value": "太偏左上"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çok sol üstte"
+          }
         }
       }
     },
@@ -3473,6 +5346,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "太偏右上"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çok sağ üstte"
           }
         }
       }
@@ -3485,6 +5364,12 @@
             "state": "translated",
             "value": "太偏上"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çok yukarıda"
+          }
         }
       }
     },
@@ -3495,6 +5380,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "左上"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sol üst"
           }
         }
       }
@@ -3507,6 +5398,12 @@
             "state": "translated",
             "value": "右上"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sağ üst"
+          }
         }
       }
     },
@@ -3517,6 +5414,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "触发条件"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tetikleyiciler"
           }
         }
       }
@@ -3529,6 +5432,12 @@
             "state": "translated",
             "value": "头部稍微向下低"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başınızı hafifçe aşağı eğin"
+          }
         }
       }
     },
@@ -3539,6 +5448,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "头部稍微向左转"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başınızı hafifçe sola çevirin"
           }
         }
       }
@@ -3551,6 +5466,12 @@
             "state": "translated",
             "value": "头部稍微向右转"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başınızı hafifçe sağa çevirin"
+          }
         }
       }
     },
@@ -3561,6 +5482,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "头部稍微向上抬"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başınızı hafifçe yukarı kaldırın"
           }
         }
       }
@@ -3573,6 +5500,12 @@
             "state": "translated",
             "value": "头部转向左下方"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başınızı sol alta çevirin"
+          }
         }
       }
     },
@@ -3583,6 +5516,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "头部转向右下方"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başınızı sağ alta çevirin"
           }
         }
       }
@@ -3595,6 +5534,12 @@
             "state": "translated",
             "value": "头部转向左上方"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başınızı sol üste çevirin"
+          }
         }
       }
     },
@@ -3605,6 +5550,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "头部转向右上方"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başınızı sağ üste çevirin"
           }
         }
       }
@@ -3617,6 +5568,12 @@
             "state": "translated",
             "value": "类型"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tür"
+          }
         }
       }
     },
@@ -3627,6 +5584,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "解锁"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kilidi Aç"
           }
         }
       }
@@ -3639,6 +5602,12 @@
             "state": "translated",
             "value": "解锁会话"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oturum kilidini aç"
+          }
         }
       }
     },
@@ -3649,6 +5618,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "解锁会话以查看已录入的身份。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kayıtlı kimlikleri görmek için oturum kilidini açın."
           }
         }
       }
@@ -3661,6 +5636,12 @@
             "state": "translated",
             "value": "上"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yukarı"
+          }
         }
       }
     },
@@ -3671,6 +5652,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "采用"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uygula"
           }
         }
       }
@@ -3683,6 +5670,12 @@
             "state": "translated",
             "value": "用于录入人脸和解锁 Mac"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yüz kaydı ve Mac'inizin kilidini açmak için kullanılır"
+          }
         }
       }
     },
@@ -3693,6 +5686,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "当这台 Mac 上设置了多人时，用于区分已录入的人脸。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu Mac'te birden fazla kişi ayarlandığında kayıtlı yüzleri ayırt etmek için kullanılır."
           }
         }
       }
@@ -3705,6 +5704,12 @@
             "state": "translated",
             "value": "正在使用 %@。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ kullanılıyor."
+          }
         }
       }
     },
@@ -3715,6 +5720,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "版本 %1$@（版本号 %2$@）"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sürüm %@ (%@)"
           }
         }
       }
@@ -3727,6 +5738,12 @@
             "state": "translated",
             "value": "Vision 未生成此图像的特征描述。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vision bu görüntü için bir özellik izi üretmedi."
+          }
         }
       }
     },
@@ -3737,6 +5754,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "偏航：%1$@  俯仰：%2$@"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yatay açı: %@  Dikey açı: %@"
           }
         }
       }
@@ -3749,6 +5772,12 @@
             "state": "translated",
             "value": "设置完成"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Her şey hazır"
+          }
         }
       }
     },
@@ -3759,6 +5788,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "无法读取已录入的人脸，因此未保存任何内容——现在写入会覆盖原有数据。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kayıtlı yüzleriniz okunamadığı için hiçbir şey kaydedilmedi. Şimdi yazmak mevcut verilerin üzerine yazardı."
           }
         }
       }
@@ -3771,6 +5806,12 @@
             "state": "translated",
             "value": "需要你的密码才能解锁 Mac。密码会加密并安全存储在这台设备上。Glance 完全离线运行，密码不会离开你的 Mac。"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mac'inizin kilidini açmak için parolanız gereklidir. Parolanız şifrelenir ve aygıtınızda güvenle saklanır. Glance tamamen çevrimdışı çalışır, bu yüzden parolanız Mac'inizden asla ayrılmaz."
+          }
         }
       }
     },
@@ -3781,6 +5822,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "已授权"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "izin verildi"
           }
         }
       }
@@ -3793,6 +5840,12 @@
             "state": "translated",
             "value": "下方"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "alt"
+          }
         }
       }
     },
@@ -3803,6 +5856,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "左下"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sol alt"
           }
         }
       }
@@ -3815,6 +5874,12 @@
             "state": "translated",
             "value": "右下"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sağ alt"
+          }
         }
       }
     },
@@ -3825,6 +5890,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "正面"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ön"
           }
         }
       }
@@ -3837,6 +5908,12 @@
             "state": "translated",
             "value": "中心 %@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "merkez %@"
+          }
         }
       }
     },
@@ -3847,6 +5924,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "已拒绝"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "reddedildi"
           }
         }
       }
@@ -3859,6 +5942,12 @@
             "state": "translated",
             "value": "眼睛 / 脸宽"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "göz / yüz genişliği"
+          }
         }
       }
     },
@@ -3869,6 +5958,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "眼睛 / 鼻嘴距"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "göz / burun-ağız"
           }
         }
       }
@@ -3881,6 +5976,12 @@
             "state": "translated",
             "value": "瞳距"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "gözler arası mesafe"
+          }
         }
       }
     },
@@ -3891,6 +5992,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "左侧"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sol"
           }
         }
       }
@@ -3903,6 +6010,12 @@
             "state": "translated",
             "value": "通过%@确认活体"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ ile canlı"
+          }
         }
       }
     },
@@ -3913,6 +6026,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "活体检测通过"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "canlılık doğrulandı"
           }
         }
       }
@@ -3925,6 +6044,12 @@
             "state": "translated",
             "value": "活体检测已关闭"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "canlılık kapalı"
+          }
         }
       }
     },
@@ -3935,6 +6060,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "macOS 将其报告为“受限”，而不是简单的用户拒绝。这通常是“屏幕使用时间”内容限制或 MDM/描述文件策略阻止了此应用访问摄像头；在限制解除前，仅在“系统设置”>“隐私与安全性”>“摄像头”中切换开关不会有帮助。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS erişimi kısıtlanmış olarak bildiriyor. Bu genellikle Ekran Süresi içerik kısıtlamalarının veya MDM/profil politikasının bu uygulamanın kamera erişimini engellediği anlamına gelir. Kısıtlama kaldırılana kadar Sistem Ayarları > Gizlilik ve Güvenlik > Kamera bölümündeki izni değiştirmek sorunu çözmez."
           }
         }
       }
@@ -3947,6 +6078,12 @@
             "state": "translated",
             "value": "最大 %@"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "en yüksek %@"
+          }
         }
       }
     },
@@ -3957,6 +6094,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "嘴宽 / 脸宽"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ağız genişliği / yüz genişliği"
           }
         }
       }
@@ -3969,6 +6112,12 @@
             "state": "translated",
             "value": "不匹配"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "eşleşme yok"
+          }
         }
       }
     },
@@ -3979,6 +6128,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "鼻眼 / 脸高"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "burun-göz / yüz yüksekliği"
           }
         }
       }
@@ -3991,6 +6146,12 @@
             "state": "translated",
             "value": "鼻嘴 / 脸高"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "burun-ağız / yüz yüksekliği"
+          }
         }
       }
     },
@@ -4001,6 +6162,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "未确定"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "henüz belirlenmedi"
           }
         }
       }
@@ -4013,6 +6180,12 @@
             "state": "translated",
             "value": "填充裁剪（未对齐）"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "kenar paylı kırpma (hizalama yok)"
+          }
         }
       }
     },
@@ -4023,6 +6196,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "受限"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "kısıtlanmış"
           }
         }
       }
@@ -4035,6 +6214,12 @@
             "state": "translated",
             "value": "右侧"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sağ"
+          }
         }
       }
     },
@@ -4045,6 +6230,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "已过期"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "eski"
           }
         }
       }
@@ -4057,6 +6248,12 @@
             "state": "translated",
             "value": "上方"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "üst"
+          }
         }
       }
     },
@@ -4067,6 +6264,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "左上"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sol üst"
           }
         }
       }
@@ -4079,6 +6282,12 @@
             "state": "translated",
             "value": "右上"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "sağ üst"
+          }
         }
       }
     },
@@ -4089,6 +6298,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "未知原因"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "bilinmeyen neden"
           }
         }
       }
@@ -4101,6 +6316,12 @@
             "state": "translated",
             "value": "未知（%lld）"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "bilinmeyen (%lld)"
+          }
         }
       }
     },
@@ -4111,6 +6332,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "未标记"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "etiketsiz"
           }
         }
       }
@@ -4123,6 +6350,12 @@
             "state": "translated",
             "value": "偏航范围（度）"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "yatay açı aralığı (derece)"
+          }
         }
       }
     },
@@ -4133,6 +6366,46 @@
           "stringUnit": {
             "state": "translated",
             "value": "“按空格键时”需要直接读取键盘，以便在锁屏界面检测空格键；这需要“辅助功能”权限，与 glance 输入密码所用的权限相同。请在“隐私与安全性”→“辅助功能”中开启 glance，然后退出并重新打开 glance。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“Boşluk tuşuyla” seçeneği, kilit ekranında boşluk tuşunu algılamak için klavyeyi doğrudan okur ve Erişilebilirlik izni gerektirir. Glance parolanızı girmek için de aynı izni kullanır. Gizlilik ve Güvenlik → Erişilebilirlik bölümünde glance için izin verin, ardından uygulamadan çıkıp yeniden açın."
+          }
+        }
+      }
+    },
+    "%lld sample": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 个样本"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld örnek"
+          }
+        }
+      }
+    },
+    "%lld samples": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld 个样本"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld örnek"
           }
         }
       }

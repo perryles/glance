@@ -111,6 +111,7 @@
 				en,
 				Base,
 				"zh-Hans",
+				tr,
 			);
 			mainGroup = 601C4933300FFC8400D3DE9D;
 			minimizedProjectReferenceProxies = 1;
@@ -276,8 +277,8 @@
 				CODE_SIGN_ENTITLEMENTS = glance/glance.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 99KWT739F7;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = 59VWA2CU63;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -291,7 +292,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.perryles.glance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -312,8 +313,8 @@
 				CODE_SIGN_ENTITLEMENTS = glance/glance.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = 99KWT739F7;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = 59VWA2CU63;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -327,7 +328,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.perryles.glance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;

@@ -1,57 +1,61 @@
 #!/usr/bin/env python3
-"""Validate Glance's Simplified Chinese localization and built resources."""
+"""Validate Chinese and Turkish catalogs, placeholders, and built resources."""
 
 import argparse
+from collections import Counter
 import json
 from pathlib import Path
+import re
+import subprocess
 
+LANGUAGES = ("zh-Hans", "tr")
 REQUIRED_KEYS = {
-    "Localizable": {
-        "Settings": "设置",
-        "Permissions": "权限",
-        "Session locked": "会话已锁定",
-        "Check for Updates": "检查更新",
-    },
-    "InfoPlist": {
-        "NSCameraUsageDescription": "摄像头",
-    },
+    "Localizable": {"Settings", "Permissions", "Session locked", "Check for Updates"},
+    "InfoPlist": {"NSCameraUsageDescription"},
 }
 
 
 def load_catalog(root: Path, name: str) -> dict:
-    path = root / "glance" / f"{name}.xcstrings"
-    if not path.is_file():
-        raise AssertionError(f"Missing {path.relative_to(root)}")
-    data = json.loads(path.read_text(encoding="utf-8"))
-    assert data.get("sourceLanguage") == "en", f"{name} source language must be English"
-    return data
+    data = json.loads((root / "glance" / f"{name}.xcstrings").read_text())
+    assert data["sourceLanguage"] == "en"
+    return data["strings"]
 
 
-def validate_catalog(root: Path, name: str, expected: dict[str, str]) -> None:
-    strings = load_catalog(root, name).get("strings", {})
-    for key, fragment in expected.items():
-        assert key in strings, f"{name} is missing key: {key!r}"
-        unit = strings[key].get("localizations", {}).get("zh-Hans", {}).get("stringUnit", {})
-        assert unit.get("state") == "translated", f"{key!r} is not marked translated"
-        value = unit.get("value", "")
-        assert value and fragment in value, f"{key!r} has no usable zh-Hans translation"
+def placeholders(value: str) -> Counter:
+    tokens = re.findall(r"%(?:(\d+)\$)?(@|lld|d|u|f|%)", value)
+    arguments = (token for token in tokens if token[1] != "%")
+    return Counter((int(position) if position else index, kind)
+                   for index, (position, kind) in enumerate(arguments, start=1))
 
 
-def read_compiled_strings(path: Path) -> str:
-    data = path.read_bytes()
-    if b"\x00" in data:
-        return data.decode("utf-16")
-    return data.decode("utf-8", errors="ignore")
+def validate_catalog(root: Path, name: str) -> None:
+    strings = load_catalog(root, name)
+    assert REQUIRED_KEYS[name] <= strings.keys()
+    for key, entry in strings.items():
+        assert "\\n" not in key, f"{key!r} uses a literal newline escape"
+        for language in LANGUAGES:
+            unit = entry.get("localizations", {}).get(language, {}).get("stringUnit", {})
+            value = unit.get("value", "")
+            assert unit.get("state") == "translated" and value, f"{name}: {key!r} lacks {language}"
+            assert "\\n" not in value, f"{key!r} displays a literal newline escape"
+            if name != "InfoPlist":
+                assert placeholders(key) == placeholders(value), (
+                    f"{language}: {key!r} has incompatible placeholders: {value!r}"
+                )
 
 
-def validate_app(app: Path) -> None:
+def validate_app(root: Path, app: Path) -> None:
     resources = app / "Contents" / "Resources"
-    localizable = resources / "zh-Hans.lproj" / "Localizable.strings"
-    info = resources / "zh-Hans.lproj" / "InfoPlist.strings"
-    assert localizable.is_file(), f"Built app lacks {localizable}"
-    assert info.is_file(), f"Built app lacks {info}"
-    assert "Settings" in read_compiled_strings(localizable)
-    assert "NSCameraUsageDescription" in read_compiled_strings(info)
+    for language in LANGUAGES:
+        for name in REQUIRED_KEYS:
+            path = resources / f"{language}.lproj" / f"{name}.strings"
+            assert path.is_file(), f"Built app lacks {path}"
+            result = subprocess.run(["plutil", "-convert", "json", "-o", "-", str(path)],
+                                    check=True, capture_output=True, text=True)
+            compiled = json.loads(result.stdout)
+            for key, entry in load_catalog(root, name).items():
+                expected = entry["localizations"][language]["stringUnit"]["value"]
+                assert compiled.get(key) == expected, f"{language}: {key!r} missing or stale in app"
 
 
 def main() -> None:
@@ -59,11 +63,10 @@ def main() -> None:
     parser.add_argument("root", nargs="?", default=Path.cwd(), type=Path)
     parser.add_argument("--app", type=Path)
     args = parser.parse_args()
-
-    for catalog, expected in REQUIRED_KEYS.items():
-        validate_catalog(args.root, catalog, expected)
+    for catalog in REQUIRED_KEYS:
+        validate_catalog(args.root, catalog)
     if args.app:
-        validate_app(args.app)
+        validate_app(args.root, args.app)
     print("i18n selftest: passed")
 
 

@@ -9,6 +9,12 @@
             "state": "translated",
             "value": "glance"
           }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "glance"
+          }
         }
       }
     },
@@ -19,6 +25,12 @@
           "stringUnit": {
             "state": "translated",
             "value": "glance 会在设备上使用摄像头识别人脸以解锁 Mac，并让你在设置中录入和预览人脸。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "glance, Mac'inizin kilidini açmak için yüzünüzü aygıt üzerinde tanımak ve Ayarlar'da yüzünüzü kaydedip önizlemenizi sağlamak amacıyla kamerayı kullanır."
           }
         }
       }
