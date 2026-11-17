@@ -74,6 +74,9 @@ final class SystemAuthenticationPromptMonitor {
         ) == .success else { return nil }
 
         let focusedElement = focusedElementValue as! AXUIElement
+        var fieldProcessIdentifier: pid_t = -1
+        guard AXUIElementGetPid(focusedElement, &fieldProcessIdentifier) == .success,
+              fieldProcessIdentifier == processIdentifier else { return nil }
         var roleValue: CFTypeRef?
         var subroleValue: CFTypeRef?
         var enabledValue: CFTypeRef?

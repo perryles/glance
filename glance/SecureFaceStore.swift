@@ -22,7 +22,7 @@ enum SecureFaceStoreError: LocalizedError {
 nonisolated enum SecureFaceStore {
     private static let appSupport = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
     // Match this app's credential namespace instead of sharing ciphertext with the upstream app.
-    private static let directory = appSupport.appendingPathComponent("com.perryles.glance", isDirectory: true)
+    private static let directory = appSupport.appendingPathComponent(Bundle.main.bundleIdentifier ?? "com.perryles.glance", isDirectory: true)
     private static let fileURL = directory.appendingPathComponent("face-identities.enc")
     private static let legacyFileURL = appSupport.appendingPathComponent("glance/face-identities.enc")
     private static let legacyImportDisabledURL = directory.appendingPathComponent("legacy-face-import-disabled")

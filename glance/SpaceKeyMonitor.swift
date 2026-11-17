@@ -9,7 +9,7 @@
 //
 //  Graceful degradation: if access isn't granted or `IOHIDManagerOpen` fails, `start()` no-ops rather than crashing.
 //
-//  Not a keylogger: only runs while locked + opted into "On space", and the callback checks only whether the key is the spacebar.
+//  Only the spacebar is queued. Keep the device open before locking, and act only while the screen is authoritatively locked.
 //
 
 import Foundation
@@ -25,6 +25,8 @@ final class SpaceKeyMonitor {
     var onSpaceKeyDown: (() -> Void)?
 
     private var manager: IOHIDManager?
+    private var generation = 0
+    private var keyState = SpaceKeyState()
 
     // MARK: - Input Monitoring permission (static — callable without an instance)
 
@@ -84,43 +86,81 @@ final class SpaceKeyMonitor {
         ]
         IOHIDManagerSetDeviceMatching(mgr, match as CFDictionary)
 
-        // Capture-less C callback; `self` threaded through the context pointer. `passUnretained` is safe since this object
-        // always `stop()`s (unregistering) before deallocation.
-        let context = Unmanaged.passUnretained(self).toOpaque()
-        IOHIDManagerRegisterInputValueCallback(mgr, { context, _, _, value in
-            guard let context else { return }
-            let element = IOHIDValueGetElement(value)
-            guard IOHIDElementGetUsagePage(element) == UInt32(kHIDPage_KeyboardOrKeypad),
-                  IOHIDElementGetUsage(element) == UInt32(kHIDUsage_KeyboardSpacebar),
-                  IOHIDValueGetIntegerValue(value) == 1 // key-down only
-            else { return }
-            let monitor = Unmanaged<SpaceKeyMonitor>.fromOpaque(context).takeUnretainedValue()
-            // Already on the main thread (scheduled on the main run loop); hop onto the main actor to satisfy isolation.
-            Task { @MainActor in monitor.onSpaceKeyDown?() }
+        IOHIDManagerSetInputValueMatching(mgr, [
+            kIOHIDElementUsagePageKey: kHIDPage_KeyboardOrKeypad,
+            kIOHIDElementUsageKey: kHIDUsage_KeyboardSpacebar,
+        ] as CFDictionary)
+        generation &+= 1
+        let callback = SpaceKeyCallbackContext(monitor: self, generation: generation)
+        let context = Unmanaged.passRetained(callback).toOpaque()
+        IOHIDManagerRegisterInputValueCallback(mgr, { context, result, _, value in
+            guard let context, result == kIOReturnSuccess else { return }
+            MainActor.assumeIsolated {
+                let callback = Unmanaged<SpaceKeyCallbackContext>.fromOpaque(context).takeUnretainedValue()
+                guard let monitor = callback.monitor, callback.generation == monitor.generation else { return }
+                let element = IOHIDValueGetElement(value)
+                guard IOHIDElementGetUsagePage(element) == UInt32(kHIDPage_KeyboardOrKeypad),
+                      IOHIDElementGetUsage(element) == UInt32(kHIDUsage_KeyboardSpacebar) else { return }
+                let device = IOHIDElementGetDevice(element)
+                let id = UInt(bitPattern: Unmanaged.passUnretained(device).toOpaque())
+                let pressed = monitor.keyState.receive(device: id, isDown: IOHIDValueGetIntegerValue(value) != 0)
+                guard pressed else { return }
+                monitor.onSpaceKeyDown?()
+            }
         }, context)
-
-        IOHIDManagerScheduleWithRunLoop(mgr, CFRunLoopGetMain(), CFRunLoopMode.commonModes.rawValue)
-
-        // Ground truth about HID access (unlike IOHIDCheckAccess); logged since a failure here is a silent no-op on the lock screen.
+        IOHIDManagerRegisterDeviceRemovalCallback(mgr, { context, _, _, device in
+            guard let context else { return }
+            MainActor.assumeIsolated {
+                let callback = Unmanaged<SpaceKeyCallbackContext>.fromOpaque(context).takeUnretainedValue()
+                let id = UInt(bitPattern: Unmanaged.passUnretained(device).toOpaque())
+                guard let monitor = callback.monitor, callback.generation == monitor.generation else { return }
+                monitor.keyState.remove(device: id)
+            }
+        }, context)
+        IOHIDManagerSetDispatchQueue(mgr, .main)
+        // IOKit requires the manager and callback context to survive until cancellation completes.
+        let retainedManager = Unmanaged.passRetained(mgr)
+        IOHIDManagerSetCancelHandler(mgr) {
+            Unmanaged<SpaceKeyCallbackContext>.fromOpaque(context).release()
+            retainedManager.release()
+        }
         let result = IOHIDManagerOpen(mgr, IOOptionBits(kIOHIDOptionsTypeNone))
+        IOHIDManagerActivate(mgr)
         guard result == kIOReturnSuccess else {
-            Self.log.error("IOHIDManagerOpen FAILED (0x\(String(result, radix: 16), privacy: .public)) — space key won't be seen")
-            IOHIDManagerUnscheduleFromRunLoop(mgr, CFRunLoopGetMain(), CFRunLoopMode.commonModes.rawValue)
+            Self.log.error("IOHIDManagerOpen failed (0x\(String(result, radix: 16), privacy: .public))")
+            IOHIDManagerCancel(mgr)
             return
         }
-        Self.log.info("listening for space on the lock screen")
         manager = mgr
+        Self.log.info("space-only HID queue started before lock")
     }
 
-    /// Stops listening. Idempotent.
+    func resetKeyState() { keyState.reset() }
+
     func stop() {
+        generation &+= 1
+        keyState.reset()
         guard let mgr = manager else { return }
-        IOHIDManagerUnscheduleFromRunLoop(mgr, CFRunLoopGetMain(), CFRunLoopMode.commonModes.rawValue)
-        IOHIDManagerClose(mgr, IOOptionBits(kIOHIDOptionsTypeNone))
         manager = nil
+        IOHIDManagerClose(mgr, IOOptionBits(kIOHIDOptionsTypeNone))
+        IOHIDManagerCancel(mgr)
     }
 
     deinit {
-        // Always stopped before teardown (on unlock/disable), so nothing to unwind here.
+        if let manager {
+            IOHIDManagerClose(manager, IOOptionBits(kIOHIDOptionsTypeNone))
+            IOHIDManagerCancel(manager)
+        }
+    }
+}
+
+@MainActor
+private final class SpaceKeyCallbackContext {
+    weak var monitor: SpaceKeyMonitor?
+    let generation: Int
+
+    init(monitor: SpaceKeyMonitor, generation: Int) {
+        self.monitor = monitor
+        self.generation = generation
     }
 }

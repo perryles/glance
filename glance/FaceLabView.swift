@@ -50,6 +50,7 @@ struct FaceLabView: View {
                 modelStatusSection
                 sessionLockSection
                 previewSection
+                InfraredLabView(beforeCapture: { controller.stop() })
                 detectionSection
                 livenessSection
                 enrollSection
@@ -293,7 +294,7 @@ struct FaceLabView: View {
         let hasEvidence = state.reading.confidence > 0
 
         return HStack(spacing: 8) {
-            Toggle("", isOn: Binding(
+            Toggle(String(localized: ""), isOn: Binding(
                 get: { controller.isLivenessCueEnabled(cue) },
                 set: { controller.setLivenessCue(cue, enabled: $0) }
             ))
@@ -324,7 +325,7 @@ struct FaceLabView: View {
                 .font(.caption.monospacedDigit())
                 .frame(width: 36, alignment: .trailing)
 
-            Text("\(state.framesCounted)/\(framesNeeded)")
+            Text(String(localized: "\(state.framesCounted)/\(framesNeeded)"))
                 .font(.caption2.monospacedDigit())
                 .frame(width: 40, alignment: .trailing)
                 .foregroundStyle(.secondary)
@@ -625,7 +626,7 @@ struct FaceLabView: View {
  private func diagnosticLabel(_ key: String) -> String {
         switch key {
         case "interocular": return String(localized: "interocular")
-        case "yaw range (deg)": return String(localized: "yaw range (deg)")
+        case String(localized: "yaw range (deg)"): return String(localized: "yaw range (deg)")
         case "eye / faceW": return String(localized: "eye / faceW")
         case "nose-eye / faceH": return String(localized: "nose-eye / faceH")
         case "nose-mouth / faceH": return String(localized: "nose-mouth / faceH")
@@ -721,7 +722,7 @@ private struct IdentityRow: View {
     }
 
     private func isLow(_ sample: FaceSample) -> Bool {
-        sample.qualityTier == .poor
+        identity.qualityTier(of: sample) == .poor
     }
 }
 

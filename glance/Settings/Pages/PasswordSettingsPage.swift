@@ -111,8 +111,20 @@ struct PasswordSettingsPage: View {
 
                 SettingsGroupDivider()
 
+                SettingsRowContent(
+                    title: String(localized: "Unlock session at login"),
+                    info: String(localized: "Glance unlocks its session by itself when it opens, so you don't need Touch ID or your password after every login. Logging in to macOS becomes the only check. Auto lock, or locking the session yourself, still keeps it locked until the next login.")
+                ) {
+                    GlanceToggle(isOn: Binding(
+                        get: { pocController.unlocksAtLogin },
+                        set: setUnlockAtLogin
+                    ))
+                }
+
+                SettingsGroupDivider()
+
                 SettingsRowContent(title: String(localized: "Change password")) {
-                    SettingsPrimaryButton(title: String(localized: "Change"), compact: true) {
+                    SettingsPrimaryButton(title: "Change", compact: true) {
                         OnboardingController.startPasswordOnly()
                     }
                 }
@@ -142,6 +154,15 @@ struct PasswordSettingsPage: View {
             // it now rather than leaving Your Face stuck showing "locked".
             FaceEnrollmentStore.shared.reloadIfUnlocked()
             isUnlocking = false
+        }
+    }
+
+    private func setUnlockAtLogin(_ enabled: Bool) {
+        do {
+            try pocController.setUnlockAtLogin(enabled)
+            statusMessage = nil
+        } catch {
+            statusMessage = String(localized: "Couldn't change unlock at login: \(error.localizedDescription)")
         }
     }
 

@@ -16,6 +16,7 @@ final class POCController {
 
     var hasStoredPassword: Bool = SecureCredentialManager.hasStoredPassword()
     var isSessionUnlocked: Bool = SecureCredentialManager.isSessionUnlocked
+    var unlocksAtLogin: Bool = SecureCredentialManager.unlocksAtLogin
     var sessionError: String? = nil
 
     /// Bound to the setup SecureField. Cleared immediately after a successful save.
@@ -34,6 +35,7 @@ final class POCController {
     func refreshCredentialStatus() {
         hasStoredPassword = SecureCredentialManager.hasStoredPassword()
         isSessionUnlocked = SecureCredentialManager.isSessionUnlocked
+        unlocksAtLogin = SecureCredentialManager.unlocksAtLogin
     }
 
     // MARK: - Session (Touch ID gate)
@@ -50,6 +52,20 @@ final class POCController {
             isSessionUnlocked = false
             sessionError = error.localizedDescription
         }
+    }
+
+    /// Silent launch-time unlock for users who opted in to unlocking at login. Never prompts; stays locked otherwise.
+    func unlockSessionAtLaunch() async {
+        _ = await Task.detached(priority: .userInitiated) {
+            SecureCredentialManager.unlockSessionFromLoginKey()
+        }.value
+        refreshCredentialStatus()
+    }
+
+    /// Throws so the toggle can revert itself; the state is re-read from the keychain either way.
+    func setUnlockAtLogin(_ enabled: Bool) throws {
+        defer { refreshCredentialStatus() }
+        try SecureCredentialManager.setUnlockAtLogin(enabled)
     }
 
     func lockSession() {
@@ -93,50 +109,37 @@ final class POCController {
     @discardableResult
     func injectStoredPassword(
         requireAuthoritativeLock: Bool = false,
-        systemAuthenticationPrompt: SystemAuthenticationPrompt? = nil
+        systemAuthenticationPrompt: SystemAuthenticationPrompt? = nil,
+        authorization: @escaping @MainActor () -> Bool = { true }
     ) async -> Bool {
         guard KeystrokeInjector.isAccessibilityTrusted() else {
             statusMessage = String(localized: "Accessibility not granted — open System Settings and enable glance.")
             return false
         }
-        guard SecureCredentialManager.isSessionUnlocked else {
-            statusMessage = String(localized: "Session locked — authenticate with Touch ID first.")
+        let session = SecureCredentialManager.sessionIdentifier
+        let authorized = {
+            !Task.isCancelled && session != nil && SecureCredentialManager.sessionIdentifier == session && authorization()
+                && (!requireAuthoritativeLock || LockMonitor.isScreenActuallyLocked())
+                && (systemAuthenticationPrompt == nil || (
+                    GlanceSettings.shared.isFaceUnlockEnabled
+                    && GlanceSettings.shared.isSystemAuthenticationAssistEnabled
+                    && SystemAuthenticationPromptMonitor.shared.currentTrustedPrompt() == systemAuthenticationPrompt))
+        }
+        guard authorized() else {
+            statusMessage = String(localized: "Unlock authorization expired or was cancelled.")
             return false
         }
-
-        if requireAuthoritativeLock {
-            guard LockMonitor.isScreenActuallyLocked() else {
-                statusMessage = String(localized: "Skipped: CGSession reports screen is not actually locked.")
-                return false
-            }
-        }
-        if let systemAuthenticationPrompt {
-            guard SystemAuthenticationPromptMonitor.shared.currentTrustedPrompt() == systemAuthenticationPrompt else {
-                statusMessage = String(localized: "Skipped: the supported system password prompt is no longer focused.")
-                return false
-            }
-        }
-
         statusMessage = String(localized: "Injecting…")
         do {
+            var bytes = try await Task.detached(priority: .userInitiated) {
+                try SecureCredentialManager.readPassword()
+            }.value
+            defer { bytes.resetBytes(in: 0..<bytes.count) }
+            guard authorized() else { throw KeystrokeError.authorizationExpired }
             if let systemAuthenticationPrompt {
-                var bytes = try await Task.detached(priority: .userInitiated) {
-                    try SecureCredentialManager.readPassword()
-                }.value
-                defer { bytes.resetBytes(in: 0..<bytes.count) }
-                try Task.checkCancellation()
-                guard SecureCredentialManager.isSessionUnlocked,
-                      GlanceSettings.shared.isFaceUnlockEnabled,
-                      GlanceSettings.shared.isSystemAuthenticationAssistEnabled else {
-                    throw SystemAuthenticationPromptError.unavailable
-                }
                 try SystemAuthenticationPromptMonitor.shared.fillPassword(bytes, in: systemAuthenticationPrompt)
             } else {
-                try await Task.detached(priority: .userInitiated) {
-                    var bytes = try SecureCredentialManager.readPassword()
-                    defer { bytes.resetBytes(in: 0..<bytes.count) }
-                    try KeystrokeInjector.typeAndReturn(bytes)
-                }.value
+                try await KeystrokeInjector.typeAndReturn(bytes, stillAuthorized: authorized)
             }
             statusMessage = systemAuthenticationPrompt != nil
                 ? String(localized: "Filled supported system password prompt at \(Date().formatted(date: .omitted, time: .standard))")

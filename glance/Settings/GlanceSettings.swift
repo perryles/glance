@@ -103,10 +103,12 @@ final class GlanceSettings {
     private enum Key {
         static let isFaceUnlockEnabled = "GlanceSettings.isFaceUnlockEnabled"
         static let isSystemAuthenticationAssistEnabled = "GlanceSettings.isSystemAuthenticationAssistEnabled"
+        static let requireInfrared = "GlanceSettings.requireInfrared"
+        static let infraredThreshold = "GlanceSettings.infraredThreshold"
+        static let minimumFaceWidth = "GlanceSettings.minimumFaceWidth"
         static let matchThreshold = "GlanceSettings.matchThreshold"
         static let livenessChecksEnabled = "GlanceSettings.livenessChecksEnabled"
         static let livenessMode = "GlanceSettings.livenessMode"
-        static let minimumFaceWidth = "GlanceSettings.minimumFaceWidth"
         static let unlockAnimationStyle = "GlanceSettings.unlockAnimationStyle"
         static let showUnlockAnimation = "GlanceSettings.showUnlockAnimation"
         /// Legacy bool key — read once during migration, then ignored.
@@ -120,6 +122,7 @@ final class GlanceSettings {
         static let preferredDisplayID = "GlanceSettings.preferredDisplayID"
         static let preferredDisplayName = "GlanceSettings.preferredDisplayName"
         static let autoLockIntervalDays = "GlanceSettings.autoLockIntervalDays"
+        static let allowContinuityCamera = "GlanceSettings.allowContinuityCamera"
         static let defaultCameraID = "GlanceSettings.defaultCameraID"
         static let builtInDisplayCameraID = "GlanceSettings.builtInDisplayCameraID"
         static let externalDisplayCameraID = "GlanceSettings.externalDisplayCameraID"
@@ -144,6 +147,13 @@ final class GlanceSettings {
             defaults.set(isSystemAuthenticationAssistEnabled, forKey: Key.isSystemAuthenticationAssistEnabled)
             systemAuthenticationAssistDidChange?(isSystemAuthenticationAssistEnabled)
         }
+    }
+    /// Additional check, never an RGB/liveness replacement. Opt-in on upgrade.
+    var requireInfrared: Bool {
+        didSet { defaults.set(requireInfrared, forKey: Key.requireInfrared) }
+    }
+    var infraredThreshold: Double {
+        didSet { defaults.set(infraredThreshold, forKey: Key.infraredThreshold) }
     }
     var matchThreshold: Float {
         didSet { defaults.set(matchThreshold, forKey: Key.matchThreshold) }
@@ -259,6 +269,9 @@ final class GlanceSettings {
     }
     /// Device `uniqueID`s, not device objects — devices can disconnect/
     /// reconnect between launches, but their unique ID is stable.
+    var allowContinuityCamera: Bool {
+        didSet { defaults.set(allowContinuityCamera, forKey: Key.allowContinuityCamera) }
+    }
     var defaultCameraID: String? {
         didSet { defaults.set(defaultCameraID, forKey: Key.defaultCameraID) }
     }
@@ -302,6 +315,8 @@ final class GlanceSettings {
     private init() {
         // Enabled by default — onboarding already enrolled a face and set a
         // password specifically to use Face Unlock.
+        requireInfrared = defaults.object(forKey: Key.requireInfrared) as? Bool ?? false
+        infraredThreshold = defaults.object(forKey: Key.infraredThreshold) as? Double ?? InfraredUnlockPolicy.defaultThreshold
         isFaceUnlockEnabled = defaults.object(forKey: Key.isFaceUnlockEnabled) as? Bool ?? true
         isSystemAuthenticationAssistEnabled = defaults.object(forKey: Key.isSystemAuthenticationAssistEnabled) as? Bool ?? false
         // Matches `MatchConfidenceLevel.standard` — see RecognitionSettingsPage.swift.
@@ -312,7 +327,7 @@ final class GlanceSettings {
         // catches the main attack (a photo on a phone screen).
         livenessMode = defaults.string(forKey: Key.livenessMode)
             .flatMap(LivenessMode.init(rawValue:)) ?? .light
-        // Matches `DetectionDistanceLevel.standard` — see RecognitionSettingsPage.swift.
+
         minimumFaceWidth = defaults.object(forKey: Key.minimumFaceWidth) as? Float ?? 0.21
 
         // Resolve the stored style first, `.none` included, then split it
@@ -358,6 +373,7 @@ final class GlanceSettings {
         // Defaults to 30 days
         autoLockInterval = (defaults.object(forKey: Key.autoLockIntervalDays) as? Int)
             .flatMap(AutoLockInterval.init(rawValue:)) ?? .thirtyDays
+        allowContinuityCamera = defaults.object(forKey: Key.allowContinuityCamera) as? Bool ?? true
         defaultCameraID = defaults.string(forKey: Key.defaultCameraID)
         builtInDisplayCameraID = defaults.string(forKey: Key.builtInDisplayCameraID)
         externalDisplayCameraID = defaults.string(forKey: Key.externalDisplayCameraID)
@@ -366,9 +382,6 @@ final class GlanceSettings {
         onboardingResumeStep = defaults.string(forKey: Key.onboardingResumeStep)
             .flatMap(OnboardingStep.init(rawValue:))
         hasAcknowledgedSecurityNotice = defaults.object(forKey: Key.hasAcknowledgedSecurityNotice) as? Bool ?? false
-
-        // Push into the nonisolated mirror immediately, or FaceRecognitionPipeline
-        // would keep its own default until the slider is first touched.
         FaceRecognitionPipeline.minimumProminentFaceWidth = minimumFaceWidth
     }
 }

@@ -14,9 +14,12 @@ enum KeychainManager {
         return data
     }
 
-    static func save(account: String, data: Data, accessControl: SecAccessControl? = nil) throws {
+    static func save(account: String, data: Data, accessControl: SecAccessControl? = nil, accessible: CFString = kSecAttrAccessibleWhenUnlockedThisDeviceOnly) throws {
         items[account] = data
     }
+
+    static func migrateLegacyItem(account: String, accessible: CFString) {}
+    static func setAccessibility(account: String, to accessible: CFString) {}
 
     static func delete(account: String) throws { items[account] = nil }
 
@@ -78,6 +81,19 @@ struct FaceStorageSelftest {
             check(!SecureFaceStore.exists)
             try check(SecureFaceStore.load().isEmpty, "Deleted enrollment must not be reimported")
             try check(Data(contentsOf: legacy) == ciphertext)
+
+        case "session-revision":
+            check(SecureCredentialManager.sessionIdentifier == nil)
+            try SecureCredentialManager.unlockSession(reason: "Selftest")
+            let first = SecureCredentialManager.sessionIdentifier
+            check(first != nil)
+            try SecureCredentialManager.savePassword(Data("test".utf8))
+            _ = try SecureCredentialManager.readPassword()
+            check(SecureCredentialManager.sessionIdentifier == first)
+            SecureCredentialManager.lockSession()
+            check(SecureCredentialManager.sessionIdentifier == nil)
+            try SecureCredentialManager.unlockSession(reason: "Selftest")
+            check(SecureCredentialManager.sessionIdentifier != first)
 
         case "missing-key":
             try FileManager.default.createDirectory(at: scoped.deletingLastPathComponent(), withIntermediateDirectories: true)

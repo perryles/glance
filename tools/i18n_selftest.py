@@ -22,7 +22,7 @@ def load_catalog(root: Path, name: str) -> dict:
 
 
 def placeholders(value: str) -> Counter:
-    tokens = re.findall(r"%(?:(\d+)\$)?(@|lld|d|u|f|%)", value)
+    tokens = re.findall(r"%(?:(\d+)\$)?[-+#0 ]*(?:\d+|\*)?(?:\.(?:\d+|\*))?(@|lld|ld|d|u|f|%)", value)
     arguments = (token for token in tokens if token[1] != "%")
     return Counter((int(position) if position else index, kind)
                    for index, (position, kind) in enumerate(arguments, start=1))
@@ -32,6 +32,8 @@ def validate_catalog(root: Path, name: str) -> None:
     strings = load_catalog(root, name)
     assert REQUIRED_KEYS[name] <= strings.keys()
     for key, entry in strings.items():
+        if not key or entry.get("shouldTranslate") is False:
+            continue
         assert "\\n" not in key, f"{key!r} uses a literal newline escape"
         for language in LANGUAGES:
             unit = entry.get("localizations", {}).get(language, {}).get("stringUnit", {})
@@ -54,6 +56,8 @@ def validate_app(root: Path, app: Path) -> None:
                                     check=True, capture_output=True, text=True)
             compiled = json.loads(result.stdout)
             for key, entry in load_catalog(root, name).items():
+                if not key or entry.get("shouldTranslate") is False:
+                    continue
                 expected = entry["localizations"][language]["stringUnit"]["value"]
                 assert compiled.get(key) == expected, f"{language}: {key!r} missing or stale in app"
 

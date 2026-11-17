@@ -6,9 +6,19 @@
 	<string>https://github.com/perryles/glance/releases/latest/download/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>q2HgtKPuCCmf4gaUjHUPf4525kz1USqiZRI8dOp7iD4=</string>
+	<key>NSCameraUseContinuityCameraDeviceType</key>
+	<true/>
+	<key>GlanceIRServiceName</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER).camera-helper</string>
+	<key>GlanceIRServiceRequirement</key>
+	<string>anchor apple generic and identifier "$(PRODUCT_BUNDLE_IDENTIFIER).camera-helper" and certificate leaf[subject.OU] = "$(DEVELOPMENT_TEAM)"</string>
 	<key>SUAutomaticallyUpdate</key>
 	<false/>
 	<key>SUEnableInstallerLauncherService</key>
 	<false/>
+	<key>SUFeedURL</key>
+	<string>https://tryglance.app/appcast.xml</string>
+	<key>SUPublicEDKey</key>
+	<string>o9uQmlzKzh7NZvFtVktVh/wqw4Ie6WshX8K8NFDweWY=</string>
 </dict>
 </plist>
