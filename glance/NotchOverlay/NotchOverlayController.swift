@@ -216,7 +216,7 @@ final class NotchOverlayController {
     ///
     /// - Parameter styleOverride: forces `.minimal`/`.original` regardless of the saved
     ///   preference, for the Animation section's live preview.
-    func present(styleOverride: UnlockAnimationStyle? = nil, onRetry: (() -> Void)? = nil) {
+    func present(styleOverride: UnlockAnimationStyle? = nil, onRetry: (() -> Void)? = nil, onPresented: (() -> Void)? = nil) {
         isArmed = false
         onActivate = onRetry
         resolveTask?.cancel(); resolveTask = nil
@@ -229,6 +229,7 @@ final class NotchOverlayController {
             phase = .scanning
             windowController.show()
             updateInteractivity()
+            onPresented?()
         }
     }
 

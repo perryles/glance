@@ -103,6 +103,11 @@ struct GeneralSettingsPage: View {
                 SettingsGroupDivider()
                 UnlockTriggerPicker(selection: $settings.unlockTriggers, isEnabled: coordinator.isEnabled)
                 SettingsGroupDivider()
+                SettingsRowContent(title: String(localized: "Assist system password prompts")) {
+                    GlanceToggle(isOn: $settings.isSystemAuthenticationAssistEnabled)
+                }
+                .disabled(!coordinator.isEnabled)
+                SettingsGroupDivider()
                 displayPicker()
             }
             .onReceive(NotificationCenter.default.publisher(for: NSApplication.didChangeScreenParametersNotification)) { _ in
@@ -121,6 +126,12 @@ struct GeneralSettingsPage: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         inputMonitoring = SpaceKeyMonitor.inputMonitoringAccess
                     }
+                }
+            }
+            if settings.isSystemAuthenticationAssistEnabled {
+                SettingsCaption(text: String(localized: "Press ⌃⌥⌘F while a supported macOS password prompt is focused. Face recognition must pass before Glance fills it."))
+                if !coordinator.statusMessage.isEmpty {
+                    SettingsCaption(text: coordinator.statusMessage)
                 }
             }
             if let launchAtLoginError {

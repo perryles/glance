@@ -150,7 +150,7 @@ struct PasswordSettingsPage: View {
     /// face store requires an unlocked session.
     private func removePassword() {
         do {
-            FaceEnrollmentStore.shared.deleteAll()
+            try FaceEnrollmentStore.shared.deleteAll()
             try SecureCredentialManager.deletePassword()
             pocController.refreshCredentialStatus()
             statusMessage = String(localized: "Password and face enrollment removed.")

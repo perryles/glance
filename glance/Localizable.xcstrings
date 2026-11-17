@@ -6376,6 +6376,244 @@
         }
       }
     },
+    "Assist system password prompts": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "协助填写系统密码弹窗"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem parola istemlerine yardımcı ol"
+          }
+        }
+      }
+    },
+    "Press ⌃⌥⌘F while a supported macOS password prompt is focused. Face recognition must pass before Glance fills it.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当受支持的 macOS 密码弹窗获得焦点时，按 ⌃⌥⌘F。人脸识别通过后，Glance 才会填写。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desteklenen bir macOS parola istemi odaktayken ⌃⌥⌘F tuşlarına basın. Glance alanı doldurmadan önce yüz tanımanın başarılı olması gerekir."
+          }
+        }
+      }
+    },
+    "No supported system password prompt is focused.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前没有获得焦点的受支持系统密码弹窗。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desteklenen bir sistem parola istemi odakta değil."
+          }
+        }
+      }
+    },
+    "System prompt assist is on, but the session is locked.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系统弹窗协助已开启，但会话处于锁定状态。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem istemi yardımı açık, ancak oturum kilitli."
+          }
+        }
+      }
+    },
+    "System prompt assist is on, but no password is stored yet.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系统弹窗协助已开启，但尚未保存密码。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem istemi yardımı açık, ancak henüz bir parola kayıtlı değil."
+          }
+        }
+      }
+    },
+    "Looking for your face for the system prompt…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在为系统弹窗寻找你的脸…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem istemi için yüzünüz aranıyor…"
+          }
+        }
+      }
+    },
+    "Recognized — filling system prompt…": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已识别——正在填写系统弹窗…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tanındı — sistem istemi dolduruluyor…"
+          }
+        }
+      }
+    },
+    "Face not recognized for the system prompt.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未识别出系统弹窗对应的用户面部。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem istemi için yüz tanınmadı."
+          }
+        }
+      }
+    },
+    "Couldn't confirm a live face for the system prompt.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法确认系统弹窗前是活体人脸。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem istemi için canlı bir yüz doğrulanamadı."
+          }
+        }
+      }
+    },
+    "System password prompt is no longer focused, or no face was detected.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系统密码弹窗已失去焦点，或未检测到人脸。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem parola istemi artık odakta değil veya yüz algılanmadı."
+          }
+        }
+      }
+    },
+    "Skipped: the supported system password prompt is no longer focused.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已跳过：受支持的系统密码弹窗已失去焦点。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atlandı: desteklenen sistem parola istemi artık odakta değil."
+          }
+        }
+      }
+    },
+    "The system password prompt changed. Focus it and try the shortcut again.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "系统密码弹窗已发生变化。请选中密码框后重新按快捷键。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem parola istemi değişti. İstemi odaklayıp kısayolu yeniden deneyin."
+          }
+        }
+      }
+    },
+    "macOS refused to fill this password field. Enter your password manually.": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS 拒绝填写此密码框。请手动输入密码。"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS bu parola alanını doldurmayı reddetti. Parolanızı elle girin."
+          }
+        }
+      }
+    },
+    "Filled supported system password prompt at %@": {
+      "extractionState": "manual",
+      "localizations": {
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已于 %@ 填写受支持的系统密码弹窗"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Desteklenen sistem parola istemi %@ anında dolduruldu"
+          }
+        }
+      }
+    },
     "%lld sample": {
       "extractionState": "manual",
       "localizations": {

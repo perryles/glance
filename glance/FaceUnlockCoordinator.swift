@@ -269,6 +269,9 @@ final class FaceUnlockCoordinator {
             if showsUI {
                 NotchOverlayController.shared.finish(success: true)
             }
+        case .injectionFailed:
+            statusMessage = pocController.statusMessage
+            if showsUI { NotchOverlayController.shared.finish(success: false) }
         case .consistentlyWrongFace:
             statusMessage = String(localized: "Face not recognized.")
             if showsUI {
@@ -316,19 +319,110 @@ final class FaceUnlockCoordinator {
         }
     }
 
+    private enum ScanTarget {
+        case lockScreen
+        case systemAuthenticationPrompt(SystemAuthenticationPrompt)
+
+        var remainsValid: Bool {
+            switch self {
+            case .lockScreen:
+                return LockMonitor.isScreenActuallyLocked()
+            case .systemAuthenticationPrompt(let prompt):
+                return GlanceSettings.shared.isSystemAuthenticationAssistEnabled &&
+                    SystemAuthenticationPromptMonitor.shared.currentTrustedPrompt() == prompt
+            }
+        }
+    }
+
     private enum ScanOutcome {
         case matched
+        case injectionFailed
         case consistentlyWrongFace
         /// A deny cue (glare, device rectangle) fired — actively rejected as a spoof regardless of match. Same failure path as `.consistentlyWrongFace`.
         case spoofSuspected
         case noResolution
     }
 
+    /// Manual hot-key entry for a trusted macOS password prompt. The shortcut is
+    /// the user's consent; every later gate can still refuse to type anything.
+    func startSystemAuthenticationAssist() {
+        guard GlanceSettings.shared.isSystemAuthenticationAssistEnabled, isEnabled else { return }
+        guard let prompt = SystemAuthenticationPromptMonitor.shared.currentTrustedPrompt() else {
+            statusMessage = String(localized: "No supported system password prompt is focused.")
+            return
+        }
+        guard SecureCredentialManager.isSessionUnlocked else {
+            statusMessage = String(localized: "System prompt assist is on, but the session is locked.")
+            return
+        }
+        guard SecureCredentialManager.hasStoredPassword() else {
+            statusMessage = String(localized: "System prompt assist is on, but no password is stored yet.")
+            return
+        }
+
+        scanTask?.cancel()
+        scanGeneration &+= 1
+        let generation = scanGeneration
+        scanTask = Task { [weak self] in
+            await self?.runSystemAuthenticationAssistScan(prompt: prompt, generation: generation)
+        }
+    }
+
+    /// The nonactivating overlay keeps the system password field focused while
+    /// showing the same scan and outcome feedback as lock-screen authentication.
+    private func runSystemAuthenticationAssistScan(prompt: SystemAuthenticationPrompt, generation: Int) async {
+        let showsUI = self.showsUI && NotchGeometry.preferredScreen() != nil
+        if showsUI {
+            await withCheckedContinuation { continuation in
+                NotchOverlayController.shared.present(onPresented: { continuation.resume() })
+            }
+        }
+        guard generation == scanGeneration, !Task.isCancelled else { return }
+        await camera.start()
+        guard generation == scanGeneration else { return }
+
+        if let error = camera.errorMessage {
+            statusMessage = error
+            camera.stop()
+            if showsUI { NotchOverlayController.shared.finish(success: false) }
+            return
+        }
+
+        statusMessage = String(localized: "Looking for your face for the system prompt…")
+        let outcome = await observeScanWindow(
+            deadline: Date().addingTimeInterval(scanWindowDuration),
+            requireOverlayScanning: false,
+            target: .systemAuthenticationPrompt(prompt)
+        )
+        guard generation == scanGeneration else { return }
+        camera.stop()
+
+        switch outcome {
+        case .matched:
+            if showsUI { NotchOverlayController.shared.finish(success: true) }
+        case .injectionFailed:
+            if showsUI { NotchOverlayController.shared.finish(success: false) }
+        case .consistentlyWrongFace:
+            statusMessage = String(localized: "Face not recognized for the system prompt.")
+            if showsUI { NotchOverlayController.shared.finish(success: false) }
+        case .spoofSuspected:
+            statusMessage = String(localized: "Couldn't confirm a live face for the system prompt.")
+            if showsUI { NotchOverlayController.shared.finish(success: false) }
+        case .noResolution:
+            statusMessage = String(localized: "System password prompt is no longer focused, or no face was detected.")
+            if showsUI { await NotchOverlayController.shared.collapse() }
+        }
+    }
+
     /// Recognition and liveness run concurrently and each latches when it succeeds, so unlock fires the moment the second lands;
     /// liveness never fails the scan by staying undecided, it just keeps scanning until `deadline`.
     /// `requireOverlayScanning` bails early once the overlay's own timeout collapses the UI — only applied when there is an
     /// overlay, since headlessly `phase` never becomes `.scanning` at all.
-    private func observeScanWindow(deadline: Date, requireOverlayScanning: Bool) async -> ScanOutcome {
+    private func observeScanWindow(
+        deadline: Date,
+        requireOverlayScanning: Bool,
+        target: ScanTarget = .lockScreen
+    ) async -> ScanOutcome {
         let livenessEnabled = GlanceSettings.shared.livenessChecksEnabled
         let liveness = LivenessAnalyzer()
         liveness.modeProvider = { GlanceSettings.shared.livenessMode }
@@ -347,7 +441,7 @@ final class FaceUnlockCoordinator {
 
         while Date() < deadline, !Task.isCancelled,
               !requireOverlayScanning || NotchOverlayController.shared.phase == .scanning {
-            guard LockMonitor.isScreenActuallyLocked() else { return .noResolution }
+            guard target.remainsValid else { return .noResolution }
 
             guard let frame = camera.currentFrame, frame.id != lastProcessedFrameID else {
                 // 20ms keeps the liveness window's sample count high while staying close to the camera's native ~33ms cadence.
@@ -364,6 +458,7 @@ final class FaceUnlockCoordinator {
                 return (result, LivenessFeatureExtractor.extract(from: result, frame: frame.image, faceCrop: faceCrop))
             }.value
 
+            guard !Task.isCancelled, isEnabled, target.remainsValid else { return .noResolution }
             guard let (result, livenessFrame) = outcome else {
                 wrongFaceStartedAt = nil
                 lastFaceBoundingBox = nil
@@ -412,8 +507,16 @@ final class FaceUnlockCoordinator {
                     ? (confirmingCue.map { String(localized: "live via \($0.title)") } ?? String(localized: "liveness clear"))
                     : String(localized: "liveness off")
                 lastOutcome = String(localized: "Matched \(readyMatch.identity.name) at \(String(format: "%.3f", readyMatch.centroidSimilarity)), \(livenessNote).")
-                await pocController.injectStoredPassword(requireAuthoritativeLock: true)
-                return .matched
+                switch target {
+                case .lockScreen:
+                    let injected = await pocController.injectStoredPassword(requireAuthoritativeLock: true)
+                    return injected ? .matched : .injectionFailed
+                case .systemAuthenticationPrompt(let prompt):
+                    statusMessage = String(localized: "Recognized — filling system prompt…")
+                    let injected = await pocController.injectStoredPassword(systemAuthenticationPrompt: prompt)
+                    statusMessage = pocController.statusMessage
+                    return injected ? .matched : .injectionFailed
+                }
             }
 
             try? await Task.sleep(nanoseconds: 20_000_000)

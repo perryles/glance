@@ -102,6 +102,7 @@ final class GlanceSettings {
 
     private enum Key {
         static let isFaceUnlockEnabled = "GlanceSettings.isFaceUnlockEnabled"
+        static let isSystemAuthenticationAssistEnabled = "GlanceSettings.isSystemAuthenticationAssistEnabled"
         static let matchThreshold = "GlanceSettings.matchThreshold"
         static let livenessChecksEnabled = "GlanceSettings.livenessChecksEnabled"
         static let livenessMode = "GlanceSettings.livenessMode"
@@ -131,9 +132,18 @@ final class GlanceSettings {
     /// AppKit owns the actual status item. This callback keeps the persisted
     /// preference independent from that UI lifecycle.
     @ObservationIgnored private var menuBarVisibilityDidChange: ((Bool) -> Void)?
+    @ObservationIgnored private var systemAuthenticationAssistDidChange: ((Bool) -> Void)?
 
     var isFaceUnlockEnabled: Bool {
         didSet { defaults.set(isFaceUnlockEnabled, forKey: Key.isFaceUnlockEnabled) }
+    }
+    /// Manual-only assist for trusted macOS password prompts. Off by default so
+    /// existing installs never gain a new credential-entry surface silently.
+    var isSystemAuthenticationAssistEnabled: Bool {
+        didSet {
+            defaults.set(isSystemAuthenticationAssistEnabled, forKey: Key.isSystemAuthenticationAssistEnabled)
+            systemAuthenticationAssistDidChange?(isSystemAuthenticationAssistEnabled)
+        }
     }
     var matchThreshold: Float {
         didSet { defaults.set(matchThreshold, forKey: Key.matchThreshold) }
@@ -282,10 +292,18 @@ final class GlanceSettings {
         didSet { defaults.set(hasAcknowledgedSecurityNotice, forKey: Key.hasAcknowledgedSecurityNotice) }
     }
 
+    /// Keeps Carbon hot-key registration outside Settings so the preference can
+    /// be observed even when no Settings view is instantiated.
+    func bindSystemAuthenticationAssistChange(_ handler: @escaping (Bool) -> Void) {
+        systemAuthenticationAssistDidChange = handler
+        handler(isSystemAuthenticationAssistEnabled)
+    }
+
     private init() {
         // Enabled by default — onboarding already enrolled a face and set a
         // password specifically to use Face Unlock.
         isFaceUnlockEnabled = defaults.object(forKey: Key.isFaceUnlockEnabled) as? Bool ?? true
+        isSystemAuthenticationAssistEnabled = defaults.object(forKey: Key.isSystemAuthenticationAssistEnabled) as? Bool ?? false
         // Matches `MatchConfidenceLevel.standard` — see RecognitionSettingsPage.swift.
         matchThreshold = defaults.object(forKey: Key.matchThreshold) as? Float ?? 0.66
         livenessChecksEnabled = defaults.object(forKey: Key.livenessChecksEnabled) as? Bool ?? true

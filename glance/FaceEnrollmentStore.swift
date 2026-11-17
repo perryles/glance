@@ -259,9 +259,9 @@ final class FaceEnrollmentStore {
 
     /// Removes the file outright (rather than writing an empty array) — the teardown path when the session key
     /// itself is being removed, so no orphaned encrypted file is left behind for the next setup to trip over.
-    func deleteAll() {
+    func deleteAll() throws {
+        try SecureFaceStore.deleteAll()
         identities.removeAll()
-        SecureFaceStore.deleteAll()
         loadFailure = nil
         hasLoadedSuccessfully = true
     }
