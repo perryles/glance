@@ -49,7 +49,7 @@ nonisolated enum InfraredProbeError: LocalizedError {
         case .invalidResponse:
             return String(localized: "The IR test did not return a complete 340 × 340 infrared image.")
         case .execution(let message):
-            return message
+            return NSLocalizedString(message, comment: "Infrared helper error")
         }
     }
 }

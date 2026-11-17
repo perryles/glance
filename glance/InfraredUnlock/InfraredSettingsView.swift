@@ -22,7 +22,7 @@ struct InfraredSettingsView: View {
                             } else { Button(String(localized: "Enable camera helper")) { service.enable() } }
                             if service.needsApproval { Button(String(localized: "Open System Settings")) { service.openSettings() } }
                             if !service.enabled { Button(String(localized: "Check approval")) { service.refresh() } }
-                            Text(service.enabled ? "Enabled" : String(localized: "Not ready")).font(.caption)
+                            Text(service.enabled ? String(localized: "Enabled") : String(localized: "Not ready")).font(.caption)
                         }
                         if !service.message.isEmpty { Text(service.message).font(.caption) }
                     } else { Text(String(localized: "The signed camera helper is not included in this build.")).font(.caption) }

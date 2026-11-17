@@ -24,7 +24,7 @@ struct InfraredLabView: View {
                         if controller.service.needsApproval {
                             Button(String(localized: "Open System Settings")) { controller.service.openSettings() }
                         }
-                        Text(controller.service.enabled ? "Enabled" : (controller.service.needsApproval ? String(localized: "Awaiting approval") : "Disabled"))
+                        Text(controller.service.enabled ? String(localized: "Enabled") : (controller.service.needsApproval ? String(localized: "Awaiting approval") : String(localized: "Disabled")))
                             .font(.caption)
                     }
                     .disabled(controller.isBusy)

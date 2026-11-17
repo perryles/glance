@@ -181,7 +181,7 @@ final class InfraredProbeController {
         case "cancelled":
             return String(localized: "IR test cancelled.")
         default:
-            return String(localized: "IR test failed at \(result.stage ?? "unknown stage") (\(result.code ?? -1)).")
+            return String(localized: "IR test failed at \(result.stage ?? String(localized: "unknown stage")) (\(result.code ?? -1)).")
         }
     }
 }

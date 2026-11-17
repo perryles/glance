@@ -58,13 +58,13 @@ final class UpdaterController {
     /// Sparkle setup itself rather than throwing.
     func start() {
         // Isolated development variants must not replace themselves with the production app.
-        guard Bundle.main.bundleIdentifier == "com.jonathan.glance" else { return }
+        guard Bundle.main.bundleIdentifier == "com.perryles.glance" else { return }
         controller.startUpdater()
     }
 
-    /// User-initiated String(localized: "Check for Updates") — shows Sparkle's standard progress UI.
+    /// User-initiated "Check for Updates" — shows Sparkle's standard progress UI.
     func checkForUpdates() {
-        guard Bundle.main.bundleIdentifier == "com.jonathan.glance" else { return }
+        guard Bundle.main.bundleIdentifier == "com.perryles.glance" else { return }
         controller.checkForUpdates(nil)
     }
 }
@@ -75,7 +75,7 @@ final class UpdaterController {
 private final class UpdatePresentationDelegate: NSObject, SPUStandardUserDriverDelegate {
     private(set) var isPresentingUpdateUI = false
 
-    /// Fires before any modal alert, including the plain String(localized: "You're up to date") sheet from a manual check.
+    /// Fires before any modal alert, including the plain "You're up to date" sheet from a manual check.
     func standardUserDriverWillShowModalAlert() {
         beginPresenting()
     }

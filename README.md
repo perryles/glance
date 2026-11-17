@@ -52,12 +52,14 @@ https://github.com/user-attachments/assets/77438826-80a9-4ab2-9fc3-42407a2d0adb
 
 **Requirements:**
 - macOS 15 Sequoia or later
-- Apple Silicon or Intel Mac
+- Apple Silicon Mac for the downloadable 1.2.1 build (Intel requires a source build)
 
 <a href="https://github.com/perryles/glance/releases/latest/download/Glance-1.2.1.dmg" target="_self"><img width="200" src="https://github.com/user-attachments/assets/cdb8af97-1ee2-4669-b7cb-dcfb56c9dd61" alt="Download for Mac" /></a>
 
 Open the `.dmg` file and drag Glance to `/Applications`, then open it.
 
+
+For changes compared with upstream and usage of system-password assistance / experimental BRIO infrared matching, see [1.2.1 release notes](docs/RELEASE-1.2.1.md).
 
 ## Permissions
 

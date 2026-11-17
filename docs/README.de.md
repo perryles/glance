@@ -50,7 +50,7 @@ https://github.com/user-attachments/assets/77438826-80a9-4ab2-9fc3-42407a2d0adb
 - macOS 15 Sequoia oder neuer
 - Mac mit Apple Silicon oder Intel-Prozessor
 
-<a href="https://github.com/jonnyoo/glance/releases/latest/download/Glance.dmg" target="_self"><img width="200" src="https://github.com/user-attachments/assets/cdb8af97-1ee2-4669-b7cb-dcfb56c9dd61" alt="Für Mac herunterladen" /></a>
+<a href="https://github.com/perryles/glance/releases/latest/download/Glance-1.2.1.dmg" target="_self"><img width="200" src="https://github.com/user-attachments/assets/cdb8af97-1ee2-4669-b7cb-dcfb56c9dd61" alt="Für Mac herunterladen" /></a>
 
 Öffne die `.dmg`-Datei, ziehe Glance nach `/Applications` und starte die App.
 

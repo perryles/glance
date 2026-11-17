@@ -50,7 +50,7 @@ https://github.com/user-attachments/assets/77438826-80a9-4ab2-9fc3-42407a2d0adb
 - macOS 15 Sequoia 或更高版本
 - 搭载 Apple 芯片或 Intel 处理器的 Mac
 
-<a href="https://github.com/jonnyoo/glance/releases/latest/download/Glance.dmg" target="_self"><img width="200" src="https://github.com/user-attachments/assets/cdb8af97-1ee2-4669-b7cb-dcfb56c9dd61" alt="下载 Mac 版" /></a>
+<a href="https://github.com/perryles/glance/releases/latest/download/Glance-1.2.1.dmg" target="_self"><img width="200" src="https://github.com/user-attachments/assets/cdb8af97-1ee2-4669-b7cb-dcfb56c9dd61" alt="下载 Mac 版" /></a>
 
 打开 `.dmg` 文件，将 Glance 拖入 `/Applications`，然后启动应用。
 
