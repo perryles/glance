@@ -293,7 +293,7 @@ final class FaceLabController {
             return
         }
         calibrationSamples.append(CalibrationSample(centroidSimilarity: top.centroidSimilarity, isGenuine: isGenuine))
-        log(String(localized: "Calibration: recorded \(isGenuine ? "genuine" : "impostor") sample at \(String(format: "%.3f", top.centroidSimilarity))."))
+        log(String(localized: "Calibration: recorded \(isGenuine ? String(localized: "Genuine") : String(localized: "Impostor")) sample at \(String(format: "%.3f", top.centroidSimilarity))."))
     }
 
     func clearCalibrationSamples() {

@@ -412,7 +412,9 @@ struct FaceLabView: View {
                     ForEach(controller.store.identities) { identity in
                         HStack {
                             Text(identity.name)
-                            Text("\(identity.samples.count) sample\(identity.samples.count == 1 ? "" : "s")")
+                            Text(identity.samples.count == 1
+                                ? String(localized: "\(identity.samples.count) sample")
+                                : String(localized: "\(identity.samples.count) samples"))
                                 .font(.caption)
                                 .foregroundStyle(.secondary)
                             if identity.isStale(comparedTo: controller.pipeline.embedder) {
