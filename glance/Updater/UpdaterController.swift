@@ -10,6 +10,7 @@
 import AppKit
 import Observation
 import Sparkle
+import Foundation
 
 @Observable
 @MainActor
@@ -59,7 +60,7 @@ final class UpdaterController {
         controller.startUpdater()
     }
 
-    /// User-initiated "检查更新" — shows Sparkle's standard progress UI.
+    /// User-initiated String(localized: "Check for Updates") — shows Sparkle's standard progress UI.
     func checkForUpdates() {
         controller.checkForUpdates(nil)
     }
@@ -71,7 +72,7 @@ final class UpdaterController {
 private final class UpdatePresentationDelegate: NSObject, SPUStandardUserDriverDelegate {
     private(set) var isPresentingUpdateUI = false
 
-    /// Fires before any modal alert, including the plain "已是最新版本" sheet from a manual check.
+    /// Fires before any modal alert, including the plain String(localized: "You're up to date") sheet from a manual check.
     func standardUserDriverWillShowModalAlert() {
         beginPresenting()
     }

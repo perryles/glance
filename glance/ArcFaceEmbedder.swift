@@ -8,6 +8,7 @@
 import CoreML
 import CoreGraphics
 import CoreVideo
+import Foundation
 
 enum ArcFaceEmbedderError: LocalizedError {
     case modelNotFound
@@ -19,15 +20,15 @@ enum ArcFaceEmbedderError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .modelNotFound:
-            return "应用包中未找到 ArcFace.mlpackage/mlmodelc。请运行 tools/convert_arcface.py，然后将 glance/Models/ArcFace.mlpackage 添加到 Xcode 项目。"
+            return String(localized: "ArcFace.mlpackage/mlmodelc not found in the app bundle. Run tools/convert_arcface.py, then add glance/Models/ArcFace.mlpackage to the Xcode project.")
         case .modelLoadFailed(let detail):
-            return "加载 ArcFace Core ML 模型失败：\(detail)"
+            return String(localized: "Failed to load the ArcFace Core ML model: \(detail)")
         case .pixelBufferCreationFailed:
-            return "无法为 Core ML 准备已对齐的人脸图像。"
+            return String(localized: "Couldn't prepare the aligned face image for Core ML.")
         case .unexpectedInputSize(let got, let expected):
-            return "ArcFaceEmbedder 需要尺寸为 \(expected)x\(expected) 的已对齐图像，但收到 \(got.0)x\(got.1)。请先通过 FaceAligner 处理人脸。"
+            return String(localized: "ArcFaceEmbedder expects a \(expected)x\(expected) aligned image, got \(got.0)x\(got.1). Run the face through FaceAligner first.")
         case .unexpectedOutput(let detail):
-            return "ArcFace 模型输出异常：\(detail)"
+            return String(localized: "ArcFace model produced an unexpected output: \(detail)")
         }
     }
 }

@@ -70,7 +70,7 @@ final class FaceLabController {
         livenessAnalyzer.reset()
         currentLiveness = .empty
         currentGeometry = .empty
-        log("Liveness cues reset.")
+        log(String(localized: "Liveness cues reset."))
     }
 
     var enrollName: String = ""
@@ -94,9 +94,9 @@ final class FaceLabController {
         }
         store.reloadIfUnlocked()
         if pipeline.usingFallbackEmbedder {
-            log("ArcFace unavailable (\(pipeline.fallbackReason ?? "unknown reason")) — using Vision Feature Print instead.")
+            log(String(localized: "ArcFace unavailable (\(pipeline.fallbackReason ?? String(localized: "unknown reason"))) — using Vision Feature Print instead."))
         } else {
-            log("Using \(pipeline.embedder.name).")
+            log(String(localized: "Using \(pipeline.embedder.name)."))
         }
     }
 
@@ -105,7 +105,7 @@ final class FaceLabController {
         if let error = camera.errorMessage {
             log(error)
         } else {
-            log("Camera started.")
+            log(String(localized: "Camera started."))
         }
     }
 
@@ -117,7 +117,7 @@ final class FaceLabController {
         currentLiveness = .empty
         currentGeometry = .empty
         lastLivenessFrame = nil
-        log("Camera stopped.")
+        log(String(localized: "Camera stopped."))
     }
 
     /// Mirrors `POCController.unlockSession()` so Face Lab can unlock the session without leaving this page.
@@ -125,10 +125,10 @@ final class FaceLabController {
         sessionError = nil
         do {
             try await Task.detached(priority: .userInitiated) {
-                try SecureCredentialManager.unlockSession(reason: "Authenticate to use Face Lab")
+                try SecureCredentialManager.unlockSession(reason: String(localized: "Authenticate to use Face Lab"))
             }.value
             store.reloadIfUnlocked()
-            log("Session unlocked.")
+            log(String(localized: "Session unlocked."))
         } catch {
             sessionError = error.localizedDescription
         }
@@ -170,7 +170,7 @@ final class FaceLabController {
         } catch {
             detectedFaces = []
             currentResult = nil
-            log("Detection error: \(error.localizedDescription)")
+            log(String(localized: "Detection error: \(error.localizedDescription)"))
         }
     }
 
@@ -178,12 +178,12 @@ final class FaceLabController {
 
     func captureSample() {
         guard let result = currentResult else {
-            log("No face detected — can't capture a sample.")
+            log(String(localized: "No face detected — can't capture a sample."))
             return
         }
         let trimmedName = enrollName.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmedName.isEmpty else {
-            log("Enter a name before capturing a sample.")
+            log(String(localized: "Enter a name before capturing a sample."))
             return
         }
         do {
@@ -193,18 +193,18 @@ final class FaceLabController {
                 embedder: pipeline.embedder,
                 quality: result.quality
             )
-            log("Captured sample for \"\(trimmedName)\" (\(result.embedding.count)-dim, \(result.alignmentTier.rawValue), quality \(Self.qualityLabel(result.quality))).")
+            log(String(localized: "Captured sample for \"\(trimmedName)\" (\(result.embedding.count)-dim, \(result.alignmentTier.rawValue), quality \(Self.qualityLabel(result.quality)))."))
         } catch {
-            log("Couldn't save sample: \(error.localizedDescription)")
+            log(String(localized: "Couldn't save sample: \(error.localizedDescription)"))
         }
     }
 
     func deleteIdentity(_ identity: FaceIdentity) {
         do {
             try store.delete(identity)
-            log("Deleted \"\(identity.name)\".")
+            log(String(localized: "Deleted \"\(identity.name)\"."))
         } catch {
-            log("Couldn't delete: \(error.localizedDescription)")
+            log(String(localized: "Couldn't delete: \(error.localizedDescription)"))
         }
     }
 
@@ -220,19 +220,19 @@ final class FaceLabController {
     /// two live sessions with different configurations.
     func startFullOnboarding() {
         camera.stop()
-        log("Starting the full onboarding flow.")
+        log(String(localized: "Starting the full onboarding flow."))
         OnboardingController.startFlow()
     }
 
     func startAddIdentity() {
         camera.stop()
-        log("Starting guided enrollment for a new identity.")
+        log(String(localized: "Starting guided enrollment for a new identity."))
         OnboardingController.startAddIdentity()
     }
 
     func startRecapture(of identity: FaceIdentity) {
         camera.stop()
-        log("Starting guided re-capture of \"\(identity.name)\".")
+        log(String(localized: "Starting guided re-capture of \"\(identity.name)\"."))
         OnboardingController.startRecapture(of: identity)
     }
 
@@ -245,13 +245,13 @@ final class FaceLabController {
 
     func recognize() {
         guard let result = currentResult else {
-            log("No face detected — can't recognize.")
+            log(String(localized: "No face detected — can't recognize."))
             recognitionResults = []
             bestMatch = nil
             return
         }
         guard !store.identities.isEmpty else {
-            log("No enrolled identities yet — capture a sample first.")
+            log(String(localized: "No enrolled identities yet — capture a sample first."))
             recognitionResults = []
             bestMatch = nil
             return
@@ -274,9 +274,9 @@ final class FaceLabController {
         }
 
         if let best = scored.first {
-            let verdict = (bestMatch != nil) ? "MATCH" : "no match"
-            let staleNote = best.identity.isStale(comparedTo: embedder) ? " [STALE — re-enroll under current model]" : ""
-            log("Recognize: best = \(best.identity.name) centroid=\(String(format: "%.3f", best.centroidSimilarity)) max=\(String(format: "%.3f", best.maxSampleSimilarity)) -> \(verdict)\(staleNote)")
+            let verdict = (bestMatch != nil) ? String(localized: "MATCH") : String(localized: "no match")
+            let staleNote = best.identity.isStale(comparedTo: embedder) ? String(localized: " [STALE — re-enroll under current model]") : ""
+            log(String(localized: "Recognize: best = \(best.identity.name) centroid=\(String(format: "%.3f", best.centroidSimilarity)) max=\(String(format: "%.3f", best.maxSampleSimilarity)) -> \(verdict)\(staleNote)"))
         }
     }
 
@@ -289,11 +289,11 @@ final class FaceLabController {
     /// threshold slider actually gates on).
     func recordCalibrationSample(isGenuine: Bool) {
         guard let top = recognitionResults.first else {
-            log("Nothing to record — run Identify first.")
+            log(String(localized: "Nothing to record — run Identify first."))
             return
         }
         calibrationSamples.append(CalibrationSample(centroidSimilarity: top.centroidSimilarity, isGenuine: isGenuine))
-        log("Calibration: recorded \(isGenuine ? "genuine" : "impostor") sample at \(String(format: "%.3f", top.centroidSimilarity)).")
+        log(String(localized: "Calibration: recorded \(isGenuine ? "genuine" : "impostor") sample at \(String(format: "%.3f", top.centroidSimilarity))."))
     }
 
     func clearCalibrationSamples() {

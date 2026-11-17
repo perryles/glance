@@ -8,6 +8,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct SessionLockButton: View {
     @Bindable var pocController: POCController
@@ -55,8 +56,8 @@ struct SessionLockButton: View {
     }
 
     private var label: String {
-        if pocController.isSessionUnlocked { return "会话已解锁" }
-        return isUnlocking ? "正在验证…" : "会话已锁定"
+        if pocController.isSessionUnlocked { return String(localized: "Session unlocked") }
+        return isUnlocking ? String(localized: "Authenticating…") : String(localized: "Session locked")
     }
 
     private func toggleSession() {

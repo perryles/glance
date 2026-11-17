@@ -9,6 +9,7 @@
 
 import AppKit
 import SwiftUI
+import Foundation
 
 /// A closure `onPreferenceChange` can actually consume — that API requires
 /// `Value: Equatable`, which a bare closure can never be. Equality is by
@@ -21,7 +22,7 @@ struct HeaderAction: Equatable {
     static func == (lhs: HeaderAction, rhs: HeaderAction) -> Bool { lhs.id == rhs.id }
 }
 
-/// Lets one page (today, only Camera's "刷新摄像头列表") publish a
+/// Lets one page (today, only Camera's String(localized: "Refresh camera list")) publish a
 /// trailing action into the shared header without the header needing
 /// to know that page's state. Switching away resolves back to `defaultValue`.
 struct HeaderTrailingActionKey: PreferenceKey {
@@ -140,7 +141,7 @@ struct SettingsWindowView: View {
                         .contentShape(Circle())
                 }
                 .buttonStyle(.plain)
-                .help("刷新摄像头列表")
+                .help(String(localized: "Refresh camera list"))
             }
 
             SessionLockButton(pocController: environment.pocController)
@@ -209,7 +210,7 @@ private struct LazyFaceLabPage: View {
             if let controller {
                 FaceLabView(controller: controller)
             } else {
-                ProgressView("正在加载人脸实验室…")
+                ProgressView(String(localized: "Loading Face Lab…"))
                     .frame(maxWidth: .infinity, minHeight: SettingsMetrics.emptyStateMinHeight)
                     .task {
                         // Yield once so the loading state can draw before Core ML

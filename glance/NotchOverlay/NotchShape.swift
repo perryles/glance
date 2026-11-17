@@ -13,6 +13,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct NotchShape: Shape {
     var topRadius: CGFloat
@@ -182,19 +183,19 @@ private enum ContinuousCorner {
         .padding(20)
 }
 
-#Preview("Notch — closed") {
+#Preview(String(localized: "Notch — closed")) {
     NotchShape(topRadius: 8, bottomRadius: 12)
         .frame(width: 200, height: 32)
         .padding(20)
 }
 
-#Preview("Pill — collapsed") {
+#Preview(String(localized: "Pill — collapsed")) {
     NotchShape(topRadius: 16, bottomRadius: 16, style: .pill)
         .frame(width: NotchGeometry.pillClosedSize.width, height: NotchGeometry.pillClosedSize.height)
         .padding(20)
 }
 
-#Preview("Pill — expanded") {
+#Preview(String(localized: "Pill — expanded")) {
     NotchShape(
         topRadius: NotchGeometry.pillOpenCornerRadius,
         bottomRadius: NotchGeometry.pillOpenCornerRadius,

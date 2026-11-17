@@ -19,22 +19,22 @@ enum KeychainError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .itemNotFound:
-            return "未找到钥匙串项。"
+            return String(localized: "Keychain item not found.")
         case .unexpectedData:
-            return "钥匙串项格式异常。"
+            return String(localized: "Keychain item had an unexpected format.")
         case .accessControlFailed(let msg):
-            return "无法创建钥匙串访问控制：\(msg)"
+            return String(localized: "Couldn't create Keychain access control: \(msg)")
         case .authenticationFailed:
-            return "验证已取消或失败。"
+            return String(localized: "Authentication was cancelled or failed.")
         case .osStatus(let status):
             let message = SecCopyErrorMessageString(status, nil) as String? ?? "OSStatus \(status)"
-            return "钥匙串错误：\(message)"
+            return String(localized: "Keychain error: \(message)")
         }
     }
 }
 
 enum KeychainManager {
-    nonisolated static let service = "com.jonathan.glance"
+    nonisolated static let service = "com.perryles.glance"
 
     /// Attributes-only existence check — never prompts, even for access-controlled items.
     nonisolated static func exists(account: String) -> Bool {

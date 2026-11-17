@@ -5,6 +5,7 @@
 
 import SwiftUI
 import AppKit
+import Foundation
 
 struct AboutSettingsPage: View {
     @Bindable var updater: UpdaterController
@@ -22,7 +23,7 @@ struct AboutSettingsPage: View {
         let info = Bundle.main.infoDictionary
         let short = info?["CFBundleShortVersionString"] as? String ?? "1.0"
         let build = info?["CFBundleVersion"] as? String ?? "1"
-        return "版本 \(short)（版本号 \(build)）"
+        return String(localized: "Version \(short) (\(build))")
     }
 
     var body: some View {
@@ -48,8 +49,8 @@ struct AboutSettingsPage: View {
 
         SettingsGroup {
             SettingsActionRowContent(
-                title: "检查更新",
-                buttonTitle: "检查",
+                title: String(localized: "Check for Updates"),
+                buttonTitle: String(localized: "Check"),
                 isEnabled: updater.canCheckForUpdates
             ) {
                 updater.checkForUpdates()
@@ -57,15 +58,15 @@ struct AboutSettingsPage: View {
 
             SettingsGroupDivider()
 
-            SettingsRowContent(title: "自动检查更新") {
+            SettingsRowContent(title: String(localized: "Automatically check for updates")) {
                 GlanceToggle(isOn: $updater.automaticallyChecksForUpdates)
             }
 
             SettingsGroupDivider()
 
             SettingsActionRowContent(
-                title: "发送反馈",
-                buttonTitle: "发送"
+                title: String(localized: "Send Feedback"),
+                buttonTitle: String(localized: "Send")
             ) {
                 if let url = URL(string: "https://tryglance.app/feedback") {
                     NSWorkspace.shared.open(url)

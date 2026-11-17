@@ -4,6 +4,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct RecognitionSettingsPage: View {
     @Bindable var coordinator: FaceUnlockCoordinator
@@ -44,8 +45,8 @@ struct RecognitionSettingsPage: View {
     private var lockedState: some View {
         SettingsEmptyStateView(
             icon: "lock.fill",
-            message: "会话已锁定",
-            buttonTitle: isUnlocking ? "正在验证…" : "解锁会话",
+            message: String(localized: "Session locked"),
+            buttonTitle: isUnlocking ? String(localized: "Authenticating…") : String(localized: "Unlock session"),
             isButtonEnabled: !isUnlocking,
             caption: sessionError,
             action: unlock
@@ -58,7 +59,7 @@ struct RecognitionSettingsPage: View {
         VStack(alignment: .leading, spacing: 20) {
             SettingsGroup {
                 SettingsOptionSliderRowContent(
-                    title: "匹配置信度",
+                    title: String(localized: "Match confidence"),
                     stepLabels: MatchConfidenceLevel.allCases.map(\.title),
                     index: matchConfidenceIndex,
                     stopCount: MatchConfidenceLevel.allCases.count
@@ -67,7 +68,7 @@ struct RecognitionSettingsPage: View {
                 SettingsGroupDivider()
 
                 SettingsOptionSliderRowContent(
-                    title: "检测距离",
+                    title: String(localized: "Detection distance"),
                     stepLabels: DetectionDistanceLevel.allCases.map(\.title),
                     index: detectionDistanceIndex,
                     stopCount: DetectionDistanceLevel.allCases.count
@@ -75,11 +76,11 @@ struct RecognitionSettingsPage: View {
             }
 
             VStack(alignment: .leading, spacing: 8) {
-                SettingsSectionTitle(text: "活体检测")
+                SettingsSectionTitle(text: String(localized: "Liveness"))
                 SettingsGroup {
                     SettingsRowContent(
-                        title: "活体检测",
-                        subtitle: "确认你是真人而不是照片。可能会增加解锁时间。",
+                        title: String(localized: "Liveness detection"),
+                        subtitle: String(localized: "Checks that you're a live person, not a photo. May increase unlock time."),
                         subtitleMaxWidth: SettingsMetrics.rowSubtitleMaxWidth
                     ) {
                         GlanceToggle(isOn: $settings.livenessChecksEnabled)
@@ -135,16 +136,16 @@ struct RecognitionSettingsPage: View {
     }
 }
 
-/// The three selectable points on the "匹配置信度" slider — named
+/// The three selectable points on the String(localized: "Match confidence") slider — named
 /// rather than exposing the raw cosine-similarity threshold directly.
 private enum MatchConfidenceLevel: Int, CaseIterable {
     case lessStrict, standard, moreStrict
 
     var title: String {
         switch self {
-        case .lessStrict: return "更宽松"
-        case .standard: return "默认"
-        case .moreStrict: return "更严格"
+        case .lessStrict: return String(localized: "Less strict")
+        case .standard: return String(localized: "Default")
+        case .moreStrict: return String(localized: "More strict")
         }
     }
 
@@ -171,15 +172,15 @@ private enum MatchConfidenceLevel: Int, CaseIterable {
     }
 }
 
-/// The three selectable points on the "检测距离" slider.
+/// The three selectable points on the String(localized: "Detection distance") slider.
 private enum DetectionDistanceLevel: Int, CaseIterable {
     case close, standard, far
 
     var title: String {
         switch self {
-        case .close: return "近"
-        case .standard: return "默认"
-        case .far: return "远"
+        case .close: return String(localized: "Close")
+        case .standard: return String(localized: "Default")
+        case .far: return String(localized: "Far")
         }
     }
 

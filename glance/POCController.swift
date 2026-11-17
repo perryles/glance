@@ -21,7 +21,7 @@ final class POCController {
     /// Bound to the setup SecureField. Cleared immediately after a successful save.
     var passwordInput: String = ""
 
-    var statusMessage: String = "Idle"
+    var statusMessage: String = String(localized: "Idle")
 
     func refreshAccessibilityStatus() {
         accessibilityGranted = KeystrokeInjector.isAccessibilityTrusted()
@@ -43,7 +43,7 @@ final class POCController {
         sessionError = nil
         do {
             try await Task.detached(priority: .userInitiated) {
-                try SecureCredentialManager.unlockSession(reason: "验证以设置或使用 glance")
+                try SecureCredentialManager.unlockSession(reason: String(localized: "Authenticate to set up or use glance"))
             }.value
             isSessionUnlocked = true
         } catch {
@@ -63,7 +63,7 @@ final class POCController {
     /// be unlocked (Touch ID happens in `unlockSession()`, not here).
     func savePassword() async {
         guard !passwordInput.isEmpty else {
-            statusMessage = "请先输入密码。"
+            statusMessage = String(localized: "Enter a password first.")
             return
         }
         let plaintext = passwordInput
@@ -77,10 +77,10 @@ final class POCController {
                 defer { bytes.resetBytes(in: 0..<bytes.count) }
                 try SecureCredentialManager.savePassword(bytes)
             }.value
-            statusMessage = "密码已保存并加密。"
+            statusMessage = String(localized: "Password saved and encrypted.")
             hasStoredPassword = true
         } catch {
-            statusMessage = "Save failed: \(error.localizedDescription)"
+            statusMessage = String(localized: "Save failed: \(error.localizedDescription)")
         }
     }
 
@@ -92,31 +92,31 @@ final class POCController {
     /// confirms the screen is actually locked.
     func injectStoredPassword(requireAuthoritativeLock: Bool = false) async {
         guard KeystrokeInjector.isAccessibilityTrusted() else {
-            statusMessage = "未授予辅助功能权限。请打开系统设置并启用 glance。"
+            statusMessage = String(localized: "Accessibility not granted — open System Settings and enable glance.")
             return
         }
         guard SecureCredentialManager.isSessionUnlocked else {
-            statusMessage = "会话已锁定——请先使用触控 ID 验证。"
+            statusMessage = String(localized: "Session locked — authenticate with Touch ID first.")
             return
         }
 
         if requireAuthoritativeLock {
             guard LockMonitor.isScreenActuallyLocked() else {
-                statusMessage = "已跳过：CGSession 显示屏幕实际并未锁定。"
+                statusMessage = String(localized: "Skipped: CGSession reports screen is not actually locked.")
                 return
             }
         }
 
-        statusMessage = "正在输入…"
+        statusMessage = String(localized: "Injecting…")
         do {
             try await Task.detached(priority: .userInitiated) {
                 var bytes = try SecureCredentialManager.readPassword()
                 defer { bytes.resetBytes(in: 0..<bytes.count) }
                 try KeystrokeInjector.typeAndReturn(bytes)
             }.value
-            statusMessage = "已在 \(Date().formatted(date: .omitted, time: .standard)) 输入已存密码并按回车"
+            statusMessage = String(localized: "Injected stored password + Return at \(Date().formatted(date: .omitted, time: .standard))")
         } catch {
-            statusMessage = "输入失败：\(error.localizedDescription)"
+            statusMessage = String(localized: "Injection failed: \(error.localizedDescription)")
         }
     }
 }

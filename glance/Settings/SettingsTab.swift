@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Foundation
 
 enum SettingsTab: String, CaseIterable, Identifiable, Hashable {
     case general
@@ -21,13 +22,13 @@ enum SettingsTab: String, CaseIterable, Identifiable, Hashable {
 
     var title: String {
         switch self {
-        case .general: return "通用"
-        case .yourFace: return "人脸"
-        case .password: return "密码"
-        case .camera: return "摄像头"
-        case .recognition: return "识别"
-        case .about: return "关于"
-        case .debugFaceLab: return "人脸实验室"
+        case .general: return String(localized: "General")
+        case .yourFace: return String(localized: "Face")
+        case .password: return String(localized: "Password")
+        case .camera: return String(localized: "Camera")
+        case .recognition: return String(localized: "Recognition")
+        case .about: return String(localized: "About")
+        case .debugFaceLab: return String(localized: "Face Lab")
         }
     }
 

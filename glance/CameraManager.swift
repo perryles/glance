@@ -8,6 +8,7 @@
 @preconcurrency import AVFoundation
 import CoreImage
 import Observation
+import Foundation
 
 enum CameraPermission {
     case notDetermined
@@ -34,7 +35,7 @@ final class CameraManager: NSObject {
     /// Exposed read-only so `CameraPreviewView` can attach a preview layer to the same session.
     let session = AVCaptureSession()
     private let videoOutput = AVCaptureVideoDataOutput()
-    private let sessionQueue = DispatchQueue(label: "com.jonathan.glance.camera.session")
+    private let sessionQueue = DispatchQueue(label: "com.perryles.glance.camera.session")
 
     /// Handed to the delegate outside the actor; only ever touched via `Task { @MainActor ... }`.
     private let framePublisher = FramePublisher()
@@ -57,10 +58,10 @@ final class CameraManager: NSObject {
         }
 
         guard permission == .granted else {
-            errorMessage = "未授予摄像头权限（状态：\(describe(status))）。" +
+            errorMessage = String(localized: "Camera access not granted (status: \(describe(status))). ") +
                 (status == .restricted
-                    ? "macOS 将其报告为“受限”，而不是简单的用户拒绝。这通常是“屏幕使用时间”内容限制或 MDM/描述文件策略阻止了此应用访问摄像头；在限制解除前，仅在“系统设置”>“隐私与安全性”>“摄像头”中切换开关不会有帮助。"
-                    : "请在“系统设置”>“隐私与安全性”>“摄像头”中启用。如果列表中没有 glance，请退出应用，在“终端”运行 `tccutil reset Camera com.jonathan.glance`，然后重新启动，让 macOS 再次询问。")
+                    ? String(localized: "macOS reports this as *restricted* — not a simple user denial. This usually means Screen Time content restrictions or an MDM/profile policy is blocking camera access for this app; toggling it in System Settings > Privacy & Security > Camera won't help until that restriction is lifted.")
+                    : String(localized: "Enable it in System Settings > Privacy & Security > Camera. If glance isn't listed there, quit the app, run `tccutil reset Camera com.perryles.glance` in Terminal, then relaunch so macOS asks again."))
             return
         }
 
@@ -88,11 +89,11 @@ final class CameraManager: NSObject {
 
     private func describe(_ status: AVAuthorizationStatus) -> String {
         switch status {
-        case .notDetermined: return "notDetermined"
-        case .restricted: return "restricted"
-        case .denied: return "denied"
-        case .authorized: return "authorized"
-        @unknown default: return "unknown(\(status.rawValue))"
+        case .notDetermined: return String(localized: "notDetermined")
+        case .restricted: return String(localized: "restricted")
+        case .denied: return String(localized: "denied")
+        case .authorized: return String(localized: "authorized")
+        @unknown default: return String(localized: "unknown(\(status.rawValue))")
         }
     }
 
@@ -121,7 +122,7 @@ final class CameraManager: NSObject {
     /// Called on every `start()` so a camera preference change in Settings takes effect without an app restart.
     private func reconcileDeviceIfNeeded() {
         guard let device = CameraDeviceCatalog.resolvedDevice() else {
-            errorMessage = "未找到摄像头设备。"
+            errorMessage = String(localized: "No camera device found.")
             return
         }
         guard device.uniqueID != currentInput?.device.uniqueID else { return }
@@ -136,7 +137,7 @@ final class CameraManager: NSObject {
             selectHighestResolutionFormat(for: device)
         } else {
             currentInput = nil
-            errorMessage = "未找到摄像头设备。"
+            errorMessage = String(localized: "No camera device found.")
         }
         session.commitConfiguration()
     }
@@ -155,7 +156,7 @@ final class CameraManager: NSObject {
             device.activeFormat = best
             device.unlockForConfiguration()
         } catch {
-            errorMessage = "无法选择摄像头的最高分辨率格式：\(error.localizedDescription)"
+            errorMessage = String(localized: "Couldn't select the camera's highest-resolution format: \(error.localizedDescription)")
         }
     }
 

@@ -21,15 +21,15 @@ enum SecureCredentialError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .emptyPassword:
-            return "密码不能为空。"
+            return String(localized: "Password cannot be empty.")
         case .sessionLocked:
-            return "会话已锁定。请先使用触控 ID 验证，才能存储或使用密码。"
+            return String(localized: "Session is locked. Authenticate with Touch ID before storing or using the password.")
         case .encryptionFailed:
-            return "加密失败。"
+            return String(localized: "Encryption failed.")
         case .decryptionFailed:
-            return "解密失败。已存凭据可能已损坏。"
+            return String(localized: "Decryption failed. The stored credential may be corrupted.")
         case .sessionKeyUnavailable:
-            return "会话密钥缺失，但仍存在只有它才能读取的加密数据。没有任何数据被删除。请在“密码”标签页移除已存密码，同时清除两者并重新开始。"
+            return String(localized: "The session key is missing, but encrypted data still exists that only it could read. Nothing has been deleted. Remove the stored password on the Password tab to clear both and start fresh.")
         }
     }
 }

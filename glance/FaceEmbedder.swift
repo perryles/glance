@@ -8,6 +8,7 @@
 
 import Vision
 import CoreGraphics
+import Foundation
 
 /// `nonisolated` so implementations can run on a background task despite the project's default main-actor isolation.
 protocol FaceEmbedder: Sendable {
@@ -30,9 +31,9 @@ enum FaceEmbedderError: LocalizedError {
     var errorDescription: String? {
         switch self {
         case .noObservation:
-            return "Vision 未生成此图像的特征描述。"
+            return String(localized: "Vision did not produce a feature print for this image.")
         case .unsupportedElementType:
-            return "特征描述使用了异常的元素类型。"
+            return String(localized: "Feature print used an unexpected element type.")
         }
     }
 }
