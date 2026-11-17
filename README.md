@@ -9,6 +9,17 @@
 <h3 align="center">Face unlock for your Mac</h3>
 
 <p align="center">
+  <a href="README.md" lang="en">English</a> ·
+  <a href="docs/README.zh-CN.md" lang="zh-CN">简体中文</a> ·
+  <a href="docs/README.ja.md" lang="ja">日本語</a> ·
+  <a href="docs/README.es.md" lang="es">Español</a> ·
+  <a href="docs/README.fr.md" lang="fr">Français</a> ·
+  <a href="docs/README.de.md" lang="de">Deutsch</a> ·
+  <a href="docs/README.pt-BR.md" lang="pt-BR">Português (Brasil)</a> ·
+  <a href="docs/README.tr.md" lang="tr">Türkçe</a>
+</p>
+
+<p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-black.svg" alt="MIT License"></a>
   <img src="https://img.shields.io/badge/macOS-15%2B-black.svg" alt="macOS 15+">
   <img src="https://img.shields.io/badge/Swift-SwiftUI-black.svg" alt="Swift">
