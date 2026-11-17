@@ -149,47 +149,54 @@ debug section should appear in the sidebar.
 
 ---
 
-
 ## Building from source
 
 ### Prerequisites
 
 - macOS 15+
 - Xcode 26+
+- Python 3.9+ and Git, with network access for the first dependency download
 
+### Build steps
 
+1. Clone this fork and open the project.
 
-### Installation
-
-1. Clone repository:
-  ```bash
-   git clone https://github.com/jonnyoo/glance.git
+   ```bash
+   git clone https://github.com/perryles/glance.git
    cd glance
-  ```
-2. Open in Xcode:
-  ```bash
    open glance.xcodeproj
-  ```
-3. Run the project:
-  - Click `run` or press `Cmd + R`.
+   ```
 
+2. Select the `glance` target and scheme. In **Signing & Capabilities**, choose your own Apple development team and enable automatic signing. Keep `glance/glance.entitlements` so camera and protected keychain access are provisioned correctly.
 
+3. Choose **My Mac** as the destination, then press `Cmd + R`. The first signed build downloads pinned libusb/libuvc sources and packages the infrared helper automatically.
+
+For a separate development installation, use your own bundle identifier. Credentials and face enrollment are isolated by bundle identifier. Automatic updates are disabled for custom bundle identifiers.
+
+For infrared setup and build options, including `GLANCE_ENABLE_INFRARED=NO`, see the infrared guide. [IR](tools/infrared/README.md)
 
 ## Contributing
 
-Not currently accepting PRs. Feel free to fork this project.
+Pull requests are welcome for bug fixes, features, translations and documentation. Submit PRs against the `main` branch of `perryles/glance`, and describe the change and how you verified it. [Open a pull request](https://github.com/perryles/glance/compare)
 
-App feedback goes to [tryglance.app/feedback](https://tryglance.app/feedback).
+Report bugs and suggest features through GitHub Issues. [Issues](https://github.com/perryles/glance/issues)
 
 ## Acknowledgements
 
+- Jonathan Zhou and the upstream Glance contributors, for the original app. [jonnyoo/glance](https://github.com/jonnyoo/glance)
+- JediBrooker, for the BRIO infrared implementation in PR #50. [PR #50](https://github.com/jonnyoo/glance/pull/50)
 - **[The Boring Notch](https://github.com/TheBoredTeam/boring.notch)** — for the notch window
 physics.
 - **[InsightFace](https://github.com/deepinsight/insightface)** — the ArcFace model doing the
 recognition.
 - **[Alcove](https://tryalcove.com)** — big design inspiration.
-
+- Sparkle, for app updates. [Sparkle](https://github.com/sparkle-project/Sparkle)
+- libusb and libuvc, for USB infrared capture. [libusb](https://github.com/libusb/libusb), [libuvc](https://github.com/libuvc/libuvc)
 
 ## License
 
-[MIT](LICENSE) © Jonathan Zhou
+Project source is distributed under the MIT license. Original work © 2026 Jonathan Zhou. Fork contributions © 2026 perryles and contributors. [MIT](LICENSE)
+
+Third-party libraries and model weights have their own licenses. InsightFace documents a non-commercial research license for its pretrained models. [InsightFace licensing](https://github.com/deepinsight/insightface#license)
+
+Signed infrared builds include the native dependency licenses in `Contents/Resources/InfraredLicenses` and source/relinking materials in `Contents/Resources/InfraredSources.zip`.

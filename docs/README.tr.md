@@ -136,40 +136,50 @@ Açmak için Ayarlar → Hakkında bölümüne gidin ve uygulama simgesine 5 kez
 
 ## Kaynak koddan derleme
 
-### Ön koşullar
+### Gereksinimler
 
 - macOS 15+
 - Xcode 26+
+- Python 3.9+ ve Git, bağımlılıkların ilk indirilmesi için ağ erişimi
 
-### Adımlar
+### Derleme adımları
 
-1. Depoyu klonlayın.
+1. Bu çatallanmış depoyu klonlayın ve projeyi açın.
 
    ```bash
-   git clone https://github.com/jonnyoo/glance.git
+   git clone https://github.com/perryles/glance.git
    cd glance
-   ```
-
-2. Xcode ile açın.
-
-   ```bash
    open glance.xcodeproj
    ```
 
-3. Çalıştır düğmesine tıklayın veya `Cmd + R` tuşlarına basın.
+2. `glance` hedefini ve şemasını seçin. **Signing & Capabilities** bölümünde kendi Apple geliştirici ekibinizi seçip otomatik imzalamayı etkinleştirin. Kamera ve korumalı Anahtar Zinciri erişimi için `glance/glance.entitlements` kullanın.
+
+3. Hedef olarak **My Mac** seçin ve `Cmd + R` tuşlarına basın. İlk imzalı derleme, libusb/libuvc kaynaklarının sabitlenmiş sürümlerini indirir ve kızılötesi yardımcı hizmetini otomatik olarak paketler.
+
+Ayrı bir geliştirme kurulumu için kendi Bundle Identifier değerinizi kullanabilirsiniz. Kimlik bilgileri ve yüz kayıtları bu tanımlayıcıya göre ayrılır. Özel Bundle Identifier değerlerinde otomatik güncellemeler devre dışıdır.
+
+Kızılötesi kurulum ve `GLANCE_ENABLE_INFRARED=NO` dahil derleme seçenekleri için kızılötesi kılavuzuna bakın. [IR](../tools/infrared/README.md)
 
 ## Katkıda bulunma
 
-Şu anda PR kabul edilmiyor. Bu projeyi çatallayabilirsiniz.
+Hata düzeltmeleri, özellikler, çeviriler ve belgeler için PR gönderebilirsiniz. PR’ları `perryles/glance` deposunun `main` dalına gönderin, değişiklikleri ve doğrulama yöntemini açıklayın. [Pull Request açın](https://github.com/perryles/glance/compare)
 
-Uygulamayla ilgili geri bildirimlerinizi [tryglance.app/feedback](https://tryglance.app/feedback) adresine iletebilirsiniz.
+Hataları ve özellik önerilerini GitHub Issues üzerinden iletin. [Issues](https://github.com/perryles/glance/issues)
 
 ## Teşekkürler
 
+- Özgün uygulama için Jonathan Zhou ve Glance katkıda bulunanlarına teşekkürler. [jonnyoo/glance](https://github.com/jonnyoo/glance)
+- PR #50 içindeki BRIO kızılötesi uygulaması için JediBrooker’a teşekkürler. [PR #50](https://github.com/jonnyoo/glance/pull/50)
 - **[The Boring Notch](https://github.com/TheBoredTeam/boring.notch)** — çentik penceresinin fizik tabanlı hareketleri için.
 - **[InsightFace](https://github.com/deepinsight/insightface)** — yüz tanımayı gerçekleştiren ArcFace modeli için.
 - **[Alcove](https://tryalcove.com)** — tasarıma büyük ilham verdiği için.
+- Uygulama güncellemeleri için Sparkle’a teşekkürler. [Sparkle](https://github.com/sparkle-project/Sparkle)
+- USB kızılötesi yakalama desteği için libusb ve libuvc’ye teşekkürler. [libusb](https://github.com/libusb/libusb), [libuvc](https://github.com/libuvc/libuvc)
 
 ## Lisans
 
-[MIT](../LICENSE) © Jonathan Zhou
+Projenin kaynak kodu MIT lisansı altında dağıtılır. Özgün çalışma © 2026 Jonathan Zhou. Bu çatallanmış depoya katkılar © 2026 perryles ve katkıda bulunanlar. [MIT](../LICENSE)
+
+Üçüncü taraf kütüphaneler ve model ağırlıkları kendi lisanslarına tabidir. InsightFace, önceden eğitilmiş modelleri için ticari olmayan araştırma lisansı belirtir. [InsightFace lisans bilgileri](https://github.com/deepinsight/insightface#license)
+
+İmzalı kızılötesi derlemelerinde yerel bağımlılık lisansları `Contents/Resources/InfraredLicenses`, kaynak ve yeniden bağlama malzemeleri ise `Contents/Resources/InfraredSources.zip` içinde bulunur.

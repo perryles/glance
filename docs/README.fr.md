@@ -140,36 +140,46 @@ Pour l'ouvrir, allez dans Réglages → À propos, puis cliquez cinq fois sur l'
 
 - macOS 15+
 - Xcode 26+
+- Python 3.9+ et Git, avec un accès réseau pour le premier téléchargement des dépendances
 
-### Étapes
+### Étapes de compilation
 
-1. Clonez le dépôt.
+1. Clonez ce fork et ouvrez le projet.
 
    ```bash
-   git clone https://github.com/jonnyoo/glance.git
+   git clone https://github.com/perryles/glance.git
    cd glance
-   ```
-
-2. Ouvrez-le dans Xcode.
-
-   ```bash
    open glance.xcodeproj
    ```
 
-3. Cliquez sur le bouton d'exécution ou appuyez sur `Cmd + R`.
+2. Sélectionnez la cible et le schéma `glance`. Dans **Signing & Capabilities**, choisissez votre équipe de développement Apple et activez la signature automatique. Utilisez `glance/glance.entitlements` pour les autorisations de caméra et du trousseau protégé.
+
+3. Choisissez **My Mac** comme destination, puis appuyez sur `Cmd + R`. La première compilation signée télécharge les sources de versions fixes de libusb/libuvc et intègre automatiquement le service auxiliaire infrarouge.
+
+Pour installer une version de développement séparément, vous pouvez utiliser votre propre Bundle Identifier. Les identifiants et les données faciales sont isolés par identifiant de bundle. Les mises à jour automatiques sont désactivées pour un Bundle Identifier personnalisé.
+
+Consultez le guide infrarouge pour la configuration et les options de compilation, notamment `GLANCE_ENABLE_INFRARED=NO`. [IR](../tools/infrared/README.md)
 
 ## Contributions
 
-Les PR ne sont pas acceptées pour le moment. Vous pouvez créer un fork de ce projet.
+Les PR pour les corrections, fonctionnalités, traductions et la documentation sont les bienvenues. Ciblez la branche `main` de `perryles/glance` et décrivez les changements et leur validation. [Ouvrir une Pull Request](https://github.com/perryles/glance/compare)
 
-Envoyez vos retours sur l'application à [tryglance.app/feedback](https://tryglance.app/feedback).
+Signalez les problèmes et proposez des fonctionnalités via GitHub Issues. [Issues](https://github.com/perryles/glance/issues)
 
 ## Remerciements
 
+- Merci à Jonathan Zhou et aux contributeurs de Glance pour l’application originale. [jonnyoo/glance](https://github.com/jonnyoo/glance)
+- Merci à JediBrooker pour l’implémentation infrarouge BRIO dans la PR #50. [PR #50](https://github.com/jonnyoo/glance/pull/50)
 - **[The Boring Notch](https://github.com/TheBoredTeam/boring.notch)** — pour la physique de la fenêtre de l'encoche.
 - **[InsightFace](https://github.com/deepinsight/insightface)** — pour le modèle ArcFace utilisé pour la reconnaissance.
 - **[Alcove](https://tryalcove.com)** — pour son importante inspiration graphique.
+- Merci à Sparkle pour les mises à jour de l’application. [Sparkle](https://github.com/sparkle-project/Sparkle)
+- Merci à libusb et libuvc pour la capture infrarouge USB. [libusb](https://github.com/libusb/libusb), [libuvc](https://github.com/libuvc/libuvc)
 
 ## Licence
 
-[MIT](../LICENSE) © Jonathan Zhou
+Le code source du projet est distribué sous licence MIT. Œuvre originale © 2026 Jonathan Zhou. Contributions au fork © 2026 perryles et les contributeurs. [MIT](../LICENSE)
+
+Les bibliothèques tierces et les poids des modèles ont leurs propres licences. InsightFace prévoit une licence de recherche non commerciale pour ses modèles préentraînés. [Licences InsightFace](https://github.com/deepinsight/insightface#license)
+
+Les compilations infrarouges signées incluent les licences natives dans `Contents/Resources/InfraredLicenses` et les sources et éléments de réédition de liens dans `Contents/Resources/InfraredSources.zip`.

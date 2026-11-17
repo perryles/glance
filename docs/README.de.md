@@ -140,36 +140,46 @@ Face Lab ist eine versteckte Debug-Konsole, mit der sich Gesichtserkennung und L
 
 - macOS 15+
 - Xcode 26+
+- Python 3.9+ und Git sowie Netzwerkzugriff für den ersten Download der Abhängigkeiten
 
-### Schritte
+### Build-Schritte
 
-1. Klone das Repository.
+1. Klone diesen Fork und öffne das Projekt.
 
    ```bash
-   git clone https://github.com/jonnyoo/glance.git
+   git clone https://github.com/perryles/glance.git
    cd glance
-   ```
-
-2. Öffne es in Xcode.
-
-   ```bash
    open glance.xcodeproj
    ```
 
-3. Klicke auf die Schaltfläche zum Ausführen oder drücke `Cmd + R`.
+2. Wähle das Target und Schema `glance`. Wähle unter **Signing & Capabilities** dein eigenes Apple-Entwicklerteam und aktiviere die automatische Signierung. Verwende `glance/glance.entitlements` für die Kamera und den geschützten Schlüsselbund.
+
+3. Wähle **My Mac** als Ziel und drücke `Cmd + R`. Der erste signierte Build lädt festgelegte Versionen der libusb/libuvc-Quellen herunter und bindet den Infrarot-Hilfsdienst automatisch ein.
+
+Für eine getrennte Entwicklungsinstallation kannst du einen eigenen Bundle Identifier verwenden. Zugangsdaten und Gesichtsdaten sind nach Bundle Identifier getrennt. Bei einem eigenen Bundle Identifier sind automatische Updates deaktiviert.
+
+Einrichtung und Build-Optionen für Infrarot, einschließlich `GLANCE_ENABLE_INFRARED=NO`, stehen in der Infrarot-Anleitung. [IR](../tools/infrared/README.md)
 
 ## Mitwirken
 
-Derzeit werden keine PRs angenommen. Du kannst gerne einen Fork dieses Projekts erstellen.
+PRs für Fehlerbehebungen, Funktionen, Übersetzungen und Dokumentation sind willkommen. Richte sie an den Branch `main` von `perryles/glance` und beschreibe die Änderungen und ihre Prüfung. [Pull Request öffnen](https://github.com/perryles/glance/compare)
 
-Feedback zur App kannst du unter [tryglance.app/feedback](https://tryglance.app/feedback) einreichen.
+Melde Fehler und Funktionswünsche über GitHub Issues. [Issues](https://github.com/perryles/glance/issues)
 
 ## Danksagungen
 
+- Danke an Jonathan Zhou und die Glance-Mitwirkenden für die ursprüngliche App. [jonnyoo/glance](https://github.com/jonnyoo/glance)
+- Danke an JediBrooker für die BRIO-Infrarot-Implementierung in PR #50. [PR #50](https://github.com/jonnyoo/glance/pull/50)
 - **[The Boring Notch](https://github.com/TheBoredTeam/boring.notch)** — für die Fensterphysik der Notch.
 - **[InsightFace](https://github.com/deepinsight/insightface)** — für das ArcFace-Modell zur Gesichtserkennung.
 - **[Alcove](https://tryalcove.com)** — für die große Designinspiration.
+- Danke an Sparkle für die App-Updates. [Sparkle](https://github.com/sparkle-project/Sparkle)
+- Danke an libusb und libuvc für die USB-Infrarot-Aufnahme. [libusb](https://github.com/libusb/libusb), [libuvc](https://github.com/libuvc/libuvc)
 
 ## Lizenz
 
-[MIT](../LICENSE) © Jonathan Zhou
+Der Projektquellcode wird unter der MIT-Lizenz verteilt. Ursprüngliches Werk © 2026 Jonathan Zhou. Beiträge zu diesem Fork © 2026 perryles und Mitwirkende. [MIT](../LICENSE)
+
+Bibliotheken Dritter und Modellgewichte haben eigene Lizenzen. InsightFace stellt seine vortrainierten Modelle unter einer Lizenz für nichtkommerzielle Forschung bereit. [InsightFace-Lizenzhinweise](https://github.com/deepinsight/insightface#license)
+
+Signierte Infrarot-Builds enthalten die nativen Lizenzen unter `Contents/Resources/InfraredLicenses` sowie Quellcode und Materialien zum erneuten Linken unter `Contents/Resources/InfraredSources.zip`.

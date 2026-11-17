@@ -134,42 +134,52 @@ Face Lab は、実際の数値を確認しながら顔認識と生体検知を�
 
 ---
 
-## ソースからのビルド
+## ソースからビルド
 
-### 必要な環境
+### 前提条件
 
 - macOS 15+
 - Xcode 26+
+- Python 3.9+ と Git。依存関係の初回ダウンロードにはネットワーク接続が必要です
 
-### 手順
+### ビルド手順
 
-1. リポジトリをクローンします。
+1. このフォークをクローンしてプロジェクトを開きます。
 
    ```bash
-   git clone https://github.com/jonnyoo/glance.git
+   git clone https://github.com/perryles/glance.git
    cd glance
-   ```
-
-2. Xcode で開きます。
-
-   ```bash
    open glance.xcodeproj
    ```
 
-3. 実行ボタンをクリックするか、`Cmd + R` を押します。
+2. `glance` のターゲットとスキームを選びます。**Signing & Capabilities** で自分の Apple 開発チームを選択し、自動署名を有効にします。カメラと保護されたキーチェーンへのアクセスには `glance/glance.entitlements` を使用します。
+
+3. 実行先に **My Mac** を選び、`Cmd + R` を押します。初回の署名付きビルドで、固定バージョンの libusb/libuvc のソースがダウンロードされ、赤外線ヘルパーが自動的に組み込まれます。
+
+開発版を別途インストールする場合は、独自の Bundle Identifier を使用できます。認証情報と顔の登録データは Bundle Identifier ごとに分離され、独自の Bundle Identifier では自動更新が無効になります。
+
+赤外線機能の設定と `GLANCE_ENABLE_INFRARED=NO` などのビルドオプションは、赤外線ガイドを参照してください。 [IR](../tools/infrared/README.md)
 
 ## コントリビューション
 
-現在、PR は受け付けていません。このプロジェクトのフォークは歓迎します。
+バグ修正、機能、翻訳、ドキュメントの PR を歓迎します。`perryles/glance` の `main` ブランチに向けて、変更内容と検証方法を記載して提出してください。 [Pull Request を作成](https://github.com/perryles/glance/compare)
 
-アプリへのフィードバックは [tryglance.app/feedback](https://tryglance.app/feedback) にお寄せください。
+不具合の報告や機能の提案は GitHub Issues にお寄せください。 [Issues](https://github.com/perryles/glance/issues)
 
 ## 謝辞
 
+- Jonathan Zhou と上流 Glance の貢献者の皆様による原作アプリに感謝します。 [jonnyoo/glance](https://github.com/jonnyoo/glance)
+- PR #50 で BRIO 赤外線機能を実装した JediBrooker に感謝します。 [PR #50](https://github.com/jonnyoo/glance/pull/50)
 - **[The Boring Notch](https://github.com/TheBoredTeam/boring.notch)** — ノッチウィンドウの物理的な動き。
 - **[InsightFace](https://github.com/deepinsight/insightface)** — 顔認識に使用する ArcFace モデル。
 - **[Alcove](https://tryalcove.com)** — デザインに大きなインスピレーションを与えてくれました。
+- アプリの更新を支える Sparkle に感謝します。 [Sparkle](https://github.com/sparkle-project/Sparkle)
+- USB 赤外線キャプチャを支える libusb と libuvc に感謝します。 [libusb](https://github.com/libusb/libusb), [libuvc](https://github.com/libuvc/libuvc)
 
 ## ライセンス
 
-[MIT](../LICENSE) © Jonathan Zhou
+プロジェクトのソースコードは MIT ライセンスで配布されます。原作 © 2026 Jonathan Zhou。フォークへの貢献 © 2026 perryles および貢献者。 [MIT](../LICENSE)
+
+サードパーティ製ライブラリとモデルの重みには、それぞれのライセンスが適用されます。InsightFace は事前学習済みモデルを非商用研究用途のライセンスで提供しています。 [InsightFace のライセンス](https://github.com/deepinsight/insightface#license)
+
+署名付き赤外線ビルドには、`Contents/Resources/InfraredLicenses` に依存ライブラリのライセンス、`Contents/Resources/InfraredSources.zip` にソースと再リンク用の資料が含まれます。

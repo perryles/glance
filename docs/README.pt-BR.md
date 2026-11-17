@@ -140,36 +140,46 @@ Para abri-lo, vá a Ajustes → Sobre e clique cinco vezes no ícone do aplicati
 
 - macOS 15+
 - Xcode 26+
+- Python 3.9+ e Git, com acesso à rede para o primeiro download das dependências
 
-### Etapas
+### Etapas de compilação
 
-1. Clone o repositório.
+1. Clone este fork e abra o projeto.
 
    ```bash
-   git clone https://github.com/jonnyoo/glance.git
+   git clone https://github.com/perryles/glance.git
    cd glance
-   ```
-
-2. Abra no Xcode.
-
-   ```bash
    open glance.xcodeproj
    ```
 
-3. Clique no botão de execução ou pressione `Cmd + R`.
+2. Selecione o target e o esquema `glance`. Em **Signing & Capabilities**, escolha sua equipe de desenvolvimento Apple e ative a assinatura automática. Use `glance/glance.entitlements` para configurar a câmera e o acesso protegido às Chaves.
+
+3. Escolha **My Mac** como destino e pressione `Cmd + R`. A primeira compilação assinada baixa versões fixas dos fontes de libusb/libuvc e inclui automaticamente o serviço auxiliar de infravermelho.
+
+Para instalar uma versão de desenvolvimento separadamente, você pode usar seu próprio Bundle Identifier. Credenciais e cadastros faciais são isolados por identificador. As atualizações automáticas são desativadas para Bundle Identifiers personalizados.
+
+Consulte o guia de infravermelho para configuração e opções de compilação, incluindo `GLANCE_ENABLE_INFRARED=NO`. [IR](../tools/infrared/README.md)
 
 ## Contribuições
 
-No momento, não são aceitos PRs. Fique à vontade para criar um fork deste projeto.
+PRs para correções, funcionalidades, traduções e documentação são bem-vindos. Direcione-os à branch `main` de `perryles/glance` e descreva as alterações e como foram verificadas. [Abrir um Pull Request](https://github.com/perryles/glance/compare)
 
-Envie seu feedback sobre o aplicativo para [tryglance.app/feedback](https://tryglance.app/feedback).
+Relate erros e sugira funcionalidades pelo GitHub Issues. [Issues](https://github.com/perryles/glance/issues)
 
 ## Agradecimentos
 
+- Agradecemos a Jonathan Zhou e aos colaboradores do Glance pelo aplicativo original. [jonnyoo/glance](https://github.com/jonnyoo/glance)
+- Agradecemos a JediBrooker pela implementação de infravermelho BRIO no PR #50. [PR #50](https://github.com/jonnyoo/glance/pull/50)
 - **[The Boring Notch](https://github.com/TheBoredTeam/boring.notch)** — pela física da janela no recorte da tela.
 - **[InsightFace](https://github.com/deepinsight/insightface)** — pelo modelo ArcFace usado no reconhecimento.
 - **[Alcove](https://tryalcove.com)** — pela grande inspiração de design.
+- Agradecemos ao Sparkle pelas atualizações do aplicativo. [Sparkle](https://github.com/sparkle-project/Sparkle)
+- Agradecemos a libusb e libuvc pela captura USB de infravermelho. [libusb](https://github.com/libusb/libusb), [libuvc](https://github.com/libuvc/libuvc)
 
 ## Licença
 
-[MIT](../LICENSE) © Jonathan Zhou
+O código-fonte do projeto é distribuído sob a licença MIT. Obra original © 2026 Jonathan Zhou. Contribuições ao fork © 2026 perryles e colaboradores. [MIT](../LICENSE)
+
+Bibliotecas de terceiros e pesos de modelos têm suas próprias licenças. O InsightFace estabelece uma licença de pesquisa não comercial para seus modelos pré-treinados. [Licenciamento do InsightFace](https://github.com/deepinsight/insightface#license)
+
+As compilações assinadas com infravermelho incluem as licenças nativas em `Contents/Resources/InfraredLicenses` e os fontes e materiais para refazer a vinculação em `Contents/Resources/InfraredSources.zip`.

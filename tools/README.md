@@ -8,7 +8,7 @@ coremltools) and ~13MB of model weights from InsightFace's own hosting.
 ## Run it
 
 ```bash
-cd /Users/jonathanzhou/Documents/glance
+cd /path/to/glance
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r tools/requirements.txt
@@ -67,5 +67,6 @@ and latency change.
 # Experimental BRIO infrared capture
 
 See [infrared/README.md](infrared/README.md) for the optional BRIO USB capture
-helper, the Face Lab IR panel, and the isolated Glance IR Lab test app. This
-prototype captures real IR frames on macOS; it does not enable IR face unlock.
+helper, the Face Lab IR panel, and the isolated Glance IR Lab test app. The
+app integrates experimental opt-in BRIO IR matching into face unlock. The guide
+covers signed helper builds, enrollment, setup and hardware validation limits.

@@ -140,36 +140,46 @@ Face Lab 是一个隐藏的调试控制台，可通过实际数值测试人脸�
 
 - macOS 15+
 - Xcode 26+
+- Python 3.9+ 和 Git，首次下载依赖时需要网络连接
 
 ### 构建步骤
 
-1. 克隆仓库。
+1. 克隆本分支并打开项目。
 
    ```bash
-   git clone https://github.com/jonnyoo/glance.git
+   git clone https://github.com/perryles/glance.git
    cd glance
-   ```
-
-2. 使用 Xcode 打开项目。
-
-   ```bash
    open glance.xcodeproj
    ```
 
-3. 点击运行按钮或按下 `Cmd + R` 运行项目。
+2. 选择 `glance` target 和 scheme。在 **Signing & Capabilities** 中选择你自己的 Apple 开发团队，并启用自动签名。使用 `glance/glance.entitlements` 配置摄像头和受保护钥匙串权限。
+
+3. 运行目标选择 **My Mac**，按 `Cmd + R`。首次签名构建会下载固定版本的 libusb/libuvc 源码，并自动打包红外辅助程序。
+
+需要单独安装开发版本时，可使用自己的 Bundle Identifier。凭据和人脸录入数据按 Bundle Identifier 隔离，自定义 Bundle Identifier 的版本会停用自动更新。
+
+红外功能设置及构建选项（包括 `GLANCE_ENABLE_INFRARED=NO`）请参阅红外指南。 [IR](../tools/infrared/README.md)
 
 ## 参与贡献
 
-目前暂不接受 PR，欢迎 Fork 本项目。
+欢迎通过 PR 贡献问题修复、新功能、翻译和文档。请向 `perryles/glance` 的 `main` 分支提交，并说明改动内容和验证方式。 [提交 Pull Request](https://github.com/perryles/glance/compare)
 
-应用反馈请提交至 [tryglance.app/feedback](https://tryglance.app/feedback)。
+问题反馈和功能建议请提交到 GitHub Issues。 [问题反馈](https://github.com/perryles/glance/issues)
 
 ## 致谢
 
+- 感谢 Jonathan Zhou 及上游 Glance 贡献者开发原始应用。 [jonnyoo/glance](https://github.com/jonnyoo/glance)
+- 感谢 JediBrooker 在 PR #50 中提供 BRIO 红外实现。 [PR #50](https://github.com/jonnyoo/glance/pull/50)
 - **[The Boring Notch](https://github.com/TheBoredTeam/boring.notch)** 提供了刘海窗口的物理动效参考。
 - **[InsightFace](https://github.com/deepinsight/insightface)** 提供了用于识别的 ArcFace 模型。
 - **[Alcove](https://tryalcove.com)** 带来了重要的设计灵感。
+- 感谢 Sparkle 提供应用更新框架。 [Sparkle](https://github.com/sparkle-project/Sparkle)
+- 感谢 libusb 和 libuvc 提供 USB 红外采集支持。 [libusb](https://github.com/libusb/libusb), [libuvc](https://github.com/libuvc/libuvc)
 
 ## 许可证
 
-[MIT](../LICENSE) © Jonathan Zhou
+项目源码采用 MIT 许可证。原始作品 © 2026 Jonathan Zhou，本分支贡献 © 2026 perryles 及贡献者。 [MIT](../LICENSE)
+
+第三方库和模型权重遵循各自的许可条款。InsightFace 对其预训练模型规定了非商业研究用途的许可。 [InsightFace 许可说明](https://github.com/deepinsight/insightface#license)
+
+签名红外构建在 `Contents/Resources/InfraredLicenses` 中附带原生依赖许可证，在 `Contents/Resources/InfraredSources.zip` 中附带源码及重新链接材料。
